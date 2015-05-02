@@ -52,16 +52,15 @@
 	<!-- End Google Tag Manager -->
 
 
-	<!-- HEADER -->
-	<header class="site-header" role="banner">
-		<div class="container header-contents">
+		<!-- HEADER -->
+		<header class="site-header">
 			<div class="row">
-				<div class="small-3">
+				<div class="medium-3">
 					<div class="site-logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
-					</div> <!-- end site-logo -->
-				</div> <!-- end small-3 -->
-				<div class="small-9">
+					</div>
+				</div>
+				<div class="medium-9">
 					<nav class="site-navigation" role="navigation">
 						<?php 
 							wp_nav_menu(
@@ -74,10 +73,4 @@
 					</nav>
 				</div> <!-- end small-9 -->
 			</div> <!-- end row -->
-		</div> <!-- end container -->
-	</header> <!-- end site-header -->
-	
-
-	<!-- MAIN CONTENT AREA -->
-	<div class="container">
-		<div class="row">
+		</header> <!-- end site-header -->
