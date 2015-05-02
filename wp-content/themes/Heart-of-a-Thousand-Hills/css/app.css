@@ -3230,11 +3230,12 @@ body {
   position: fixed;
   top: 0;
   padding: 40px;
-  width: 100%; }
-  /* line 15, ../scss/components/_nav.scss */
+  width: 100%;
+  z-index: 999; }
+  /* line 16, ../scss/components/_nav.scss */
   .site-header .nav {
     float: right; }
-    /* line 18, ../scss/components/_nav.scss */
+    /* line 19, ../scss/components/_nav.scss */
     .site-header .nav ul {
       margin: 0 auto 1.0625rem auto;
       margin-left: -1.375rem;
@@ -3251,10 +3252,10 @@ body {
         /* line 47, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
         .site-header .nav ul > li > * {
           display: block; }
-      /* line 21, ../scss/components/_nav.scss */
+      /* line 22, ../scss/components/_nav.scss */
       .site-header .nav ul li {
         margin: 0; }
-      /* line 25, ../scss/components/_nav.scss */
+      /* line 26, ../scss/components/_nav.scss */
       .site-header .nav ul a {
         color: #c0c0af;
         cursor: pointer;
