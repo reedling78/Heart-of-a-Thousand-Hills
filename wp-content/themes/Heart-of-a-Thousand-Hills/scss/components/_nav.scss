@@ -1,0 +1,37 @@
+// 
+// NAV
+//
+
+.site-header {
+	position: fixed;
+	top: 0;
+	padding: 40px;
+	width: 100%;
+	z-index: 999;
+
+	.site-logo {
+
+	}
+
+	.nav {
+		float: right;
+
+		ul {
+			@include inline-list;
+
+			li {
+				margin: 0;
+			}
+
+			a {
+				color: $secondary-color;
+				cursor: pointer;
+				display: inline-block;
+				font: 20px $body-font-family;
+				padding: 15px;
+				position: relative;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
