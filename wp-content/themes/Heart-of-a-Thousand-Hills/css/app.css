@@ -3278,4 +3278,12 @@ h2 {
 
 /* line 6, ../scss/components/_video.scss */
 .home video {
-  opacity: .5; }
+  opacity: .5;
+  width: 100%;
+  height: auto; }
+
+@media (min-width: 1920px) {
+  /* line 14, ../scss/components/_video.scss */
+  .home video {
+    width: auto;
+    min-height: 900px; } }

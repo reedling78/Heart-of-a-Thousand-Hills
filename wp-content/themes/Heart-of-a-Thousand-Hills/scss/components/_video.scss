@@ -5,5 +5,15 @@
 .home {
 	video {
 		opacity: .5;
+        width:100%;
+        height:auto;
 	}
+}
+@media (min-width: 1920px) {
+    .home {
+        video {
+            width:auto;
+            min-height:900px;
+        }
+    }
 }

@@ -12,7 +12,7 @@
 <!-- CONTENT AREA 1 - IN BETA -->
 <div class="row home">
 	<div class="column large-12">
-		<video autoplay="" loop="" style="visibility: visible; margin: auto; position: absolute; z-index: -1; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; min-height: 900px;">
+		<video autoplay="" loop="" style="visibility: visible; margin: auto; position: absolute; z-index: -1; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
 			<source src="http://localhost:8888/Heart-of-a-Thousand-Hills/wp-content/uploads/2015/05/HighFives-min.mp4" type="video/mp4">
 			<source src="http://localhost:8888/Heart-of-a-Thousand-Hills/wp-content/uploads/2015/05/HighFives-min.webm" type="video/webm">
 			<source src="http://localhost:8888/Heart-of-a-Thousand-Hills/wp-content/uploads/2015/05/HighFives-min.ogg" type="video/ogg">
