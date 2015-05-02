@@ -1,0 +1,25 @@
+{
+  "name": "overnight2015",
+  "version": "1.0.0",
+  "homepage": "https://github.com/reedling78/Overnight-Challenge-Temp",
+  "authors": [
+    "Reed Rizzo <reedling78@gmail.com>"
+  ],
+  "main": "main",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation": "zurb/bower-foundation",
+    "requirejs": "~2.1.16",
+    "requirejs-router": "~0.8.0"
+  }
+}

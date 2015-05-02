@@ -1,0 +1,105 @@
+//
+// VARIABLES
+//
+
+
+
+//
+// MIXINS
+//
+
+@mixin gradient($firststop: #3fb74b, $laststop: #1a9123, $firstposition: top, $secondposition: bottom, $webkitstopone: left top, $webkitstoptwo: left bottom) {
+	background: $firststop;
+	background-image: -moz-linear-gradient($firstposition, $firststop 0%, $laststop 100%);
+	background-image: -webkit-gradient(linear, $webkitstopone, $webkitstoptwo, color-stop(0%, $firststop), color-stop(100%, $laststop));
+	background-image: -webkit-linear-gradient($firstposition, $firststop 0%, $laststop 100%);
+	background-image: -o-linear-gradient($firstposition, $firststop 0%, $laststop 100%);
+	background-image: -ms-linear-gradient($firstposition, $firststop 0%, $laststop 100%);
+	background-image: linear-gradient(to $secondposition, $firststop 0%, $laststop 100%);
+}
+
+@mixin box-shadow($shadow:0 0 2px fade-out(#98d9fe, 1)) {
+
+	@if $experimental {
+		-webkit-box-shadow: $shadow;
+		-moz-box-shadow: $shadow;
+	}
+	box-shadow: $shadow;
+}
+
+@mixin transition($property: all, $duration: .4s, $timing-function: ease, $delay: 0) {
+	-webkit-transition: $property $duration $timing-function $delay;
+	-moz-transition: $property $duration $timing-function $delay;
+	transition: $property $duration $timing-function $delay;
+}
+
+@mixin selection {
+    ::-moz-selection { @content; }
+    ::selection { @content; }
+}
+
+@include selection {
+    color: #fff;
+    background: $primary-color;
+}
+
+@mixin placeholder ($color: #aaa, $font: 'Harmonia Sans W01', $style: italic){
+
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-family: $font;
+    font-style: $style;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+    font-family: $font;
+    font-style: $style;
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $color;
+    font-family: $font;
+    font-style: $style;
+  }
+  &:-ms-input-placeholder {  
+    color: $color;
+    font-family: $font;
+    font-style: $style;
+  }
+}
+
+@mixin radius($radius:$global-radius) {
+  @if $radius {
+    border-radius: $radius;
+  }
+}
+
+// 
+// COLORS
+//
+
+$purple: #6a566d ;
+$orange: #ecb186 ;
+$pink: #d6797b ;
+$aqua: #74bdb2 ;
+
+.purple { background-color: $purple; }
+.orange { background-color: $orange; }
+.pink 	{ background-color: $pink; }
+.teal 	{ background-color: $aqua; }
+
+//
+// OTHER
+//
+
+a {
+	@include transition;
+}
+
+.text-center .inline-list {
+	display: inline-block;
+}
+
+$h1-font-reduction: rem-calc(24);
+$h2-font-reduction: rem-calc(5);
+$h3-font-reduction: 0;
+$h4-font-reduction: 0;
