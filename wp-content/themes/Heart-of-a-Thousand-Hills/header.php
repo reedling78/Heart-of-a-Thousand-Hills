@@ -55,13 +55,13 @@
 		<!-- HEADER -->
 		<header class="site-header">
 			<div class="row">
-				<div class="column medium-6">
+				<div class="medium-3">
 					<div class="site-logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
 					</div>
 				</div>
-				<div class="column medium-6">
-					<nav class="nav" role="navigation">
+				<div class="medium-9">
+					<nav class="site-navigation" role="navigation">
 						<?php 
 							wp_nav_menu(
 								array(
