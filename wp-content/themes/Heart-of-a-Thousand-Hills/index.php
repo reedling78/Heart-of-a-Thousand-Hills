@@ -5,18 +5,9 @@
  * The main template file.
  */
  ?>
-<<<<<<< Updated upstream
 
 <?php get_header(); ?>
 
-=======
-<?php get_header();?>
-<h1>whatever</h1>
-	<div class="main-content large-8 columns" role="main">
-		<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
->>>>>>> Stashed changes
 
 <!-- CONTENT AREA 1 - IN BETA -->
 <div class="video-bg">
