@@ -10,7 +10,9 @@
 	z-index: 999;
 
 	.site-logo {
-
+		background: url('http://localhost:8888/Heart-of-a-Thousand-Hills/wp-content/uploads/2015/05/thousandHillsLogo1.svg') no-repeat;
+		width: 150px;
+		height: 150px;
 	}
 
 	.nav {
@@ -20,17 +22,17 @@
 			@include inline-list;
 
 			li {
-				margin: 0;
+				margin: 0 15px;
 			}
 
 			a {
 				color: $secondary-color;
 				cursor: pointer;
 				display: inline-block;
-				font: 20px $body-font-family;
-				padding: 15px;
+				font: 20px/ $body-font-family;
 				position: relative;
 				text-transform: uppercase;
+				font-style: normal;
 			}
 		}
 	}

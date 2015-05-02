@@ -2,6 +2,10 @@
 \wp-content\themes\overnight2015\.sass-cache
 \wp-content\themes\Heart-of-a-Thousand-Hills\.sass-cache
 
-.env
+wp-config.php
+
+wp-config.php
 
 *.scssc
+
+.env

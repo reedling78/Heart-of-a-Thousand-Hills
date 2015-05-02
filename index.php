@@ -14,13 +14,4 @@
 define('WP_USE_THEMES', true);
 
 /** Loads the WordPress Environment and Template */
-$environment = getenv('APP_ENV') ?: 'local';
-
-if ($environment != 'production') {
-	require( dirname( __FILE__ ) . '/wp-content/themes/Heart-of-a-Thousand-Hills/vendor/Dotenv.php' );
-	Dotenv::load(__DIR__);
-}
-
 require( dirname( __FILE__ ) . '/wp-blog-header.php' );
-
-
