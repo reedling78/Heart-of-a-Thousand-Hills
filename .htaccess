@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /Overnight-Challenge-Temp/
+RewriteBase /Heart-of-a-Thousand-Hills/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /Overnight-Challenge-Temp/index.php [L]
+RewriteRule . /Heart-of-a-Thousand-Hills/index.php [L]
 </IfModule>
 
 # END WordPress
