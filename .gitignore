@@ -7,3 +7,5 @@ wp-config.php
 wp-config.php
 
 *.scssc
+
+.env
