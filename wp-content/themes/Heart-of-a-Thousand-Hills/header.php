@@ -26,6 +26,10 @@
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
+	<!-- Fonts.com Web Font Code -->
+	<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/dc5192c9-31e0-4816-96ca-1f1ab513cd27.css"/>
+
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
