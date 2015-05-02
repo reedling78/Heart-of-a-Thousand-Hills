@@ -33,6 +33,16 @@
 				position: relative;
 				text-transform: uppercase;
 				font-style: normal;
+				position: relative;
+
+				&:hover {
+					&:after {
+						content: ".";
+						display: block;
+						position: absolute;
+						bottom: ;
+					}
+				}
 			}
 		}
 	}
