@@ -31,3 +31,15 @@ p {
 		line-height: 2;
 	}
 }
+
+
+@media #{$medium-only} { 
+	h1 { font-size: rem-calc(64) }
+	h2 { font-size: rem-calc(52) }
+}
+
+@media #{$small-only} { 
+	h1 { font-size: rem-calc(46) }
+	h2 { font-size: rem-calc(34) }
+}
+

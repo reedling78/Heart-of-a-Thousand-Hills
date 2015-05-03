@@ -64,3 +64,25 @@
 		}
 	}
 }
+
+@media #{$medium-only} { 
+	.donate {
+		.column {
+			padding: 140px 0 100px;
+			&.keylime {
+				padding-bottom: 160px;
+			}
+		}
+	}
+}
+
+@media #{$small-only} { 
+	.donate {
+		.column {
+			padding: 140px 0 100px;
+			&.keylime {
+				padding-bottom: 160px;
+			}
+		}
+	}
+}

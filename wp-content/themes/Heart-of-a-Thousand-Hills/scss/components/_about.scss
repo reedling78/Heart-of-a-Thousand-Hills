@@ -24,8 +24,8 @@
 		margin-bottom: 0;
 
 		&.quote {
-			margin: 15px 0 10px;
-			padding: 0 180px;
+			margin: 15px auto 10px;
+			width: 50%;
 			line-height: 1.8;
 		}
 	}
@@ -60,3 +60,27 @@
 		margin: 60px 0 0;
 	}
 }
+
+@media #{$medium-only} { 
+	.about {
+		.column:last-child {
+			padding-top: 0;
+		}
+		p {
+			&.quote { width: 40%; }
+		}
+	}
+}
+
+@media #{$small-only} { 
+	.about {
+		.column:last-child {
+			padding-top: 0;
+		}
+		p {
+			&.quote { width: 60%; }
+		}
+	}
+}
+
+

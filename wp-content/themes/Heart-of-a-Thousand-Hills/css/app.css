@@ -3162,8 +3162,8 @@ blockquote p {
     margin-bottom: 0; }
     /* line 26, ../scss/components/_about.scss */
     .about p.quote {
-      margin: 15px 0 10px;
-      padding: 0 180px;
+      margin: 15px auto 10px;
+      width: 50%;
       line-height: 1.8; }
   /* line 33, ../scss/components/_about.scss */
   .about .content-area {
@@ -3192,6 +3192,20 @@ blockquote p {
   .board .button {
     margin: 60px 0 0; }
 
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 66, ../scss/components/_about.scss */
+  .about .column:last-child {
+    padding-top: 0; }
+  /* line 70, ../scss/components/_about.scss */
+  .about p.quote {
+    width: 40%; } }
+@media only screen and (max-width: 40em) {
+  /* line 77, ../scss/components/_about.scss */
+  .about .column:last-child {
+    padding-top: 0; }
+  /* line 81, ../scss/components/_about.scss */
+  .about p.quote {
+    width: 60%; } }
 /* line 5, ../scss/components/_blog-list.scss */
 .blog-list {
   padding: 60px 0;
@@ -3328,6 +3342,20 @@ blockquote p {
     .donate .event-button:hover {
       background-color: #b9b851; }
 
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 70, ../scss/components/_donate.scss */
+  .donate .column {
+    padding: 140px 0 100px; }
+    /* line 72, ../scss/components/_donate.scss */
+    .donate .column.keylime {
+      padding-bottom: 160px; } }
+@media only screen and (max-width: 40em) {
+  /* line 81, ../scss/components/_donate.scss */
+  .donate .column {
+    padding: 140px 0 100px; }
+    /* line 83, ../scss/components/_donate.scss */
+    .donate .column.keylime {
+      padding-bottom: 160px; } }
 /* line 5, ../scss/components/_event.scss */
 .event {
   height: auto; }
@@ -3538,6 +3566,22 @@ p {
     font-size: 12.5px;
     line-height: 2; }
 
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  /* line 37, ../scss/components/_type.scss */
+  h1 {
+    font-size: 4rem; }
+
+  /* line 38, ../scss/components/_type.scss */
+  h2 {
+    font-size: 3.25rem; } }
+@media only screen and (max-width: 40em) {
+  /* line 42, ../scss/components/_type.scss */
+  h1 {
+    font-size: 2.875rem; }
+
+  /* line 43, ../scss/components/_type.scss */
+  h2 {
+    font-size: 2.125rem; } }
 /* line 6, ../scss/components/_video.scss */
 .start video {
   opacity: .5;
