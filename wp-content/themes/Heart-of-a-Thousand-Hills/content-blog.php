@@ -29,6 +29,7 @@
 					<li>
 					<date><?php the_date('n.j.Y'); ?></date>
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<?php remove_filter('the_excerpt', 'wpautop'); ?>
 					<p class="small"><?php the_excerpt();  ?><a href="<?php the_permalink(); ?>">Read More</a></p>
 				</li>
 				<?php endwhile; ?>
