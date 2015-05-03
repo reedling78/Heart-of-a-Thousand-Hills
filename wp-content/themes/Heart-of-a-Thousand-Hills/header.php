@@ -8,7 +8,8 @@
 
 <?php 
 	// Get the favicon.
-	$favicon = IMAGES . '/icons/favicon.png';
+	$favicon16 = IMAGES . '/icons/favicon-16x16.png';
+    $favicon32 = IMAGES . '/icons/favicon-32x32.png';
 
 	// Get the custom touch icon.
 	$touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
@@ -35,7 +36,8 @@
 	<![endif]-->
 
 	<!-- Favicon and Apple Icons -->
-	<link rel="shortcut icon" href="<?php echo $favicon; ?>">
+    <link rel="shortcut icon" type="image/png" href="<?php echo $favicon32; ?>" sizes="32x32" />
+    <link rel="shortcut icon" type="image/png" href="<?php echo $favicon16; ?>" sizes="16x16" />
 	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo $touch_icon; ?>">
 
 	<?php wp_head(); ?>
