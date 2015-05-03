@@ -220,8 +220,12 @@ if ( ! function_exists( 'alpha_validate_length' ) ) {
 		return ( strlen( trim( $fieldValue ) ) > $minLength );
 	}
 }
-
-
+if ( ! function_exists( 'new_excerpt_length' ) ) {
+	function new_excerpt_length($length) {
+		return 10;
+	}
+	add_filter('excerpt_length', 'new_excerpt_length');
+}
 
 /**
  * ----------------------------------------------------------------------------------------
