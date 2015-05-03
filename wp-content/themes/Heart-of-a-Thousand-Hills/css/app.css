@@ -3144,51 +3144,52 @@ blockquote p {
     font-size: 1rem; } }
 /* line 5, ../scss/components/_blog-list.scss */
 .blog-list {
-  padding: 60px 0; }
-  /* line 8, ../scss/components/_blog-list.scss */
+  padding: 60px 0;
+  position: relative; }
+  /* line 9, ../scss/components/_blog-list.scss */
   .blog-list .arrows {
     float: right; }
-    /* line 11, ../scss/components/_blog-list.scss */
+    /* line 12, ../scss/components/_blog-list.scss */
     .blog-list .arrows svg {
       width: 13px; }
-    /* line 16, ../scss/components/_blog-list.scss */
+    /* line 17, ../scss/components/_blog-list.scss */
     .blog-list .arrows .disabled svg path {
       fill: #515151; }
-    /* line 20, ../scss/components/_blog-list.scss */
+    /* line 21, ../scss/components/_blog-list.scss */
     .blog-list .arrows .disabled:hover svg path {
       fill: #515151; }
-    /* line 26, ../scss/components/_blog-list.scss */
+    /* line 27, ../scss/components/_blog-list.scss */
     .blog-list .arrows a:hover svg path {
       fill: #cecd5a; }
-  /* line 32, ../scss/components/_blog-list.scss */
+  /* line 33, ../scss/components/_blog-list.scss */
   .blog-list .archive {
     text-transform: uppercase;
     font-style: normal;
     font-size: 16px;
     font-weight: 800;
     letter-spacing: 1px; }
-    /* line 39, ../scss/components/_blog-list.scss */
+    /* line 40, ../scss/components/_blog-list.scss */
     .blog-list .archive a {
       color: #c0c0af;
       font-size: 16px;
       font-weight: 800; }
-      /* line 44, ../scss/components/_blog-list.scss */
+      /* line 45, ../scss/components/_blog-list.scss */
       .blog-list .archive a.selected, .blog-list .archive a:hover {
         color: #cecd5a; }
-  /* line 52, ../scss/components/_blog-list.scss */
+  /* line 53, ../scss/components/_blog-list.scss */
   .blog-list .list date {
     display: block;
     margin: 30px 0 20px;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 1px; }
-  /* line 60, ../scss/components/_blog-list.scss */
+  /* line 61, ../scss/components/_blog-list.scss */
   .blog-list .list h2 {
     font-size: 30px; }
-    /* line 62, ../scss/components/_blog-list.scss */
+    /* line 63, ../scss/components/_blog-list.scss */
     .blog-list .list h2 a {
       color: #c0c0af; }
-  /* line 68, ../scss/components/_blog-list.scss */
+  /* line 69, ../scss/components/_blog-list.scss */
   .blog-list .list p a {
     white-space: nowrap; }
 
@@ -3485,11 +3486,7 @@ p {
   .home video {
     width: auto;
     min-height: 900px; } }
-/* line 1, ../scss/components/_contact-form.scss */
-body {
-  background: #cecd5a; }
-
-/* line 6, ../scss/components/_contact-form.scss */
+/* line 4, ../scss/components/_contact-form.scss */
 .namespace.contact-form input[type="text"] {
   color: #333;
   font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
@@ -3501,28 +3498,28 @@ body {
   line-height: 60px;
   font-size: 1.2em;
   -webkit-appearance: none; }
-/* line 19, ../scss/components/_contact-form.scss */
+/* line 17, ../scss/components/_contact-form.scss */
 .namespace.contact-form input[placeholder] {
   color: #333; }
-/* line 23, ../scss/components/_contact-form.scss */
+/* line 21, ../scss/components/_contact-form.scss */
 .namespace.contact-form input[type="checkbox"] {
   width: 20px;
   height: 20px; }
-/* line 28, ../scss/components/_contact-form.scss */
+/* line 26, ../scss/components/_contact-form.scss */
 .namespace.contact-form input::-webkit-input-placeholder {
   color: #333;
   font-size: 1.4em;
   margin: 3%; }
-/* line 34, ../scss/components/_contact-form.scss */
+/* line 32, ../scss/components/_contact-form.scss */
 .namespace.contact-form input:-ms-input-placeholder {
   color: #333;
   font-size: 1.4em; }
-/* line 39, ../scss/components/_contact-form.scss */
+/* line 37, ../scss/components/_contact-form.scss */
 .namespace.contact-form label {
   font-style: normal;
   color: #333;
   font-size: 1.4em; }
-/* line 45, ../scss/components/_contact-form.scss */
+/* line 43, ../scss/components/_contact-form.scss */
 .namespace.contact-form h1 {
   color: #333;
   text-align: left;
@@ -3530,12 +3527,12 @@ body {
   font-family: "Malabar W01", Times New Roman, Times, serif;
   font-weight: 800;
   font-size: 2.2em; }
-/* line 54, ../scss/components/_contact-form.scss */
+/* line 52, ../scss/components/_contact-form.scss */
 .namespace.contact-form p {
   font-style: normal;
   color: #333;
   font-family: "Quire Sans W01", Arial, Helvetica, sans-serif; }
-/* line 60, ../scss/components/_contact-form.scss */
+/* line 58, ../scss/components/_contact-form.scss */
 .namespace.contact-form .btn {
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
@@ -3550,27 +3547,27 @@ body {
   font-size: 1em;
   letter-spacing: 2px;
   font-weight: 600; }
-/* line 76, ../scss/components/_contact-form.scss */
+/* line 74, ../scss/components/_contact-form.scss */
 .namespace.contact-form .btn:hover {
   background: #333;
   color: #FFF;
   text-decoration: none; }
-/* line 82, ../scss/components/_contact-form.scss */
+/* line 80, ../scss/components/_contact-form.scss */
 .namespace.contact-form .bottomBorder {
   border-bottom: 1px solid #333; }
-/* line 86, ../scss/components/_contact-form.scss */
+/* line 84, ../scss/components/_contact-form.scss */
 .namespace.contact-form .rightBorder {
   border-right: 1px solid #333; }
-/* line 90, ../scss/components/_contact-form.scss */
+/* line 88, ../scss/components/_contact-form.scss */
 .namespace.contact-form .contactFields {
   border: 1px solid #333333;
   border-radius: 10px;
   margin: 0% 5% 1% 5%; }
-/* line 95, ../scss/components/_contact-form.scss */
+/* line 93, ../scss/components/_contact-form.scss */
 .namespace.contact-form .contactCheckboxes {
   padding: 0;
   margin: 0% 5% 0% 5%; }
 @media only screen and (min-width: 40.063em) {
-  /* line 100, ../scss/components/_contact-form.scss */
+  /* line 98, ../scss/components/_contact-form.scss */
   .namespace.contact-form .rightBorder {
     border-right: none; } }

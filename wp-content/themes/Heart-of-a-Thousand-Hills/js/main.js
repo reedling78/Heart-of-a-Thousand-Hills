@@ -41,11 +41,10 @@ require(['jquery'], function (skrollr) {
             });
 
         });
+        skrollr.init();
 
-        setTimeout(function () {
-            skrollr.init();
-        }, 1000);
-        
+        $('body').css('height', 'auto');
+
 
     });
 });
