@@ -7,8 +7,10 @@ body {
 }
 
 .home {
-	padding: 0 0 290px;
-	
+	.columns {
+		overflow: hidden;
+	}
+
 	h2,
 	p {
 		text-align: center;
@@ -16,5 +18,9 @@ body {
 
 	h2 {
 		margin-top: 290px;
+	}
+
+	p {
+		margin-bottom: 290px;
 	}
 }

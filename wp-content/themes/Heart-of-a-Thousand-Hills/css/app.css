@@ -3229,16 +3229,19 @@ body {
   background: #000000;
   box-sizing: border-box; }
 
-/* line 9, ../scss/components/_home.scss */
-.home {
-  padding: 0 0 290px; }
-  /* line 12, ../scss/components/_home.scss */
-  .home h2,
-  .home p {
-    text-align: center; }
-  /* line 17, ../scss/components/_home.scss */
-  .home h2 {
-    margin-top: 290px; }
+/* line 10, ../scss/components/_home.scss */
+.home .columns {
+  overflow: hidden; }
+/* line 14, ../scss/components/_home.scss */
+.home h2,
+.home p {
+  text-align: center; }
+/* line 19, ../scss/components/_home.scss */
+.home h2 {
+  margin-top: 290px; }
+/* line 23, ../scss/components/_home.scss */
+.home p {
+  margin-bottom: 290px; }
 
 /* line 5, ../scss/components/_nav.scss */
 .site-header {
