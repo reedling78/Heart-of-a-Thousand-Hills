@@ -8,6 +8,10 @@ h1 {
 }
 
 h2 {
+    font-size:rem-calc(60);
+}
+
+h3 {
 	color: $secondary-color;
 	font: 15px $body-font-family;
 	font-weight: 700;

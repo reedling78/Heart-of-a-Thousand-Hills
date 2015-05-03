@@ -1,0 +1,22 @@
+// 
+// EVENT
+//
+
+.event {
+    height: auto;
+    .event-image {
+        width: 50%;
+        float: left;
+        background-repeat: no-repeat;
+        min-height:698px;
+    }
+    .event-description {
+        width: 50%;
+        float: right;
+        text-align: center;
+        padding:145px 100px;
+    }
+    p {
+        margin-bottom: 60px;
+    }
+}
