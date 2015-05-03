@@ -49,7 +49,22 @@ require(['jquery'], function (skrollr) {
             }, 2000);
         };
 
+        $('a').click(function(event) {
 
+            if(event.target.href === window.location.href)
+            {
+                event.preventDefault();
+                $(document.body).animate({ 'scrollTop':   0 }, 2000);
+            }
+
+            if(event.target.href.lastIndexOf(window.location.href + "#", 0) === 0)
+            {
+                event.preventDefault();
+                var anchor = event.target.href.substr(event.target.href.indexOf("#") + 1);
+                scrollToAnchor(anchor);
+            }
+
+        });
 
         $('body').css('height', 'auto');
 
