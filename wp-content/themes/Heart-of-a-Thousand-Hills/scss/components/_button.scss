@@ -5,6 +5,7 @@
 .button {
 	text-transform: uppercase;
 	@include radius(12px);
+	font-style: normal;
 	
 	&:hover {
 		color: #fff;
