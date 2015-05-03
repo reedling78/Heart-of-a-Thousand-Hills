@@ -85,6 +85,8 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 	}
 
 	add_action( 'after_setup_theme', 'alpha_setup' );
+
+	
 }
 
 
@@ -268,6 +270,62 @@ function create_posttype() {
 }
 add_action( 'init', 'create_posttype' );
 
+function add_custom_meta_box() {
+    add_meta_box(
+        'event_button_box', // $id
+        'Event Button', // $title 
+        'show_event_button_box', // $callback
+        'events', // $page
+        'side', // $context
+        'default'); // $priority
+}
+add_action('add_meta_boxes', 'add_custom_meta_box');
+
+// Save the Data
+function save_custom_meta($post_id) {
+
+    // verify nonce
+    if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__))) 
+        return $post_id;
+    // check autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+        return $post_id;
+    // check permissions
+    if ('page' == $_POST['post_type']) {
+        if (!current_user_can('edit_page', $post_id))
+            return $post_id;
+        } elseif (!current_user_can('edit_post', $post_id)) {
+            return $post_id;
+    }
+     
+    $oldEventRadioButton = get_post_meta($post_id, 'event_button_selection', true);
+    $newEventRadioButton = $_POST['event_button_selection'];
+    if ($newEventRadioButton && $newEventRadioButton != $oldEventRadioButton) {
+        update_post_meta($post_id, 'event_button_selection', $newEventRadioButton);
+    } elseif ('' == $newEventRadioButton && $oldEventRadioButton) {
+        delete_post_meta($post_id, 'event_button_selection', $oldEventRadioButton);
+    }
+
+    $oldEventBrightText = get_post_meta($post_id, 'eventBrightText', true);
+    $newEventBrightText = $_POST['event_bright_text'];
+    if ($newEventBrightText && $newEventBrightText != $oldEventBrightText) {
+        update_post_meta($post_id, 'eventBrightText', $newEventBrightText);
+    } elseif ('' == $newEventBrightText && $oldEventBrightText) {
+        delete_post_meta($post_id, 'eventBrightText', $oldEventBrightText);
+    }
+
+    $oldGoogleMapText = get_post_meta($post_id, 'googleMapsText', true);
+    $newGoogleMapText = $_POST['google_maps_text'];
+    if ($newGoogleMapText && $newGoogleMapText != $oldGoogleMapText) {
+        update_post_meta($post_id, 'googleMapsText', $newGoogleMapText);
+    } elseif ('' == $newGoogleMapText && $oldGoogleMapText) {
+        delete_post_meta($post_id, 'googleMapsText', $oldGoogleMapText);
+    }
+
+}
+add_action('save_post', 'save_custom_meta');
+
+
 
 
 /**
@@ -285,6 +343,12 @@ function ovn_initialize_theme_options() {
 		'general'							// The section to which we're adding the setting
 	);
 	
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'facebook_url'
+	);
+
 	// Define the settings field
 	add_settings_field( 
 		'twitter_url', 					// The ID (or the name) of the field
@@ -292,6 +356,14 @@ function ovn_initialize_theme_options() {
 		'ovn_twitter_url_display', 		// The callback function used to render the field
 		'general'							// The section to which we're adding the setting
 	);
+
+
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'twitter_url'
+	);
+
 
 	// Define the settings field
 	add_settings_field( 
@@ -304,24 +376,25 @@ function ovn_initialize_theme_options() {
 	// Register the 'footer_message' setting with the 'General' section
 	register_setting(
 		'general',
-		'facebook_url'
-	);
-
-	// Register the 'footer_message' setting with the 'General' section
-	register_setting(
-		'general',
-		'twitter_url'
-	);
-
-	// Register the 'footer_message' setting with the 'General' section
-	register_setting(
-		'general',
 		'instagram_url'
+	);
+
+	// Define the settings field
+	add_settings_field( 
+		'copyrightString', 					// The ID (or the name) of the field
+		'copyright String', 					// The text used to label the field
+		'ovn_copyrightString_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);	
+
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'copyrightString'
 	);
 	
 } // end ovn_initialize_theme_options
 add_action( 'admin_init', 'ovn_initialize_theme_options' );
-
 
 
 /**
@@ -342,5 +415,35 @@ function ovn_instagram_url_display() {
 	echo '<input type="text" name="instagram_url" id="instagram_url" value="' . get_option( 'instagram_url' ) . '" />';
 } // end ovn_twitter_url_display
 
+function ovn_copyrightString_display() {
+	echo '<input type="text" name="copyrightString" id="copyrightString" value="' . get_option( 'copyrightString' ) . '" />';
+} // end ovn_twitter_url_display
+
+function show_event_button_box() {
+	global $custom_meta_fields, $post;
+// Use nonce for verification
+	echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
+
+	$radioButtonValue = get_post_meta($post->ID, 'event_button_selection', true);
+	$eventBrightTextValue = get_post_meta($post->ID, 'eventBrightText', true);
+	$googleMapsTextValue = get_post_meta($post->ID, 'googleMapsText', true);
+     
+    // Begin the field table and loop
+    echo '<table class="form-table">';
+    	echo '<tr><th><label for="event_button_selection">Event Button Selection</label></th></tr>';
+    	echo '<tr><td>';
+    	echo '<input type="radio" name=event_button_selection id="eventBright" value="eventBright"', $radioButtonValue == "eventBright" ? ' checked="checked"' : "", ' />
+                <label for="eventBright">Event Bright</label><br />';
+        echo '<input type="radio" name="event_button_selection" id="googleMap" value="googleMap"', $radioButtonValue == "googleMap" ? ' checked="checked"' : "", '/>
+                <label for="googleMap">Google Map</label><br />';
+    	echo '</td></tr>';
+    	echo '<tr><th><label for="event_bright_test">Event Bright Url</label></th></tr>';
+    	echo '<tr><td><input type="text" name="event_bright_text" id="eventBrightText" value="'.$eventBrightTextValue.'" size="30" />
+        <br /><span class="description">Url to the event bright page.</span></td></tr>';
+    	echo '<tr><th><label for="google_maps_text">Google Maps Url</label></th></tr>';
+    	echo '<tr><td><input type="text" name="google_maps_text" id="googleMapsText" value="'.$googleMapsTextValue.'" size="30" />
+        <br /><span class="description">Url to the google maps location.</span></td></tr>';
+    echo '</table>'; // end table
+}
 
 ?>
