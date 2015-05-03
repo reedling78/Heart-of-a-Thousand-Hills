@@ -5,16 +5,16 @@
 .site-header {
 	position: fixed;
 	top: 0;
-	padding: 25px 0;
 	width: 100%;
-	height: 120px;
+	height: 100px;
 	z-index: 999;
+	padding-top: 12px;
 
 	.main-nav-background {
-		height: 90px;
+		height: 100px;
 		background-color: #333;
 		position: relative;
-		top: -80px;
+		top: -92px;
 		z-index: -1;
 		opacity: 0;
 	}
@@ -31,7 +31,7 @@
 		ul {
 			@include inline-list;
 			overflow: visible;
-			margin: 3px 0 0;
+			margin: 6px 0 0;
 
 			li {
 				margin: 0 15px;

@@ -27,6 +27,12 @@
 </div>
 
 <!-- END CONTENT AREA 1 -->
+
+<!-- CONTENT AREA 2 - IN BETA -->
+
+
+
+<!-- END CONTENT AREA 2 -->
         
 <!-- CONTENT AREA 3 -->
 <?php require_once('content-event.php'); ?>
