@@ -36,9 +36,21 @@
 
 <div class="row donate">
 	<div class="column large-6 seaweed">
+		<h3>- Donate Money -</h3>
+		<h2>Your Money</h2>
+		<p>Buys supplies.</p>
+		<a href="#" class="button">Donate Now</a>
 	</div>
 	<div class="column large-6 keylime">
+		<h3>- Donate Money -</h3>
+		<h2>Your Money</h2>
+		<p>Buys supplies.</p>
+		<a href="#" class="button">Donate Now</a>
 	</div>
+	<a href="#" class="event-button">
+		<div class="calendar"></div>
+		Let's Attend An Event
+	</a>
 </div>
 
 <!-- END CONTENT AREA 5 -->
