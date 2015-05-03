@@ -29,7 +29,7 @@
 <!-- END CONTENT AREA 1 -->
 
 <!-- CONTENT AREA 2 - IN BETA -->
-<div class="row about keylime">
+<div class="row about keylime" id="WhoWeAre">
 	<div class="arc" style="top: -117px;">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1500 150" enable-background="new 0 0 1500 150" xml:space="preserve">
 		<path fill="#d5d45e" d="M546.4 28c510.6 0 952.6 94 952.6 94H0C0 122 137 28 546.4 28z"/>
@@ -62,7 +62,7 @@
 </div>
 <!-- END CONTENT AREA 2 -->
 
-<div class="row board">
+<div class="row board" id="MeetUs">
 	<div class="column large-12">
 		<h3>- Meet Us -</h3>
 		<h2>The advisors</h2>
@@ -100,7 +100,7 @@
 
 <!-- CONTENT AREA 5 -->
 
-<div class="row donate">
+<div class="row donate" id="Donate">
 	<div class="column large-6 seaweed">
 		<h3>- Donate Money -</h3>
 		<h2>Your Money</h2>

@@ -43,13 +43,15 @@ require(['jquery'], function (skrollr) {
         });
         skrollr.init();
 
+        function scrollToAnchor(hash) {
+            $(document.body).animate({
+            'scrollTop':   $('#' + hash ).offset().top - 87
+            }, 2000);
+        };
+
+        scrollToAnchor('WhoWeAre');
+
         $('body').css('height', 'auto');
-
-
-
-
-
-
 
     });
 });

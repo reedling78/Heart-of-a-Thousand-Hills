@@ -13,7 +13,7 @@
 
 
 	<!-- FOOTER -->
-	<footer class="site-footer">
+	<footer class="site-footer" id="Footer">
 		<div class="row">
 			<?php get_sidebar( 'footer' ); ?>
 			 <div class="column large-12 footer" style="background: url('<?= IMAGES ?>/footer-Image.png') no-repeat center; background-size:cover;">
