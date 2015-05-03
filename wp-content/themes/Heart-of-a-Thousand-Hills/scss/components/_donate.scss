@@ -48,6 +48,7 @@
 		text-align: center;
 		letter-spacing: 1px;
 		@include radius(12px 12px 0 0);
+		@include transition;
 
 		svg {
 			width: 60px;

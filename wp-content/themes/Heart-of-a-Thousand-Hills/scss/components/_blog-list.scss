@@ -32,9 +32,15 @@
 	.archive {
 		text-transform: uppercase;
 		font-style: normal;
+		font-size: 16px;
+		font-weight: 800;
+		letter-spacing: 1px;
 
 		a {
 			color: $secondary-color;
+			font-size: 16px;
+			font-weight: 800;
+
 			&.selected, 
 			&:hover {
 				color: $primary-color;
@@ -42,4 +48,21 @@
 		}
 	}
 
+	.list {
+		date {
+			margin: 40px 0 30px;
+			font-style: normal;
+			font-weight: 800;
+			letter-spacing: 1px;
+		}
+
+		h2 {
+			font-size: 30px;
+			color: $secondary-color;
+		}
+
+		p {
+			
+		}
+	}
 }

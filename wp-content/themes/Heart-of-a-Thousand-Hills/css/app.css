@@ -1,36 +1,38 @@
-/* line 37, ../scss/_global.scss */
+/* line 39, ../scss/_global.scss */
 ::-moz-selection {
   color: #fff;
   background: #cecd5a; }
 
-/* line 38, ../scss/_global.scss */
+/* line 40, ../scss/_global.scss */
 ::selection {
   color: #fff;
   background: #cecd5a; }
 
-/* line 85, ../scss/_global.scss */
+/* line 87, ../scss/_global.scss */
 .dark {
   background-color: #333333; }
 
-/* line 86, ../scss/_global.scss */
+/* line 88, ../scss/_global.scss */
 .seaweed {
   background-color: #c8c758; }
 
-/* line 87, ../scss/_global.scss */
+/* line 89, ../scss/_global.scss */
 .keylime {
   background-color: #d5d45e; }
 
-/* line 88, ../scss/_global.scss */
+/* line 90, ../scss/_global.scss */
 .grey {
   background-color: #565656; }
 
-/* line 94, ../scss/_global.scss */
+/* line 96, ../scss/_global.scss */
 a {
-  -webkit-transition: all 0.4s ease 0;
-  -moz-transition: all 0.4s ease 0;
-  transition: all 0.4s ease 0; }
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  -ms-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in; }
 
-/* line 98, ../scss/_global.scss */
+/* line 100, ../scss/_global.scss */
 .text-center .inline-list {
   display: inline-block; }
 
@@ -3029,13 +3031,28 @@ blockquote p {
   /* line 32, ../scss/components/_blog-list.scss */
   .blog-list .archive {
     text-transform: uppercase;
-    font-style: normal; }
-    /* line 36, ../scss/components/_blog-list.scss */
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px; }
+    /* line 39, ../scss/components/_blog-list.scss */
     .blog-list .archive a {
-      color: #c0c0af; }
-      /* line 38, ../scss/components/_blog-list.scss */
+      color: #c0c0af;
+      font-size: 16px;
+      font-weight: 800; }
+      /* line 44, ../scss/components/_blog-list.scss */
       .blog-list .archive a.selected, .blog-list .archive a:hover {
         color: #cecd5a; }
+  /* line 52, ../scss/components/_blog-list.scss */
+  .blog-list .list date {
+    margin: 40px 0 30px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 1px; }
+  /* line 59, ../scss/components/_blog-list.scss */
+  .blog-list .list h2 {
+    font-size: 30px;
+    color: #c0c0af; }
 
 /* line 5, ../scss/components/_button.scss */
 .button {
@@ -3088,16 +3105,21 @@ blockquote p {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;
-    border-radius: 12px 12px 0 0; }
-    /* line 52, ../scss/components/_donate.scss */
+    border-radius: 12px 12px 0 0;
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in; }
+    /* line 53, ../scss/components/_donate.scss */
     .donate .event-button svg {
       width: 60px;
       height: 60px; }
-      /* line 55, ../scss/components/_donate.scss */
+      /* line 56, ../scss/components/_donate.scss */
       .donate .event-button svg path,
       .donate .event-button svg rect {
         fill: #565656; }
-    /* line 61, ../scss/components/_donate.scss */
+    /* line 62, ../scss/components/_donate.scss */
     .donate .event-button:hover {
       background-color: #b9b851; }
 
@@ -3166,16 +3188,16 @@ body {
 .site-header {
   position: fixed;
   top: 0;
-  padding: 25px 0;
   width: 100%;
-  height: 120px;
-  z-index: 999; }
+  height: 100px;
+  z-index: 999;
+  padding-top: 12px; }
   /* line 13, ../scss/components/_nav.scss */
   .site-header .main-nav-background {
-    height: 90px;
+    height: 100px;
     background-color: #333;
     position: relative;
-    top: -80px;
+    top: -92px;
     z-index: -1;
     opacity: 0; }
   /* line 22, ../scss/components/_nav.scss */
@@ -3195,7 +3217,7 @@ body {
       list-style: none;
       overflow: hidden;
       overflow: visible;
-      margin: 3px 0 0; }
+      margin: 6px 0 0; }
       /* line 42, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
       .site-header .nav ul > li {
         list-style: none;
@@ -3302,6 +3324,10 @@ h3 {
 p {
   font-size: 25px;
   margin: 0; }
+  /* line 27, ../scss/components/_type.scss */
+  p.small {
+    font-size: 12.5px;
+    line-height: 2; }
 
 /* line 6, ../scss/components/_video.scss */
 .start video {
