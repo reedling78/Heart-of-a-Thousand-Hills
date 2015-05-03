@@ -3424,7 +3424,7 @@ body {
       list-style: none;
       overflow: hidden;
       overflow: visible;
-      margin: 6px 0 0; }
+      margin: 1px 0 0; }
       /* line 42, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
       .site-header .nav ul > li {
         list-style: none;
