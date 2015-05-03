@@ -1,0 +1,16 @@
+// 
+// FOOTER
+//
+
+.footer {
+    background: url('<?= IMAGES ?>/footer-Image.png') no-repeat center;
+    min-height: 500px; /*need to see how this adjusts*/
+    
+    .copyright p {
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        color: #c0c0af;
+        text-align: center;
+    }
+}
