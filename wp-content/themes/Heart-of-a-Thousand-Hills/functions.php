@@ -184,7 +184,7 @@ if ( ! function_exists( 'alpha_widget_init' ) ) {
 		if ( function_exists( 'register_sidebar' ) ) {
 			register_sidebar(
 				array(
-					'name' => __( 'Main Widget Area', 'alpha' ),
+					'name' => __( 'Image Gallery', 'alpha' ),
 					'id' => 'sidebar-1',
 					'description' => __( 'Appears on posts and pages.', 'alpha' ),
 					'before_widget' => '<div id="%1$s" class="widget %2$s">',
