@@ -224,7 +224,7 @@ if ( ! function_exists( 'alpha_validate_length' ) ) {
 }
 if ( ! function_exists( 'new_excerpt_length' ) ) {
 	function new_excerpt_length($length) {
-		return 10;
+		return 12;
 	}
 	add_filter('excerpt_length', 'new_excerpt_length');
 }
