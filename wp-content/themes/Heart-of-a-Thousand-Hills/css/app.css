@@ -8,25 +8,29 @@
   color: #fff;
   background: #cecd5a; }
 
-/* line 84, ../scss/_global.scss */
+/* line 85, ../scss/_global.scss */
 .dark {
   background-color: #333333; }
 
-/* line 85, ../scss/_global.scss */
-.seaweed {
-  background-color: #c8c660; }
-
 /* line 86, ../scss/_global.scss */
-.keylime {
-  background-color: #d6797b; }
+.seaweed {
+  background-color: #c8c758; }
 
-/* line 92, ../scss/_global.scss */
+/* line 87, ../scss/_global.scss */
+.keylime {
+  background-color: #d5d45e; }
+
+/* line 88, ../scss/_global.scss */
+.grey {
+  background-color: #565656; }
+
+/* line 94, ../scss/_global.scss */
 a {
   -webkit-transition: all 0.4s ease 0;
   -moz-transition: all 0.4s ease 0;
   transition: all 0.4s ease 0; }
 
-/* line 96, ../scss/_global.scss */
+/* line 98, ../scss/_global.scss */
 .text-center .inline-list {
   display: inline-block; }
 
@@ -3221,21 +3225,60 @@ blockquote p {
   .button:hover {
     color: #fff; }
 
-/* line 4, ../scss/components/_donate.scss */
-body {
-  background: #000000;
-  box-sizing: border-box; }
-
-/* line 9, ../scss/components/_donate.scss */
-.start {
-  overflow: hidden; }
+/* line 5, ../scss/components/_donate.scss */
+.donate {
+  position: relative; }
+  /* line 8, ../scss/components/_donate.scss */
+  .donate .column {
+    padding: 190px 0 240px; }
   /* line 12, ../scss/components/_donate.scss */
-  .start .content {
-    padding: 290px 0; }
-  /* line 16, ../scss/components/_donate.scss */
-  .start h2,
-  .start p {
-    text-align: center; }
+  .donate h2, .donate h3, .donate p, .donate .button {
+    text-align: center;
+    color: #565656; }
+  /* line 17, ../scss/components/_donate.scss */
+  .donate p {
+    margin-bottom: 50px; }
+  /* line 21, ../scss/components/_donate.scss */
+  .donate .seaweed .button {
+    border-color: #d5d45e; }
+    /* line 23, ../scss/components/_donate.scss */
+    .donate .seaweed .button:hover {
+      background-color: #d5d45e; }
+  /* line 27, ../scss/components/_donate.scss */
+  .donate .keylime .button {
+    border-color: #c8c758; }
+    /* line 29, ../scss/components/_donate.scss */
+    .donate .keylime .button:hover {
+      background-color: #c8c758; }
+  /* line 34, ../scss/components/_donate.scss */
+  .donate .event-button {
+    color: #565656;
+    position: absolute;
+    display: block;
+    border: 2px solid #b9b851;
+    bottom: 0;
+    width: 360px;
+    left: 50%;
+    margin: 0 0 0 -180px;
+    padding: 15px 0;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 12px 12px 0 0; }
+    /* line 52, ../scss/components/_donate.scss */
+    .donate .event-button svg {
+      width: 60px;
+      height: 60px; }
+      /* line 55, ../scss/components/_donate.scss */
+      .donate .event-button svg path,
+      .donate .event-button svg rect {
+        fill: #565656; }
+    /* line 61, ../scss/components/_donate.scss */
+    .donate .event-button:hover {
+      background-color: #b9b851; }
 
 /* line 5, ../scss/components/_event.scss */
 .event {
