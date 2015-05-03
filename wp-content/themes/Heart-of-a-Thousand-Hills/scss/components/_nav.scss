@@ -5,12 +5,12 @@
 .site-header {
 	position: fixed;
 	top: 0;
-	padding: 40px;
+	padding: 25px 0;
 	width: 100%;
 	z-index: 999;
 
 	.site-logo {
-		background: url('http://localhost:8888/Heart-of-a-Thousand-Hills/wp-content/uploads/2015/05/thousandHillsLogo1.svg') no-repeat;
+		background: url('../images/thousandHillsLogo1.svg') no-repeat;
 		width: 150px;
 		height: 150px;
 	}
@@ -29,7 +29,17 @@
 					a {
 						@include button;
 						margin: 0;
-						@include radius (25px);
+						font-weight: 400;
+						font-size: 20px;
+						@include radius(12px);
+
+						&:hover {
+							color: #fff;
+							
+							&:after {
+								display: none;
+							}
+						}
 					}
 				}
 			}
@@ -38,7 +48,7 @@
 				color: $secondary-color;
 				cursor: pointer;
 				display: inline-block;
-				font: 20px/50px $body-font-family;
+				font: 20px/58px $body-font-family;
 				position: relative;
 				text-transform: uppercase;
 				font-style: normal;
@@ -56,6 +66,17 @@
 						height: 2px;
 						background: $primary-color;
 					}
+				}
+
+				&.selected {
+					content: ".";
+					display: block;
+					position: absolute;
+					text-indent: -9999px;
+					bottom: 2px;
+					width: 100%;
+					height: 2px;
+					background: $primary-color;
 				}
 			}
 		}

@@ -1,0 +1,12 @@
+// 
+// BUTTON
+//
+
+.button {
+	text-transform: uppercase;
+	@include radius(12px);
+	
+	&:hover {
+		color: #fff;
+	}
+}

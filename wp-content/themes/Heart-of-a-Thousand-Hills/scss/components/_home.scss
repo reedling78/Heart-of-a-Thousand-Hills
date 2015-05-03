@@ -3,12 +3,18 @@
 //
 body {
 	background: $black;
+	box-sizing: border-box;
 }
 
 .home {
-	margin: 290px 0 0;
+	padding: 0 0 290px;
+	overflow: hidden;
 	h2,
 	p {
 		text-align: center;
+	}
+
+	h2 {
+		margin-top: 290px;
 	}
 }
