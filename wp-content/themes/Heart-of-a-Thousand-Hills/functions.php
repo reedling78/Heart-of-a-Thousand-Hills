@@ -318,10 +318,24 @@ function save_custom_meta($post_id) {
         delete_post_meta($post_id, 'googleMapsText', $oldGoogleMapText);
     }
 
+    $oldGoogleMapText = get_post_meta($post_id, 'eventDate', true);
+    $newGoogleMapText = $_POST['event_date'];
+    if ($newGoogleMapText && $newGoogleMapText != $oldGoogleMapText) {
+        update_post_meta($post_id, 'eventDate', $newGoogleMapText);
+    } elseif ('' == $newGoogleMapText && $oldGoogleMapText) {
+        delete_post_meta($post_id, 'eventDate', $oldGoogleMapText);
+    }
+
 }
 add_action('save_post', 'save_custom_meta');
 
-
+add_action('admin_head','add_custom_scripts');
+function add_custom_scripts() {
+     
+    echo '<script type="text/javascript">
+                jQuery(document).ready(function($) { $(".datepicker").datepicker();});
+        </script>';
+}
 
 
 /**
@@ -417,15 +431,24 @@ function ovn_copyrightString_display() {
 
 function show_event_button_box() {
 	global $custom_meta_fields, $post;
+
+	if(is_admin()) {
+    	wp_enqueue_script('jquery-ui-datepicker');
+    	wp_enqueue_style('jquery-ui', get_template_directory_uri().'/css/jquery-ui.min.css');
+	}
 // Use nonce for verification
 	echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
 
 	$radioButtonValue = get_post_meta($post->ID, 'event_button_selection', true);
 	$eventBrightTextValue = get_post_meta($post->ID, 'eventBrightText', true);
 	$googleMapsTextValue = get_post_meta($post->ID, 'googleMapsText', true);
+	$eventDate = get_post_meta($post->ID, 'eventDate', true);
      
     // Begin the field table and loop
     echo '<table class="form-table">';
+    	echo '<tr><th><label for="event_date">Event Date</label></th></tr>';
+    	echo '<tr><td><input type="text" class="datepicker" name="event_date" id="eventDate" value="'.$eventDate.'" size="30" />
+        <br /><span class="description">Url to the event bright page.</span></td></tr>';
     	echo '<tr><th><label for="event_button_selection">Event Button Selection</label></th></tr>';
     	echo '<tr><td>';
     	echo '<input type="radio" name=event_button_selection id="eventBright" value="eventBright"', $radioButtonValue == "eventBright" ? ' checked="checked"' : "", ' />
