@@ -3142,6 +3142,56 @@ blockquote p {
   /* line 461, ../bower_components/foundation/scss/foundation/components/_type.scss */
   h6 {
     font-size: 1rem; } }
+/* line 5, ../scss/components/_about.scss */
+.about {
+  position: relative; }
+  /* line 8, ../scss/components/_about.scss */
+  .about .arc {
+    position: absolute;
+    left: 0;
+    width: 100%; }
+  /* line 14, ../scss/components/_about.scss */
+  .about .column {
+    padding: 140px 0 180px; }
+  /* line 18, ../scss/components/_about.scss */
+  .about h2, .about h3, .about p, .about .button {
+    text-align: center;
+    color: #565656; }
+  /* line 23, ../scss/components/_about.scss */
+  .about p {
+    margin-bottom: 0; }
+    /* line 26, ../scss/components/_about.scss */
+    .about p.quote {
+      margin: 15px 0 10px;
+      padding: 0 180px;
+      line-height: 1.8; }
+  /* line 33, ../scss/components/_about.scss */
+  .about .content-area {
+    width: 80%;
+    margin: 0 auto; }
+
+/* line 40, ../scss/components/_about.scss */
+.avatar {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 45px auto 0; }
+
+/* line 49, ../scss/components/_about.scss */
+.board {
+  background: url("../images/test.jpg") center no-repeat;
+  background-size: cover;
+  padding: 130px 0; }
+  /* line 54, ../scss/components/_about.scss */
+  .board h2, .board h3, .board p {
+    color: #c0c0af;
+    text-align: center; }
+  /* line 59, ../scss/components/_about.scss */
+  .board .button {
+    margin: 60px 0 0; }
+
 /* line 5, ../scss/components/_blog-list.scss */
 .blog-list {
   padding: 60px 0;

@@ -69,29 +69,6 @@
 		<p>They're always working hard to get Rwanda's children what they need</p>
 		<p><a href="#" class="button">Join Our Board</a>
 	</div>
-	<div class="column large-7">
-		<ul class="inline-list">
-			<li>
-				<div class="avatar">
-						<img />
-				</div>
-			</li>
-			<li>
-				<div class="avatar">
-						<img />
-				</div>
-			</li>
-			<li>
-				<div class="avatar">
-						<img />
-				</div>
-			</li>
-			<li>
-				<a href="#" class="add">
-				</a>
-			</li>
-		</ul>
-	</div>
 </div>
         
 <!-- CONTENT AREA 3 -->
