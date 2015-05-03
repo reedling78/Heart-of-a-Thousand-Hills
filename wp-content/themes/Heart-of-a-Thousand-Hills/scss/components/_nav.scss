@@ -7,13 +7,23 @@
 	top: 0;
 	padding: 25px 0;
 	width: 100%;
+	height: 120px;
 	z-index: 999;
+
+	.main-nav-background {
+		height: 90px;
+		background-color: #333;
+		position: relative;
+		top: -80px;
+		z-index: -1;
+		opacity: 0;
+	}
 
 	.site-logo {
 		background: url('../images/thousandHillsLogo.svg') no-repeat;
 		width: 150px;
 		height: 150px;
-		margin: -35px 0 0 -35px;
+		margin: -40px;
 	}
 
 	.nav {
@@ -22,6 +32,7 @@
 		ul {
 			@include inline-list;
 			overflow: visible;
+			margin: 3px 0 0;
 
 			li {
 				margin: 0 15px;
@@ -49,7 +60,7 @@
 				color: $secondary-color;
 				cursor: pointer;
 				display: inline-block;
-				font: 20px/58px $body-font-family;
+				font: 20px/60px $body-font-family;
 				position: relative;
 				text-transform: uppercase;
 				font-style: normal;

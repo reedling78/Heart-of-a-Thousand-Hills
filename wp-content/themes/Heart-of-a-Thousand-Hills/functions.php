@@ -85,6 +85,8 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 	}
 
 	add_action( 'after_setup_theme', 'alpha_setup' );
+
+	
 }
 
 
@@ -337,6 +339,12 @@ function ovn_initialize_theme_options() {
 		'general'							// The section to which we're adding the setting
 	);
 	
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'facebook_url'
+	);
+
 	// Define the settings field
 	add_settings_field( 
 		'twitter_url', 					// The ID (or the name) of the field
@@ -344,6 +352,14 @@ function ovn_initialize_theme_options() {
 		'ovn_twitter_url_display', 		// The callback function used to render the field
 		'general'							// The section to which we're adding the setting
 	);
+
+
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'twitter_url'
+	);
+
 
 	// Define the settings field
 	add_settings_field( 
@@ -356,19 +372,21 @@ function ovn_initialize_theme_options() {
 	// Register the 'footer_message' setting with the 'General' section
 	register_setting(
 		'general',
-		'facebook_url'
-	);
-
-	// Register the 'footer_message' setting with the 'General' section
-	register_setting(
-		'general',
-		'twitter_url'
-	);
-
-	// Register the 'footer_message' setting with the 'General' section
-	register_setting(
-		'general',
 		'instagram_url'
+	);
+
+	// Define the settings field
+	add_settings_field( 
+		'copyrightString', 					// The ID (or the name) of the field
+		'copyright String', 					// The text used to label the field
+		'ovn_copyrightString_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);	
+
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'copyrightString'
 	);
 	
 } // end ovn_initialize_theme_options
@@ -393,6 +411,9 @@ function ovn_instagram_url_display() {
 	echo '<input type="text" name="instagram_url" id="instagram_url" value="' . get_option( 'instagram_url' ) . '" />';
 } // end ovn_twitter_url_display
 
+function ovn_copyrightString_display() {
+	echo '<input type="text" name="copyrightString" id="copyrightString" value="' . get_option( 'copyrightString' ) . '" />';
+} // end ovn_twitter_url_display
 
 function show_event_button_box() {
 	global $custom_meta_fields, $post;

@@ -8,25 +8,29 @@
   color: #fff;
   background: #cecd5a; }
 
-/* line 84, ../scss/_global.scss */
+/* line 85, ../scss/_global.scss */
 .dark {
   background-color: #333333; }
 
-/* line 85, ../scss/_global.scss */
-.seaweed {
-  background-color: #c8c660; }
-
 /* line 86, ../scss/_global.scss */
-.keylime {
-  background-color: #d6797b; }
+.seaweed {
+  background-color: #c8c758; }
 
-/* line 92, ../scss/_global.scss */
+/* line 87, ../scss/_global.scss */
+.keylime {
+  background-color: #d5d45e; }
+
+/* line 88, ../scss/_global.scss */
+.grey {
+  background-color: #565656; }
+
+/* line 94, ../scss/_global.scss */
 a {
   -webkit-transition: all 0.4s ease 0;
   -moz-transition: all 0.4s ease 0;
   transition: all 0.4s ease 0; }
 
-/* line 96, ../scss/_global.scss */
+/* line 98, ../scss/_global.scss */
 .text-center .inline-list {
   display: inline-block; }
 
@@ -2107,6 +2111,138 @@ label.error {
     .inline-list > li > * {
       display: block; }
 
+/* line 169, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+.reveal-modal-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1004;
+  display: none;
+  left: 0; }
+
+/* line 171, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+.reveal-modal {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  z-index: 1005;
+  width: 100%;
+  top: 0;
+  border-radius: 3px;
+  left: 0;
+  background-color: #FFFFFF;
+  padding: 1.875rem;
+  border: solid 1px #666666;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  @media only screen and (max-width: 40em) {
+    /* line 171, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+    .reveal-modal {
+      min-height: 100vh; } }
+  /* line 89, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+  .reveal-modal .column, .reveal-modal .columns {
+    min-width: 0; }
+  /* line 92, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+  .reveal-modal > :first-child {
+    margin-top: 0; }
+  /* line 94, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+  .reveal-modal > :last-child {
+    margin-bottom: 0; }
+  @media only screen and (min-width: 40.063em) {
+    /* line 171, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+    .reveal-modal {
+      width: 80%;
+      max-width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 40.063em) {
+    /* line 171, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+    .reveal-modal {
+      top: 6.25rem; } }
+  /* line 182, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+  .reveal-modal.radius {
+    border-radius: 3px; }
+  /* line 183, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+  .reveal-modal.round {
+    border-radius: 1000px; }
+  /* line 184, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+  .reveal-modal.collapse {
+    padding: 0; }
+  @media only screen and (min-width: 40.063em) {
+    /* line 185, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+    .reveal-modal.tiny {
+      width: 30%;
+      max-width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 40.063em) {
+    /* line 186, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+    .reveal-modal.small {
+      width: 40%;
+      max-width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 40.063em) {
+    /* line 187, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+    .reveal-modal.medium {
+      width: 60%;
+      max-width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 40.063em) {
+    /* line 188, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+    .reveal-modal.large {
+      width: 70%;
+      max-width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 40.063em) {
+    /* line 189, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+    .reveal-modal.xlarge {
+      width: 95%;
+      max-width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  /* line 190, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+  .reveal-modal.full {
+    top: 0;
+    left: 0;
+    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    max-width: none !important;
+    margin-left: 0 !important; }
+    @media only screen and (min-width: 40.063em) {
+      /* line 190, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+      .reveal-modal.full {
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto; } }
+  /* line 202, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+  .reveal-modal.toback {
+    z-index: 1003; }
+  /* line 206, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
+  .reveal-modal .close-reveal-modal {
+    font-size: 2.5rem;
+    line-height: 1;
+    position: absolute;
+    top: 0.625rem;
+    right: 1.375rem;
+    color: #AAAAAA;
+    font-weight: bold;
+    cursor: pointer; }
+
 /* line 113, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 meta.foundation-mq-topbar {
   font-family: "/only screen and (min-width:40.063em)/";
@@ -3221,21 +3357,60 @@ blockquote p {
   .button:hover {
     color: #fff; }
 
-/* line 4, ../scss/components/_donate.scss */
-body {
-  background: #000000;
-  box-sizing: border-box; }
-
-/* line 9, ../scss/components/_donate.scss */
-.start {
-  overflow: hidden; }
+/* line 5, ../scss/components/_donate.scss */
+.donate {
+  position: relative; }
+  /* line 8, ../scss/components/_donate.scss */
+  .donate .column {
+    padding: 190px 0 240px; }
   /* line 12, ../scss/components/_donate.scss */
-  .start .content {
-    padding: 290px 0; }
-  /* line 16, ../scss/components/_donate.scss */
-  .start h2,
-  .start p {
-    text-align: center; }
+  .donate h2, .donate h3, .donate p, .donate .button {
+    text-align: center;
+    color: #565656; }
+  /* line 17, ../scss/components/_donate.scss */
+  .donate p {
+    margin-bottom: 50px; }
+  /* line 21, ../scss/components/_donate.scss */
+  .donate .seaweed .button {
+    border-color: #d5d45e; }
+    /* line 23, ../scss/components/_donate.scss */
+    .donate .seaweed .button:hover {
+      background-color: #d5d45e; }
+  /* line 27, ../scss/components/_donate.scss */
+  .donate .keylime .button {
+    border-color: #c8c758; }
+    /* line 29, ../scss/components/_donate.scss */
+    .donate .keylime .button:hover {
+      background-color: #c8c758; }
+  /* line 34, ../scss/components/_donate.scss */
+  .donate .event-button {
+    color: #565656;
+    position: absolute;
+    display: block;
+    border: 2px solid #b9b851;
+    bottom: 0;
+    width: 360px;
+    left: 50%;
+    margin: 0 0 0 -180px;
+    padding: 15px 0;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 12px 12px 0 0; }
+    /* line 52, ../scss/components/_donate.scss */
+    .donate .event-button svg {
+      width: 60px;
+      height: 60px; }
+      /* line 55, ../scss/components/_donate.scss */
+      .donate .event-button svg path,
+      .donate .event-button svg rect {
+        fill: #565656; }
+    /* line 61, ../scss/components/_donate.scss */
+    .donate .event-button:hover {
+      background-color: #b9b851; }
 
 /* line 5, ../scss/components/_event.scss */
 .event {
@@ -3264,6 +3439,24 @@ body {
   .event .button:hover svg path {
     fill: #fff; }
 
+/* line 5, ../scss/components/_footer.scss */
+.footer {
+  height: 500px; }
+  /* line 8, ../scss/components/_footer.scss */
+  .footer .copyright p {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    color: #565656;
+    text-align: center;
+    margin-top: 175px; }
+  /* line 17, ../scss/components/_footer.scss */
+  .footer .inline-list {
+    margin-top: 245px; }
+  /* line 21, ../scss/components/_footer.scss */
+  .footer .inline-list li {
+    margin-left: 24%; }
+
 /* line 4, ../scss/components/_home.scss */
 body {
   background: #000000;
@@ -3276,7 +3469,7 @@ body {
   .start .content {
     padding: 290px 0; }
   /* line 16, ../scss/components/_home.scss */
-  .start h2,
+  .start h3,
   .start p {
     text-align: center; }
 
@@ -3286,17 +3479,26 @@ body {
   top: 0;
   padding: 25px 0;
   width: 100%;
+  height: 120px;
   z-index: 999; }
-  /* line 12, ../scss/components/_nav.scss */
+  /* line 13, ../scss/components/_nav.scss */
+  .site-header .main-nav-background {
+    height: 90px;
+    background-color: #333;
+    position: relative;
+    top: -80px;
+    z-index: -1;
+    opacity: 0; }
+  /* line 22, ../scss/components/_nav.scss */
   .site-header .site-logo {
     background: url("../images/thousandHillsLogo.svg") no-repeat;
     width: 150px;
     height: 150px;
-    margin: -35px 0 0 -35px; }
-  /* line 19, ../scss/components/_nav.scss */
+    margin: -40px; }
+  /* line 29, ../scss/components/_nav.scss */
   .site-header .nav {
     float: right; }
-    /* line 22, ../scss/components/_nav.scss */
+    /* line 32, ../scss/components/_nav.scss */
     .site-header .nav ul {
       margin: 0 auto 1.0625rem auto;
       margin-left: -1.375rem;
@@ -3304,7 +3506,8 @@ body {
       padding: 0;
       list-style: none;
       overflow: hidden;
-      overflow: visible; }
+      overflow: visible;
+      margin: 3px 0 0; }
       /* line 42, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
       .site-header .nav ul > li {
         list-style: none;
@@ -3314,10 +3517,10 @@ body {
         /* line 47, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
         .site-header .nav ul > li > * {
           display: block; }
-      /* line 26, ../scss/components/_nav.scss */
+      /* line 37, ../scss/components/_nav.scss */
       .site-header .nav ul li {
         margin: 0 15px; }
-        /* line 30, ../scss/components/_nav.scss */
+        /* line 41, ../scss/components/_nav.scss */
         .site-header .nav ul li:last-child a {
           border-style: solid;
           border-width: 2px;
@@ -3352,23 +3555,23 @@ body {
           /* line 168, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
           .site-header .nav ul li:last-child a:hover, .site-header .nav ul li:last-child a:focus {
             color: #cecd5a; }
-          /* line 37, ../scss/components/_nav.scss */
+          /* line 48, ../scss/components/_nav.scss */
           .site-header .nav ul li:last-child a:hover {
             color: #fff; }
-            /* line 40, ../scss/components/_nav.scss */
+            /* line 51, ../scss/components/_nav.scss */
             .site-header .nav ul li:last-child a:hover:after {
               display: none; }
-      /* line 48, ../scss/components/_nav.scss */
+      /* line 59, ../scss/components/_nav.scss */
       .site-header .nav ul a {
         color: #c0c0af;
         cursor: pointer;
         display: inline-block;
-        font: 20px/58px "Quire Sans W01", Arial, Helvetica, sans-serif;
+        font: 20px/60px "Quire Sans W01", Arial, Helvetica, sans-serif;
         position: relative;
         text-transform: uppercase;
         font-style: normal;
         position: relative; }
-        /* line 60, ../scss/components/_nav.scss */
+        /* line 71, ../scss/components/_nav.scss */
         .site-header .nav ul a:hover:after {
           content: ".";
           display: block;
@@ -3378,7 +3581,7 @@ body {
           width: 100%;
           height: 2px;
           background: #cecd5a; }
-        /* line 72, ../scss/components/_nav.scss */
+        /* line 83, ../scss/components/_nav.scss */
         .site-header .nav ul a.selected {
           content: ".";
           display: block;

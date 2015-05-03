@@ -1,21 +1,65 @@
 // 
-// HOME
+// DONATE
 //
-body {
-	background: $black;
-	box-sizing: border-box;
-}
 
-.start {
-	overflow: hidden;
+.donate {
+	position: relative;
 
-	.content {
-		padding: 290px 0;
+	.column {
+		padding: 190px 0 240px;
 	}
 
-	h2,
-	p {
+	h2, h3, p, .button {
 		text-align: center;
+		color: $grey;
 	}
 
+	p {
+		margin-bottom: 50px;
+	}
+
+	.seaweed .button { 
+		border-color: $keylime; 
+		&:hover {
+			background-color: $keylime;
+		}
+	}
+	.keylime .button { 
+		border-color: $seaweed; 
+		&:hover {
+			background-color: $seaweed;
+		}
+	}
+
+	.event-button {
+		color: $grey;
+		position: absolute;
+		display: block;
+		border: 2px solid #b9b851;
+		bottom: 0;
+		width: 360px;
+		left: 50%;
+		margin: 0 0 0 -180px;
+		padding: 15px 0;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 800;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 1px;
+		@include radius(12px 12px 0 0);
+
+		svg {
+			width: 60px;
+			height: 60px;
+			path,
+			rect {
+				fill: $grey;
+			}
+		}
+
+		&:hover {
+			background-color: #b9b851;
+		}
+	}
 }

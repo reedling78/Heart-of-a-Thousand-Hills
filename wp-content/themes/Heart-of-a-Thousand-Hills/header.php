@@ -53,7 +53,7 @@
 
 
 		<!-- HEADER -->
-		<header class="site-header">
+		<header class="site-header"> 
 			<div class="row">
 				<div class="column medium-6">
 					<div class="site-logo">
@@ -73,4 +73,9 @@
 					</nav>
 				</div> <!-- end small-9 -->
 			</div> <!-- end row -->
+			<div data-150="opacity:0" data-650="opacity:1" class="main-nav-background"></div>
+
+
+
+
 		</header> <!-- end site-header -->
