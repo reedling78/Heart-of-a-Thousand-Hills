@@ -3180,14 +3180,13 @@ body {
     opacity: 0; }
   /* line 22, ../scss/components/_nav.scss */
   .site-header .site-logo {
-    background: url("../images/thousandHillsLogo.svg") no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: -40px; }
-  /* line 29, ../scss/components/_nav.scss */
+    background: url("../images/hothlogo.svg") no-repeat;
+    width: 80px;
+    height: 80px; }
+  /* line 28, ../scss/components/_nav.scss */
   .site-header .nav {
     float: right; }
-    /* line 32, ../scss/components/_nav.scss */
+    /* line 31, ../scss/components/_nav.scss */
     .site-header .nav ul {
       margin: 0 auto 1.0625rem auto;
       margin-left: -1.375rem;
@@ -3206,10 +3205,10 @@ body {
         /* line 47, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
         .site-header .nav ul > li > * {
           display: block; }
-      /* line 37, ../scss/components/_nav.scss */
+      /* line 36, ../scss/components/_nav.scss */
       .site-header .nav ul li {
         margin: 0 15px; }
-        /* line 41, ../scss/components/_nav.scss */
+        /* line 40, ../scss/components/_nav.scss */
         .site-header .nav ul li:last-child a {
           border-style: solid;
           border-width: 2px;
@@ -3244,13 +3243,13 @@ body {
           /* line 168, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
           .site-header .nav ul li:last-child a:hover, .site-header .nav ul li:last-child a:focus {
             color: #cecd5a; }
-          /* line 48, ../scss/components/_nav.scss */
+          /* line 47, ../scss/components/_nav.scss */
           .site-header .nav ul li:last-child a:hover {
             color: #fff; }
-            /* line 51, ../scss/components/_nav.scss */
+            /* line 50, ../scss/components/_nav.scss */
             .site-header .nav ul li:last-child a:hover:after {
               display: none; }
-      /* line 59, ../scss/components/_nav.scss */
+      /* line 58, ../scss/components/_nav.scss */
       .site-header .nav ul a {
         color: #c0c0af;
         cursor: pointer;
@@ -3260,7 +3259,7 @@ body {
         text-transform: uppercase;
         font-style: normal;
         position: relative; }
-        /* line 71, ../scss/components/_nav.scss */
+        /* line 70, ../scss/components/_nav.scss */
         .site-header .nav ul a:hover:after {
           content: ".";
           display: block;
@@ -3270,7 +3269,7 @@ body {
           width: 100%;
           height: 2px;
           background: #cecd5a; }
-        /* line 83, ../scss/components/_nav.scss */
+        /* line 82, ../scss/components/_nav.scss */
         .site-header .nav ul a.selected {
           content: ".";
           display: block;
