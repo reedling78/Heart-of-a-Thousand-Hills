@@ -335,6 +335,11 @@ add_action('save_post', 'save_custom_meta');
 
 add_action('admin_head','add_custom_scripts');
 function add_custom_scripts() {
+
+	if(is_admin()) {
+    	wp_enqueue_script('jquery-ui-datepicker');
+    	wp_enqueue_style('jquery-ui', get_template_directory_uri().'/css/jquery-ui.min.css');
+	}
      
     echo '<script type="text/javascript">
                 jQuery(document).ready(function($) { $(".datepicker").datepicker();});
@@ -528,10 +533,7 @@ function ovn_attendEventLink_display() {
 function show_event_button_box() {
 	global $custom_meta_fields, $post;
 
-	if(is_admin()) {
-    	wp_enqueue_script('jquery-ui-datepicker');
-    	wp_enqueue_style('jquery-ui', get_template_directory_uri().'/css/jquery-ui.min.css');
-	}
+	
 // Use nonce for verification
 	echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
 
