@@ -3441,16 +3441,21 @@ blockquote p {
 
 /* line 5, ../scss/components/_footer.scss */
 .footer {
-  background: url("<?= IMAGES ?>/footer-Image.png") no-repeat center;
-  min-height: 500px;
-  /*need to see how this adjusts*/ }
-  /* line 9, ../scss/components/_footer.scss */
+  height: 500px; }
+  /* line 8, ../scss/components/_footer.scss */
   .footer .copyright p {
     font-size: 13px;
     font-weight: normal;
     font-style: normal;
     color: #c0c0af;
-    text-align: center; }
+    text-align: center;
+    margin-top: 175px; }
+  /* line 17, ../scss/components/_footer.scss */
+  .footer .inline-list {
+    margin-top: 245px; }
+  /* line 21, ../scss/components/_footer.scss */
+  .footer .inline-list li {
+    margin-left: 24%; }
 
 /* line 4, ../scss/components/_home.scss */
 body {
