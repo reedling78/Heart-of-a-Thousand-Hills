@@ -1,0 +1,73 @@
+// 
+// BLOG LIST
+//
+
+.blog-list {
+	padding: 60px 0;
+
+	.arrows {
+		float: right;
+
+		svg {
+			width: 13px;
+		}
+
+		.disabled {
+			svg path {
+				fill: #515151;
+			}
+			&:hover {
+				svg path {
+					fill: #515151;
+				}
+			}
+		}
+		a:hover {
+			svg path {
+				fill: $primary-color;
+			}
+		}
+	}
+
+	.archive {
+		text-transform: uppercase;
+		font-style: normal;
+		font-size: 16px;
+		font-weight: 800;
+		letter-spacing: 1px;
+
+		a {
+			color: $secondary-color;
+			font-size: 16px;
+			font-weight: 800;
+
+			&.selected, 
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	.list {
+		date {
+			display: block;
+			margin: 30px 0 20px;
+			font-style: normal;
+			font-weight: 800;
+			letter-spacing: 1px;
+		}
+
+		h2 {
+			font-size: 30px;
+			a {
+				color: $secondary-color;
+			}
+		}
+
+		p {
+			a {
+				white-space: nowrap;
+			}
+		}
+	}
+}

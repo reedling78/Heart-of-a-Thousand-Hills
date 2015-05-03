@@ -24,7 +24,7 @@
                 <a href="<?= get_post_meta($post->ID, 'eventBrightText', true) ?>" class="button">
                     Buy Tickets
                 </a>
-                <?
+                <?php 
             }
             else {
                 ?>
@@ -40,7 +40,7 @@
                     </svg>
                     Find It
                 </a>
-                <?
+                <?php
             } ?>
             
         </div>
@@ -48,7 +48,7 @@
 </div>
 
 
-        <?php
-      }
-    }
-  ?>
+        <?php 
+      } 
+    } 
+   ?>

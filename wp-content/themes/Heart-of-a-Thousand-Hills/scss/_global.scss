@@ -27,10 +27,12 @@
 	box-shadow: $shadow;
 }
 
-@mixin transition($property: all, $duration: .4s, $timing-function: ease, $delay: 0) {
-	-webkit-transition: $property $duration $timing-function $delay;
-	-moz-transition: $property $duration $timing-function $delay;
-	transition: $property $duration $timing-function $delay;
+@mixin transition($transition-effect: all .4s ease-in) {
+	-webkit-transition: $transition-effect;
+	-moz-transition: $transition-effect;
+  -o-transition: $transition-effect;
+  -ms-transition: $transition-effect;
+	transition: $transition-effect;
 }
 
 @mixin selection {
