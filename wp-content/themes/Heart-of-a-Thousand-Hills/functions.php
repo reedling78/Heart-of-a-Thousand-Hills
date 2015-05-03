@@ -221,43 +221,6 @@ if ( ! function_exists( 'alpha_validate_length' ) ) {
 }
 
 
-/**
- * ----------------------------------------------------------------------------------------
- * 9.0 - Include the generated CSS in the page header.
- * ----------------------------------------------------------------------------------------
- */
-// if ( ! function_exists( 'alpha_load_wp_head' ) ) {
-// 	function alpha_load_wp_head() {
-// 		// Get the logos
-// 		$logo = IMAGES . '/thousandHillsLogo1.svg';
-// 		$logo_retina = IMAGES . '/thousandHillsLogo1.svg';
-
-// 		$logo_size = getimagesize( $logo );
-// 		?>
-		
-// 		<!-- Logo CSS -->
-// 		<style type="text/css">
-// 			.site-logo a {
-// 				width: <?php echo $logo_size[0] ?>px;
-// 				height: <?php echo $logo_size[1] ?>px;
-// 				display: inline-block;
-// 			}
-
-// 			@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-// 			only screen and (-moz-min-device-pixel-ratio: 1.5),
-// 			only screen and (-o-min-device-pixel-ratio: 3/2),
-// 			only screen and (min-device-pixel-ratio: 1.5) {
-// 				.site-logo a {
-// 					background-size: <?php echo $logo_size[0]; ?>px <?php echo $logo_size[1]; ?>px;
-// 				}
-// 			}
-// 		</style>
-
-// 		<?php
-// 	}
-
-// 	add_action( 'wp_head', 'alpha_load_wp_head' );
-// }
 
 /**
  * ----------------------------------------------------------------------------------------
