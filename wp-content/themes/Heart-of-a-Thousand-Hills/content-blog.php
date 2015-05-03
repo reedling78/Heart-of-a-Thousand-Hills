@@ -18,11 +18,11 @@
 	</div>
 	<div class="row">
 		<div class="columns large-12">
-			<ul class="large-block-grid-2 small-block-grid-1 list">
+			<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 list">
 
 				<?php 
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array('posts_per_page' => 12, 'paged' => $paged );
+				$args = array('posts_per_page' => 6, 'paged' => $paged );
 				query_posts($args); ?>
 				<!-- the loop -->
 				<?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
