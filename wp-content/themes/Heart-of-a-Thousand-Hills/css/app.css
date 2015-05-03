@@ -3224,6 +3224,22 @@ blockquote p {
   .button:hover {
     color: #fff; }
 
+/* line 4, ../scss/components/_donate.scss */
+body {
+  background: #000000;
+  box-sizing: border-box; }
+
+/* line 9, ../scss/components/_donate.scss */
+.start {
+  overflow: hidden; }
+  /* line 12, ../scss/components/_donate.scss */
+  .start .content {
+    padding: 290px 0; }
+  /* line 16, ../scss/components/_donate.scss */
+  .start h2,
+  .start p {
+    text-align: center; }
+
 /* line 5, ../scss/components/_event.scss */
 .event {
   height: auto; }

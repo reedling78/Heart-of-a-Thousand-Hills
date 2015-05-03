@@ -1,0 +1,21 @@
+// 
+// HOME
+//
+body {
+	background: $black;
+	box-sizing: border-box;
+}
+
+.start {
+	overflow: hidden;
+
+	.content {
+		padding: 290px 0;
+	}
+
+	h2,
+	p {
+		text-align: center;
+	}
+
+}

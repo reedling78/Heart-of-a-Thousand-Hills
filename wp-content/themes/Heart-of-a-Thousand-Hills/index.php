@@ -42,5 +42,16 @@
 </div>
 <!-- END CONTENT AREA 3 -->
 
+<!-- CONTENT AREA 5 - IN BETA -->
+
+<div class="row donate">
+	<div class="column large-6 seaweed">
+	</div>
+	<div class="column large-6 keylime">
+	</div>
+</div>
+
+<!-- END CONTENT AREA 5 -->
+
 
 <?php get_footer(); ?>
