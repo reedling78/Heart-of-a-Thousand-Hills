@@ -184,7 +184,7 @@ if ( ! function_exists( 'alpha_widget_init' ) ) {
 		if ( function_exists( 'register_sidebar' ) ) {
 			register_sidebar(
 				array(
-					'name' => __( 'Main Widget Area', 'alpha' ),
+					'name' => __( 'Image Gallery', 'alpha' ),
 					'id' => 'sidebar-1',
 					'description' => __( 'Appears on posts and pages.', 'alpha' ),
 					'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -327,7 +327,7 @@ function save_custom_meta($post_id) {
     }
 
     $oldGoogleMapText = get_post_meta($post_id, 'eventDate', true);
-    $newGoogleMapText = $_POST['event_date'];
+    $newGoogleMapText = strtotime($_POST['event_date']);
     if ($newGoogleMapText && $newGoogleMapText != $oldGoogleMapText) {
         update_post_meta($post_id, 'eventDate', $newGoogleMapText);
     } elseif ('' == $newGoogleMapText && $oldGoogleMapText) {
@@ -544,7 +544,8 @@ function show_event_button_box() {
 	$radioButtonValue = get_post_meta($post->ID, 'event_button_selection', true);
 	$eventBrightTextValue = get_post_meta($post->ID, 'eventBrightText', true);
 	$googleMapsTextValue = get_post_meta($post->ID, 'googleMapsText', true);
-	$eventDate = get_post_meta($post->ID, 'eventDate', true);
+
+	$eventDate = date("m/d/Y", get_post_meta($post->ID, 'eventDate', true));
      
     // Begin the field table and loop
     echo '<table class="form-table">';
