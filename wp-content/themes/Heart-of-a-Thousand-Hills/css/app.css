@@ -2551,7 +2551,7 @@ label.error {
   top: 0;
   border-radius: 3px;
   left: 0;
-  background-color: #FFFFFF;
+  background-color: #c8c758;
   padding: 1.875rem;
   border: solid 1px #666666;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
@@ -3245,16 +3245,19 @@ blockquote p {
 
 /* line 7, ../scss/components/_blog-post.scss */
 #blog-post h2 {
-  margin-left: 30px; }
-/* line 11, ../scss/components/_blog-post.scss */
+  margin-left: 30px;
+  color: #333; }
+/* line 12, ../scss/components/_blog-post.scss */
 #blog-post h3 {
   margin-top: 20px;
   margin-left: 30px;
-  margin-bottom: 0; }
-/* line 17, ../scss/components/_blog-post.scss */
+  margin-bottom: 0;
+  color: #333; }
+/* line 19, ../scss/components/_blog-post.scss */
 #blog-post p {
   margin-left: 30px;
-  font-style: normal; }
+  font-style: normal;
+  color: #333; }
 
 /* line 5, ../scss/components/_button.scss */
 .button {
@@ -3355,9 +3358,8 @@ blockquote p {
 /* line 5, ../scss/components/_footer.scss */
 .footer {
   height: auto;
-  width: 100%;
-  min-height: 500px; }
-  /* line 10, ../scss/components/_footer.scss */
+  width: 100%; }
+  /* line 9, ../scss/components/_footer.scss */
   .footer .copyright p {
     font-size: 13px;
     font-weight: normal;
@@ -3365,10 +3367,10 @@ blockquote p {
     color: #565656;
     text-align: center;
     margin-top: 175px; }
-  /* line 19, ../scss/components/_footer.scss */
+  /* line 18, ../scss/components/_footer.scss */
   .footer .inline-list {
     margin-top: 245px; }
-  /* line 23, ../scss/components/_footer.scss */
+  /* line 22, ../scss/components/_footer.scss */
   .footer .inline-list li {
     margin-left: 24%; }
 
