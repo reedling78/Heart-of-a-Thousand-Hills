@@ -246,4 +246,20 @@ if ( ! function_exists( 'alpha_scripts' ) ) {
 
 	add_action( 'wp_enqueue_scripts', 'alpha_scripts' );
 }
+
+function create_posttype() {
+
+	register_post_type( 'events',
+		array(
+			'labels' => array(
+				'name' => __( 'Events' ),
+				'singular_name' => __( 'Events' )
+			),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'events'),
+		)
+	);
+}
+add_action( 'init', 'create_posttype' );
 ?>
