@@ -40,6 +40,7 @@
         </div>
     </div>
 </div>
+<?php require_once('content-event.php'); ?>
 <!-- END CONTENT AREA 3 -->
 
 <!-- CONTENT AREA 5 - IN BETA -->
