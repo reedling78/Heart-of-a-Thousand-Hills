@@ -49,7 +49,7 @@ require(['jquery'], function (skrollr) {
             }, 2000);
         };
 
-        scrollToAnchor('WhoWeAre');
+
 
         $('body').css('height', 'auto');
 
