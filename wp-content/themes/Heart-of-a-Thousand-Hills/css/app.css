@@ -8,29 +8,25 @@
   color: #fff;
   background: #cecd5a; }
 
-/* line 85, ../scss/_global.scss */
+/* line 84, ../scss/_global.scss */
 .dark {
   background-color: #333333; }
 
-/* line 86, ../scss/_global.scss */
-.green {
-  background-color: #333333; }
+/* line 85, ../scss/_global.scss */
+.seaweed {
+  background-color: #c8c660; }
 
-/* line 87, ../scss/_global.scss */
-.pink {
+/* line 86, ../scss/_global.scss */
+.keylime {
   background-color: #d6797b; }
 
-/* line 88, ../scss/_global.scss */
-.teal {
-  background-color: #74bdb2; }
-
-/* line 94, ../scss/_global.scss */
+/* line 92, ../scss/_global.scss */
 a {
   -webkit-transition: all 0.4s ease 0;
   -moz-transition: all 0.4s ease 0;
   transition: all 0.4s ease 0; }
 
-/* line 98, ../scss/_global.scss */
+/* line 96, ../scss/_global.scss */
 .text-center .inline-list {
   display: inline-block; }
 
@@ -3219,8 +3215,9 @@ blockquote p {
 /* line 5, ../scss/components/_button.scss */
 .button {
   text-transform: uppercase;
-  border-radius: 12px; }
-  /* line 9, ../scss/components/_button.scss */
+  border-radius: 12px;
+  font-style: normal; }
+  /* line 10, ../scss/components/_button.scss */
   .button:hover {
     color: #fff; }
 
@@ -3243,21 +3240,29 @@ body {
 /* line 5, ../scss/components/_event.scss */
 .event {
   height: auto; }
-  /* line 7, ../scss/components/_event.scss */
+  /* line 8, ../scss/components/_event.scss */
   .event .event-image {
-    width: 50%;
-    float: left;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     min-height: 698px; }
-  /* line 13, ../scss/components/_event.scss */
+  /* line 15, ../scss/components/_event.scss */
   .event .event-description {
-    width: 50%;
-    float: right;
     text-align: center;
     padding: 145px 100px; }
-  /* line 19, ../scss/components/_event.scss */
+  /* line 20, ../scss/components/_event.scss */
+  .event svg {
+    width: 9px;
+    margin-right: 7px; }
+  /* line 25, ../scss/components/_event.scss */
   .event p {
     margin-bottom: 60px; }
+  /* line 29, ../scss/components/_event.scss */
+  .event h3, .event p {
+    color: #cecd5a; }
+  /* line 36, ../scss/components/_event.scss */
+  .event .button:hover svg path {
+    fill: #fff; }
 
 /* line 4, ../scss/components/_home.scss */
 body {
