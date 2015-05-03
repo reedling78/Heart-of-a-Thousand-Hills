@@ -1,7 +1,7 @@
 
 <div class="blog-list dark">
 	<div class="row">
-		<div class="columns medium-6">
+		<div class="columns small-8">
 			<ul class="inline-list archive">
 				<li>Archives</li>
 				<li><a href="#" class="selected blog-page">2013</a></li>
@@ -9,7 +9,7 @@
 				<li><a href="#" class="blog-page">2015</a></li>
 			</ul>
 		</div>
-		<div class="columns medium-6">
+		<div class="columns small-4">
 			<ul class="inline-list arrows">
 				<li><a href="#" class="disabled"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 73.7 74.2" enable-background="new 0 0 73.7 74.2" xml:space="preserve"><g><path fill="#C0C0AF" d="M73.1 40.6H13.6L42 69l-5 5L0 37l37-37l5 5L13.6 33.5h59.5V40.6z"/></g></svg></a></li>
 				<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 73.7 74.2" enable-background="new 0 0 73.7 74.2" xml:space="preserve"><g><path fill="#C0C0AF" d="M73.3 37l-37 37l-5-5l28.4-28.4H0.3v-7.1h59.5L31.3 5.1l5-5L73.3 37z"/></g></svg></a></li>
