@@ -35,12 +35,14 @@
 
 
 <div id="DonateForm" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <?php echo do_shortcode('[contact-form-7 id="17" title="Contact form 1"]'); ?>
+    <div class="namespace donation-form ">
+  <?php echo do_shortcode('[dgx-donate]'); ?>
+  </div>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
 <div id="ContentForm" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <?php echo do_shortcode('[contact-form-7 id="17" title="Contact form 1"]'); ?>
+ <?php echo do_shortcode('[contact-form-7 id="17" title="Contact form 1"]'); ?>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
