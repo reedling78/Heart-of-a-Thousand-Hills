@@ -392,7 +392,77 @@ function ovn_initialize_theme_options() {
 		'general',
 		'copyrightString'
 	);
-	
+
+	// Define the settings field
+	add_settings_field( 
+		'homePageTitle', 					// The ID (or the name) of the field
+		'Home Page Title', 					// The text used to label the field
+		'ovn_homePageTitle_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);	
+
+	// Register the 'home page title' setting with the 'General' section
+	register_setting(
+		'general',
+		'homePageTitle'
+	);
+
+	// Define the settings field
+	add_settings_field( 
+		'homePageSubTitle', 					// The ID (or the name) of the field
+		'Home Page Sub Title', 					// The text used to label the field
+		'ovn_homePageSubTitle_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);	
+
+	// Register the 'home page sub title' setting with the 'General' section
+	register_setting(
+		'general',
+		'homePageSubTitle'
+	);
+
+	// Define the settings field
+	add_settings_field( 
+		'donateMoneyTitle', 					// The ID (or the name) of the field
+		'Donate Money Title', 					// The text used to label the field
+		'ovn_donateMoneyTitle_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);	
+
+	// Register the 'donate money title' setting with the 'General' section
+	register_setting(
+		'general',
+		'donateMoneyTitle'
+	);
+
+// Define the settings field
+	add_settings_field( 
+		'donateMoneySubTitle', 					// The ID (or the name) of the field
+		'Donate Money Sub Title', 					// The text used to label the field
+		'ovn_donateMoneySubTitle_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);	
+
+	// Register the 'donate money title' setting with the 'General' section
+	register_setting(
+		'general',
+		'donateMoneySubTitle'
+	);
+
+	// Define the settings field
+	add_settings_field( 
+		'attendEventLink', 					// The ID (or the name) of the field
+		'Attend Event LInk', 					// The text used to label the field
+		'ovn_attendEventLink_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);	
+
+	// Register the 'attend event' setting with the 'General' section
+	register_setting(
+		'general',
+		'attendEventLink'
+	);
+
 } // end ovn_initialize_theme_options
 add_action( 'admin_init', 'ovn_initialize_theme_options' );
 
@@ -413,11 +483,33 @@ function ovn_twitter_url_display() {
 
 function ovn_instagram_url_display() {
 	echo '<input type="text" name="instagram_url" id="instagram_url" value="' . get_option( 'instagram_url' ) . '" />';
-} // end ovn_twitter_url_display
+} // end ovn_instagram_url_display
 
 function ovn_copyrightString_display() {
 	echo '<input type="text" name="copyrightString" id="copyrightString" value="' . get_option( 'copyrightString' ) . '" />';
-} // end ovn_twitter_url_display
+} // end ovn_copyrightString_display
+
+function ovn_homePageTitle_display() {
+	echo '<input type="text" name="homePageTitle" id="homePageTitle" value="' . get_option( 'homePageTitle' ) . '" />';
+} // end ovn_homePageTitle_display
+
+function ovn_homePageSubTitle_display() {
+	echo '<input type="text" name="homePageSubTitle" id="homePageSubTitle" value="' . get_option( 'homePageSubTitle' ) . '" />';
+} // end ovn_homePageSubTitle_display
+
+
+function ovn_donateMoneyTitle_display() {
+	echo '<input type="text" name="donateMoneyTitle" id="donateMoneyTitle" value="' . get_option( 'donateMoneyTitle' ) . '" />';
+} // end ovn_donateMoneyTitle_display
+
+function ovn_donateMoneySubTitle_display() {
+	echo '<input type="text" name="donateMoneySubTitle" id="donateMoneySubTitle" value="' . get_option( 'donateMoneySubTitle' ) . '" />';
+} // end ovn_donateMoneySubTitle_display
+
+function ovn_attendEventLink_display() {
+	echo '<input type="text" name="attendEventLink" id="attendEventLink" value="' . get_option( 'attendEventLink' ) . '" />';
+} // end ovn_donateMoneySubTitle_display
+
 
 function show_event_button_box() {
 	global $custom_meta_fields, $post;
