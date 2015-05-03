@@ -9,7 +9,7 @@
 <?php get_header(); ?>
 
 
-<!-- CONTENT AREA 1 - IN BETA -->
+<!-- CONTENT AREA 1 -->
 
 <div class="row home">
 	<div class="column large-12">
