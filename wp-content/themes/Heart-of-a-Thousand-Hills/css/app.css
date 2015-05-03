@@ -3286,17 +3286,18 @@ body {
   top: 0;
   padding: 25px 0;
   width: 100%;
+  height: 120px;
   z-index: 999; }
-  /* line 12, ../scss/components/_nav.scss */
+  /* line 13, ../scss/components/_nav.scss */
   .site-header .site-logo {
     background: url("../images/thousandHillsLogo.svg") no-repeat;
     width: 150px;
     height: 150px;
-    margin: -35px 0 0 -35px; }
-  /* line 19, ../scss/components/_nav.scss */
+    margin: -40px; }
+  /* line 20, ../scss/components/_nav.scss */
   .site-header .nav {
     float: right; }
-    /* line 22, ../scss/components/_nav.scss */
+    /* line 23, ../scss/components/_nav.scss */
     .site-header .nav ul {
       margin: 0 auto 1.0625rem auto;
       margin-left: -1.375rem;
@@ -3304,7 +3305,8 @@ body {
       padding: 0;
       list-style: none;
       overflow: hidden;
-      overflow: visible; }
+      overflow: visible;
+      margin: 3px 0 0; }
       /* line 42, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
       .site-header .nav ul > li {
         list-style: none;
@@ -3314,10 +3316,10 @@ body {
         /* line 47, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
         .site-header .nav ul > li > * {
           display: block; }
-      /* line 26, ../scss/components/_nav.scss */
+      /* line 28, ../scss/components/_nav.scss */
       .site-header .nav ul li {
         margin: 0 15px; }
-        /* line 30, ../scss/components/_nav.scss */
+        /* line 32, ../scss/components/_nav.scss */
         .site-header .nav ul li:last-child a {
           border-style: solid;
           border-width: 2px;
@@ -3352,23 +3354,23 @@ body {
           /* line 168, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
           .site-header .nav ul li:last-child a:hover, .site-header .nav ul li:last-child a:focus {
             color: #cecd5a; }
-          /* line 37, ../scss/components/_nav.scss */
+          /* line 39, ../scss/components/_nav.scss */
           .site-header .nav ul li:last-child a:hover {
             color: #fff; }
-            /* line 40, ../scss/components/_nav.scss */
+            /* line 42, ../scss/components/_nav.scss */
             .site-header .nav ul li:last-child a:hover:after {
               display: none; }
-      /* line 48, ../scss/components/_nav.scss */
+      /* line 50, ../scss/components/_nav.scss */
       .site-header .nav ul a {
         color: #c0c0af;
         cursor: pointer;
         display: inline-block;
-        font: 20px/58px "Quire Sans W01", Arial, Helvetica, sans-serif;
+        font: 20px/60px "Quire Sans W01", Arial, Helvetica, sans-serif;
         position: relative;
         text-transform: uppercase;
         font-style: normal;
         position: relative; }
-        /* line 60, ../scss/components/_nav.scss */
+        /* line 62, ../scss/components/_nav.scss */
         .site-header .nav ul a:hover:after {
           content: ".";
           display: block;
@@ -3378,7 +3380,7 @@ body {
           width: 100%;
           height: 2px;
           background: #cecd5a; }
-        /* line 72, ../scss/components/_nav.scss */
+        /* line 74, ../scss/components/_nav.scss */
         .site-header .nav ul a.selected {
           content: ".";
           display: block;
