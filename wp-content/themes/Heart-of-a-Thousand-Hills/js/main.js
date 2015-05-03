@@ -4,47 +4,25 @@
 
 require.config({
     paths: {
-        'router': '../bower_components/requirejs-router/router'
+        'router': '../bower_components/requirejs-router/router',
+        'jquery': '../bower_components/jquery/dist/jquery',
+        'skrollr': '../bower_components/skrollr/src/skrollr',
+        'foundation': '../bower_components/foundation/js/foundation'
+
     }
 });
+require(['jquery'], function (skrollr) {
+    require(['skrollr', 'foundation'], function (skrollr) {
+        'use strict';
 
-require(['router', 'modules/eastereggs'], function (router, EasterEggs) {
-    'use strict';
+        skrollr.init();
 
-    router
-        .registerRoutes({
-            // matches an exact path
-            home: {
-                path: '/',
-                moduleId: 'views/default'
-            },
+        $(document).foundation();
 
-            // matches using a wildcard
-            customer: {
-                path: '/customer/*',
-                moduleId: 'customer/customerView'
-            },
 
-            // matches using a path variable
-            order: {
-                path: '/orders/:id',
-                moduleId: 'order/orderView'
-            },
+        console.log($(window).height());
 
-            // matches a pattern like '/word/number'
-            regex: {
-                path: /^\/\w+\/\d+$/i,
-                moduleId: 'regex/regexView'
-            },
+        $('.event-image').css('height', $(window).height() + 'px');
 
-            // matches everything else
-            notFound: {
-                path: '*',
-                moduleId: 'views/notfound'
-            }
-        })
-        .on('routeload', function (Module, routeArguments) {
-            EasterEggs.listen();
-        })
-        .init(); // Set up event handlers and trigger the initial page load
+    });
 });
