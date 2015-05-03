@@ -22,5 +22,7 @@ require(['jquery'], function (skrollr) {
 
         console.log($(window).height());
 
+        $('.event-image').css('height', $(window).height() + 'px');
+
     });
 });
