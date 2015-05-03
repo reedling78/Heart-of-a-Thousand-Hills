@@ -3229,19 +3229,16 @@ body {
   background: #000000;
   box-sizing: border-box; }
 
-/* line 10, ../scss/components/_home.scss */
-.home .columns {
+/* line 9, ../scss/components/_home.scss */
+.start {
   overflow: hidden; }
-/* line 14, ../scss/components/_home.scss */
-.home h2,
-.home p {
-  text-align: center; }
-/* line 19, ../scss/components/_home.scss */
-.home h2 {
-  margin-top: 290px; }
-/* line 23, ../scss/components/_home.scss */
-.home p {
-  margin-bottom: 290px; }
+  /* line 12, ../scss/components/_home.scss */
+  .start .content {
+    padding: 290px 0; }
+  /* line 16, ../scss/components/_home.scss */
+  .start h2,
+  .start p {
+    text-align: center; }
 
 /* line 5, ../scss/components/_nav.scss */
 .site-header {
@@ -3372,13 +3369,19 @@ p {
   margin: 0; }
 
 /* line 6, ../scss/components/_video.scss */
-.home video {
+.start video {
   opacity: .5;
   width: 100%;
-  height: auto; }
+  height: auto;
+  visibility: visible;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
 
 @media (max-width: 1920px) {
-  /* line 14, ../scss/components/_video.scss */
+  /* line 20, ../scss/components/_video.scss */
   .home video {
     width: auto;
     min-height: 900px; } }
