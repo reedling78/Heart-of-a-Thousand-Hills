@@ -15,14 +15,37 @@ require(['jquery'], function (skrollr) {
     require(['skrollr', 'foundation'], function (skrollr) {
         'use strict';
 
-        skrollr.init();
+        
 
         $(document).foundation();
 
+        $('.event-description').css('height', ($(window).height() - 105) + 'px');
 
-        console.log($(window).height());
 
-        $('.event-image').css('height', $(window).height() + 'px');
+
+        $('.event-image').each(function () {
+            var self = this;
+            var offset = ($(self).offset().top - 105);
+            $(this).css('width', $(this).width() + 'px').css('height', ($(window).height() - 105) + 'px');
+            // $(this).attr('data-' + ($(this).offset().top - 105), 'background-position: 0px 0px;');
+            // $(this).attr('data-' + (($(this).offset().top - 105) + $(window).height()), 'background-position: 0px ' + ($(window).height() - 105) + 'px;');
+        
+            $(window).on('scroll', function () {
+                if (offset < $(window).scrollTop()) {
+                    $(self).css('position', 'fixed').css('top', '105px');
+                } 
+
+                if (offset > $(window).scrollTop()) {
+                    $(self).css('position', 'relative').css('top', '0');
+                }
+            });
+
+        });
+
+        setTimeout(function () {
+            skrollr.init();
+        }, 1000);
+        
 
     });
 });
