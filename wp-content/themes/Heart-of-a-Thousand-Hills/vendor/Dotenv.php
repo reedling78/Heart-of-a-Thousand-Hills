@@ -4,7 +4,7 @@
  *
  * Loads a `.env` file in the given directory and sets the environment vars
  */
-class Dotenv
+class Dotenv 
 {
     /**
      * If true, then environment variables will not be overwritten
