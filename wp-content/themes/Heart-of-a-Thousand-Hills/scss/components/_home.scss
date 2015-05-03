@@ -6,9 +6,11 @@ body {
 	box-sizing: border-box;
 }
 
-.home {
-	.columns {
-		overflow: hidden;
+.start {
+	overflow: hidden;
+
+	.content {
+		padding: 290px 0;
 	}
 
 	h2,
@@ -16,11 +18,4 @@ body {
 		text-align: center;
 	}
 
-	h2 {
-		margin-top: 290px;
-	}
-
-	p {
-		margin-bottom: 290px;
-	}
 }
