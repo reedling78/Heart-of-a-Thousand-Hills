@@ -4,47 +4,16 @@
 
 require.config({
     paths: {
-        'router': '../bower_components/requirejs-router/router'
+        'router': '../bower_components/requirejs-router/router',
+        'jquery': '../bower_components/jquery/dist/jquery',
+        'skrollr': '../bower_components/skrollr/src/skrollr'
     }
 });
 
-require(['router', 'modules/eastereggs'], function (router, EasterEggs) {
+require(['skrollr', 'jquery'], function (skrollr) {
     'use strict';
 
-    router
-        .registerRoutes({
-            // matches an exact path
-            home: {
-                path: '/',
-                moduleId: 'views/default'
-            },
+    skrollr.init();
 
-            // matches using a wildcard
-            customer: {
-                path: '/customer/*',
-                moduleId: 'customer/customerView'
-            },
 
-            // matches using a path variable
-            order: {
-                path: '/orders/:id',
-                moduleId: 'order/orderView'
-            },
-
-            // matches a pattern like '/word/number'
-            regex: {
-                path: /^\/\w+\/\d+$/i,
-                moduleId: 'regex/regexView'
-            },
-
-            // matches everything else
-            notFound: {
-                path: '*',
-                moduleId: 'views/notfound'
-            }
-        })
-        .on('routeload', function (Module, routeArguments) {
-            EasterEggs.listen();
-        })
-        .init(); // Set up event handlers and trigger the initial page load
 });
