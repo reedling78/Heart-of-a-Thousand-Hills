@@ -2,7 +2,10 @@
 <?php
     $args = array(
       'post_type' => 'events',
-      'posts_per_page' => 3
+      'posts_per_page' => 3,
+      'meta_key'  => 'eventDate',
+      'orderby'   => 'meta_value_num',
+      'order' => "ASC"
       );
     $events = new WP_Query( $args );
     if( $events->have_posts() ) {

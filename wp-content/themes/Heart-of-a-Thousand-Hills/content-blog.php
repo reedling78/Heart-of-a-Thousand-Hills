@@ -4,9 +4,9 @@
 		<div class="columns medium-6">
 			<ul class="inline-list archive">
 				<li>Archives</li>
-				<li><a href="#" class="selected">2013</a></li>
-				<li><a href="#">2014</a></li>
-				<li><a href="#">2015</a></li>
+				<li><a href="#" class="selected blog-page">2013</a></li>
+				<li><a href="#" class="blog-page">2014</a></li>
+				<li><a href="#" class="blog-page">2015</a></li>
 			</ul>
 		</div>
 		<div class="columns medium-6">
@@ -28,7 +28,12 @@
 				<?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
 					<li>
 					<date><?php the_date('n.j.Y'); ?></date>
+<<<<<<< HEAD
 					<h2><a href="<?php the_permalink(); ?>" data-reveal-id="blog-post"><?php the_title(); ?></a></h2>
+=======
+					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<?php remove_filter('the_excerpt', 'wpautop'); ?>
+>>>>>>> origin/master
 					<p class="small"><?php the_excerpt();  ?><a href="<?php the_permalink(); ?>">Read More</a></p>
 				</li>
 				<?php endwhile; ?>
