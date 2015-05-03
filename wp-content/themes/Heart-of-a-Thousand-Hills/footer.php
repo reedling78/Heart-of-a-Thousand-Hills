@@ -22,7 +22,7 @@
                 <div class="copyright">
                     <p>
                         &copy; <?php echo date( 'Y' ); ?>
-                        <?php echo get_option('copyright') ?>
+                        <?php echo get_option('copyrightString') ?>
                         <?php _e( 'All rights reserved.', 'alpha' ); ?>
                     </p>
                 </div> <!-- end copyright -->
