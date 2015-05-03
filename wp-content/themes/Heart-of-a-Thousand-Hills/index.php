@@ -75,43 +75,38 @@
 	</div>
 	<div class="row">
 		<div class="columns large-12">
-			<ul class="large-block-grid-2 small-block-grid-1">
+			<ul class="large-block-grid-2 small-block-grid-1 list">
 				<li>
 					<date>5.9.2015</date>
-					<h2>Blog Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur 
-	adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
+					<h2><a href="#">Blog Title</a></h2>
+					<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
 				</li>
 				<li>
 					<date>5.9.2015</date>
-					<h2>Blog Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur 
-	adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
+					<h2><a href="#">Blog Title</a></h2>
+					<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
 				</li>
 				<li>
 					<date>5.9.2015</date>
-					<h2>Blog Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur 
-	adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
+					<h2><a href="#">Blog Title</a></h2>
+					<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
 				</li>
 				<li>
 					<date>5.9.2015</date>
-					<h2>Blog Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur 
-	adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
+					<h2><a href="#">Blog Title</a></h2>
+					<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
 				</li>
 				<li>
 					<date>5.9.2015</date>
-					<h2>Blog Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur 
-	adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
+					<h2><a href="#">Blog Title</a></h2>
+					<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
 				</li>
 				<li>
 					<date>5.9.2015</date>
-					<h2>Blog Title</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur 
-	adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
+					<h2><a href="#">Blog Title</a></h2>
+					<p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eleifend. <a href="#">Read More</a></p>
 				</li>
+				
 			</ul>
 		</div>
 	</div>
