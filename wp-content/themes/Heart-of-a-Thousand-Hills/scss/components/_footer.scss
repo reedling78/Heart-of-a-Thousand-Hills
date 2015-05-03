@@ -3,8 +3,7 @@
 //
 
 .footer {
-    background: url('<?= IMAGES ?>/footer-Image.png') no-repeat center;
-    min-height: 500px; /*need to see how this adjusts*/
+    height: 500px;
     
     .copyright p {
         font-size: 13px;
@@ -12,5 +11,14 @@
         font-style: normal;
         color: #c0c0af;
         text-align: center;
+        margin-top:190px;
+    }
+    
+    .inline-list {
+        margin-top:245px;
+    }
+    
+    .inline-list li {
+        margin-left:24%;
     }
 }
