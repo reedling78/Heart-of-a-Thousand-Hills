@@ -50,7 +50,8 @@
 
 	.list {
 		date {
-			margin: 40px 0 30px;
+			display: block;
+			margin: 30px 0 20px;
 			font-style: normal;
 			font-weight: 800;
 			letter-spacing: 1px;
@@ -58,11 +59,15 @@
 
 		h2 {
 			font-size: 30px;
-			color: $secondary-color;
+			a {
+				color: $secondary-color;
+			}
 		}
 
 		p {
-			
+			a {
+				white-space: nowrap;
+			}
 		}
 	}
 }

@@ -3045,14 +3045,20 @@ blockquote p {
         color: #cecd5a; }
   /* line 52, ../scss/components/_blog-list.scss */
   .blog-list .list date {
-    margin: 40px 0 30px;
+    display: block;
+    margin: 30px 0 20px;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 1px; }
-  /* line 59, ../scss/components/_blog-list.scss */
+  /* line 60, ../scss/components/_blog-list.scss */
   .blog-list .list h2 {
-    font-size: 30px;
-    color: #c0c0af; }
+    font-size: 30px; }
+    /* line 62, ../scss/components/_blog-list.scss */
+    .blog-list .list h2 a {
+      color: #c0c0af; }
+  /* line 68, ../scss/components/_blog-list.scss */
+  .blog-list .list p a {
+    white-space: nowrap; }
 
 /* line 5, ../scss/components/_button.scss */
 .button {
@@ -3309,9 +3315,10 @@ h1 {
 
 /* line 10, ../scss/components/_type.scss */
 h2 {
-  font-size: 3.75rem; }
+  font-size: 3.75rem;
+  margin: 0; }
 
-/* line 14, ../scss/components/_type.scss */
+/* line 15, ../scss/components/_type.scss */
 h3 {
   color: #c0c0af;
   font: 15px "Quire Sans W01", Arial, Helvetica, sans-serif;
@@ -3320,11 +3327,11 @@ h3 {
   letter-spacing: 1px;
   margin: 0 0 35px; }
 
-/* line 23, ../scss/components/_type.scss */
+/* line 24, ../scss/components/_type.scss */
 p {
   font-size: 25px;
   margin: 0; }
-  /* line 27, ../scss/components/_type.scss */
+  /* line 28, ../scss/components/_type.scss */
   p.small {
     font-size: 12.5px;
     line-height: 2; }
