@@ -9,12 +9,18 @@
 		</div> <!-- end row -->
 	</div> <!-- end container -->
 
-<div id="myModal" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">Awesome. I have it.</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+<div id="DonateForm" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <?php echo do_shortcode('[contact-form-7 id="17" title="Contact form 1"]'); ?>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
+
+<div id="ContentForm" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <?php echo do_shortcode('[contact-form-7 id="17" title="Contact form 1"]'); ?>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+
+
 	<!-- FOOTER -->
 	<footer class="site-footer">
 		<div class="row">

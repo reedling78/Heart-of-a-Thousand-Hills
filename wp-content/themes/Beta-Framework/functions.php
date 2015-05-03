@@ -181,9 +181,9 @@ if ( ! function_exists( 'alpha_widget_init' ) ) {
 		if ( function_exists( 'register_sidebar' ) ) {
 			register_sidebar(
 				array(
-					'name' => __( 'Main Widget Area', 'alpha' ),
+					'name' => __( 'Donate Form', 'alpha' ),
 					'id' => 'sidebar-1',
-					'description' => __( 'Appears on posts and pages.', 'alpha' ),
+					'description' => __( 'Donate Form', 'alpha' ),
 					'before_widget' => '<div id="%1$s" class="widget %2$s">',
 					'after_widget' => '</div> <!-- end widget -->',
 					'before_title' => '<h5 class="widget-title">',
@@ -193,9 +193,9 @@ if ( ! function_exists( 'alpha_widget_init' ) ) {
 
 			register_sidebar(
 				array(
-					'name' => __( 'Footer Widget Area', 'alpha' ),
+					'name' => __( 'Content Form', 'alpha' ),
 					'id' => 'sidebar-2',
-					'description' => __( 'Appears on the footer.', 'alpha' ),
+					'description' => __( 'Content Form', 'alpha' ),
 					'before_widget' => '<div id="%1$s" class="widget small-3 %2$s">',
 					'after_widget' => '</div> <!-- end widget -->',
 					'before_title' => '<h5 class="widget-title">',
