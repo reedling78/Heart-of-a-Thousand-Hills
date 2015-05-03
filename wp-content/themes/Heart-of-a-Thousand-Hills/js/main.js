@@ -6,14 +6,18 @@ require.config({
     paths: {
         'router': '../bower_components/requirejs-router/router',
         'jquery': '../bower_components/jquery/dist/jquery',
-        'skrollr': '../bower_components/skrollr/src/skrollr'
+        'skrollr': '../bower_components/skrollr/src/skrollr',
+        'foundation': '../bower_components/foundation/js/foundation'
+
     }
 });
 
-require(['skrollr', 'jquery'], function (skrollr) {
+require(['skrollr', 'jquery', 'foundation'], function (skrollr) {
     'use strict';
 
     skrollr.init();
+
+    $(document).foundation();
 
 
 });
