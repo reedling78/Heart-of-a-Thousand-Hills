@@ -262,4 +262,80 @@ function create_posttype() {
 	);
 }
 add_action( 'init', 'create_posttype' );
+
+
+
+/**
+ * ----------------------------------------------------------------------------------------
+ * 11.0 - Registers a new settings field on the 'General Settings' page of the WordPress dashboard.
+ * ----------------------------------------------------------------------------------------
+ */
+function ovn_initialize_theme_options() {
+
+	// Define the settings field
+	add_settings_field( 
+		'facebook_url', 					// The ID (or the name) of the field
+		'Facebook URL', 					// The text used to label the field
+		'ovn_facebook_url_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);
+	
+	// Define the settings field
+	add_settings_field( 
+		'twitter_url', 					// The ID (or the name) of the field
+		'Twitter URL', 					// The text used to label the field
+		'ovn_twitter_url_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);
+
+	// Define the settings field
+	add_settings_field( 
+		'instagram_url', 					// The ID (or the name) of the field
+		'Instagram URL', 					// The text used to label the field
+		'ovn_instagram_url_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);
+
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'facebook_url'
+	);
+
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'twitter_url'
+	);
+
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'instagram_url'
+	);
+	
+} // end ovn_initialize_theme_options
+add_action( 'admin_init', 'ovn_initialize_theme_options' );
+
+
+
+/**
+ * ----------------------------------------------------------------------------------------
+ * 12.0 - Renders the input field for the 'Footer Message' setting in the 'General Settings' section.
+ * ----------------------------------------------------------------------------------------
+ */
+
+function ovn_facebook_url_display() {
+	echo '<input type="text" name="facebook_url" id="facebook_url" value="' . get_option( 'facebook_url' ) . '" />';
+} // end ovn_facebook_url_display
+
+function ovn_twitter_url_display() {
+	echo '<input type="text" name="twitter_url" id="twitter_url" value="' . get_option( 'twitter_url' ) . '" />';
+} // end ovn_twitter_url_display
+
+function ovn_instagram_url_display() {
+	echo '<input type="text" name="instagram_url" id="instagram_url" value="' . get_option( 'instagram_url' ) . '" />';
+} // end ovn_twitter_url_display
+
+
 ?>
