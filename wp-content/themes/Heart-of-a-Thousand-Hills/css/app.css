@@ -3231,8 +3231,7 @@ body {
 
 /* line 9, ../scss/components/_home.scss */
 .home {
-  padding: 0 0 290px;
-  overflow: hidden; }
+  padding: 0 0 290px; }
   /* line 12, ../scss/components/_home.scss */
   .home h2,
   .home p {
