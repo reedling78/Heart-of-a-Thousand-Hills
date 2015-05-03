@@ -59,7 +59,8 @@ if ( ! function_exists( 'alpha_setup' ) ) {
 				'image',
 				'quote',
 				'video',
-				'audio'
+				'audio',
+				'events'
 			)
 		);
 
