@@ -36,7 +36,7 @@
             <h3>- How We Help -</h3>
             <h2>Event title</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit eleifend ligula, in interdum diam aliquet vel.</p>
-            <a href="#" class="button"><img src="<?= IMAGES ?>/locationIcon.svg" alt="">Find It</a>
+            <a href="#" class="button"><img src="<?= IMAGES ?>/locationIcon.svg" alt="" width="9px" style="margin-right:3px; margin-top:-5px;" />Find It</a>
         </div>
     </div>
 </div>
