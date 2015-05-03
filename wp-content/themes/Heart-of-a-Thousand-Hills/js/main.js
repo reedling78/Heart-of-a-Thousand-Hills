@@ -49,7 +49,7 @@ require(['jquery'], function (skrollr) {
             }, 2000);
         };
 
-        $('a').click(function(event) {
+        $('.site-menu a').on('click', function(event) {
 
             if(event.target.href === window.location.href)
             {
