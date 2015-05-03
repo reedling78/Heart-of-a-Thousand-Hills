@@ -4,9 +4,9 @@
 		<div class="columns medium-6">
 			<ul class="inline-list archive">
 				<li>Archives</li>
-				<li><a href="#" class="selected">2013</a></li>
-				<li><a href="#">2014</a></li>
-				<li><a href="#">2015</a></li>
+				<li><a href="#" class="selected blog-page">2013</a></li>
+				<li><a href="#" class="blog-page">2014</a></li>
+				<li><a href="#" class="blog-page">2015</a></li>
 			</ul>
 		</div>
 		<div class="columns medium-6">
