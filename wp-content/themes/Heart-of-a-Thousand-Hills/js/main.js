@@ -11,13 +11,16 @@ require.config({
 
     }
 });
+require(['jquery'], function (skrollr) {
+    require(['skrollr', 'foundation'], function (skrollr) {
+        'use strict';
 
-require(['skrollr', 'jquery', 'foundation'], function (skrollr) {
-    'use strict';
+        skrollr.init();
 
-    skrollr.init();
-
-    $(document).foundation();
+        $(document).foundation();
 
 
+        console.log($(window).height());
+
+    });
 });
