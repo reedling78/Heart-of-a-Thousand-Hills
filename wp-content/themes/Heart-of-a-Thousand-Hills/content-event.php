@@ -1,5 +1,4 @@
 
-<div class="main-content large-8 columns" role="main">
 <?php
     $args = array(
       'post_type' => 'events',
@@ -10,22 +9,33 @@
       while( $events->have_posts() ) {
         $events->the_post();
         ?>
-          <div class="row event">
-             <div class="column large-12">
-                <div style="width:50%; min-height:698px; height:auto; background-image:url('<?= IMAGES ?>/eventsDefault.png'); background-repeat:none; float:left;"></div>
-                    <div style="width:50%; background-color:#333333; float:right; min-height:698px; text-align:center; color:#c8660;">
-                        <h2 style="color:#c8c660; text-transform:uppercase; font-size:15px;">- How We Help -</h2>
-
-                        <h3 style="font-size:60px;"><?php the_title(); ?></h3>
-                        <p style="color:#c8c660; font-size:25px;"><?php the_content(); ?></p>
-                        <a href="#" class="button" style="text-decoration:none; text-transform:uppercase; color:#c8c660; font-size:15px; margin-top:65px;">Find It</a>
-                    </div>
-              </div>
-           </div>
+           <div class="row event collapse">
+    <div class="column large-6 medium-3">
+        <div class="event-image" style="background-image:url('<?= IMAGES ?>/eventsDefault.png');"></div>
+    </div>
+    <div class="column large-6 medium-9">
+        <div class="dark event-description">
+            <h3>- How We Help -</h3>
+            <h2><?php the_title(); ?></h2>
+            <p><?php the_content(); ?></p>
+            <a href="#" class="button">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                xmlns:xlink="http://www.w3.org/1999/xlink" 
+                version="1.1" x="0px" y="0px" 
+                viewBox="0 0 73.7 100.8" 
+                enable-background="new 0 0 73.7 100.8" xml:space="preserve">
+                <g>
+                    <path fill="#C9C859" d="M73.6 38.5c0 28.8-31.3 58.6-31.3 58.6c-4.5 4.2-7 3.9-11.1 0c0 0-30.9-29.9-30.9-58.6 c0-21 16.5-38.3 36.7-38.3C57.1 0.1 73.6 17.4 73.6 38.5z M54.3 36.8c0-9.6-7.8-17.4-17.4-17.4s-17.3 7.8-17.3 17.4 s7.7 17.3 17.3 17.3S54.3 46.4 54.3 36.8z"/>
+                </g>
+                </svg>
+                Find It
+            </a>
+        </div>
+    </div>
+</div>
 
 
         <?php
       }
     }
   ?>
-  </div>
