@@ -1,0 +1,105 @@
+	body{
+		background:#cecd5a; 
+	}
+.namespace.contact-form {
+
+	input[type="text"]{
+		color:#333;
+		font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
+		background:transparent;
+		border:none;
+		outline:none;
+		box-shadow: none;
+		height: 60px;
+		line-height: 60px;
+		font-size: 1.2em;
+		-webkit-appearance: none;
+	}
+
+	input[placeholder]{
+		color: #333;
+	}
+	
+	input[type="checkbox"]{
+		width: 20px;
+  		height: 20px;
+	}
+
+	input::-webkit-input-placeholder{
+		color: #333;
+		font-size: 1.4em;
+		margin: 3%;
+	}
+
+	input:-ms-input-placeholder { 
+		color: #333;
+		font-size: 1.4em;
+	}
+
+	label{
+		font-style: normal;
+		color:#333;
+		font-size: 1.4em;
+	}
+
+	h1 {
+		color: #333;
+		text-align: left;
+		margin:5% 5% 1% 5%; 
+		font-family: "Malabar W01", Times New Roman, Times, serif;
+		font-weight: 800;
+		font-size: 2.2em;
+	}
+
+	p {
+		font-style: normal;
+		color:#333;
+		font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
+	}
+	
+	.btn {
+	  -webkit-border-radius: 10;
+	  -moz-border-radius: 10;
+	  border-radius: 10px;
+	  color: #333;
+	  background: transparent;
+	  padding: 10px 20px 10px 20px;
+	  border: solid #333 2px;
+	  text-decoration: none;
+	  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
+	  text-transform: uppercase;
+	  font-size: 1em;
+	  letter-spacing: 2px;
+	  font-weight: 600;
+	}
+
+	.btn:hover {
+	  background: #333;
+	  color: #FFF;
+	  text-decoration: none;
+	}
+
+	.bottomBorder{
+		border-bottom: 1px solid #333;
+	}
+
+	.rightBorder{
+		border-right:1px solid #333;
+	}
+
+	.contactFields{
+		border:1px solid #333333;
+		border-radius: 10px;
+		margin:0% 5% 1% 5%;
+	}
+	.contactCheckboxes{
+		padding:0;
+		margin:0% 5% 0% 5%;
+	}
+	@media only screen and (min-width: 40.063em){
+		.rightBorder{
+				border-right:none;
+			}
+	}
+}
+
