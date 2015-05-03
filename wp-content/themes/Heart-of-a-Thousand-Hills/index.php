@@ -30,7 +30,7 @@
 
 <!-- END CONTENT AREA 1 -->
 
-<!-- CONTENT AREA 2 - IN BETA -->
+<!-- CONTENT AREA 2 - IN BETA 
 <div class="row about keylime" id="WhoWeAre">
 	<div class="arc" style="top: -117px;">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1500 150" enable-background="new 0 0 1500 150" xml:space="preserve">
@@ -46,6 +46,39 @@
 		endwhile;
 		wp_reset_postdata();
 	?>
+</div>
+
+-->
+<div class="row about keylime" id="WhoWeAre">
+	<div class="arc" style="top: -117px;">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1500 150" enable-background="new 0 0 1500 150" xml:space="preserve">
+		<path fill="#d5d45e" d="M546.4 28c510.6 0 952.6 94 952.6 94H0C0 122 137 28 546.4 28z"/>
+		</svg>
+	</div>
+	<div class="column large-6 keylime">
+		<div class="content-area">
+				<h3>- Who We Are -</h3>
+				<h2>Rwandan</h2>
+				<p class="small">Based in Chicago, Heart of a Thousand Hills (HOTH) is a registered 501(c)(3) charity organization. The mission of Heart of a Thousand Hills is to provide essential school supplies and uniforms for vulnerable children in Rwanda to support their educational pursuit. Founded in 2014 by Nina Iliza, who wanted to honor her mother, a victim of the Rwandan genocide of 1994, and to inspire current day orphans and street kids in Rwanda by supporting their pursuit of a proper education.</p>
+				<div class="avatar">
+					<img src="<?= IMAGES ?>/Mandela.jpg" alt="Nelson Mandela" />
+				</div>
+				<p class="small quote">"Education is the  most powerful weapon which you can use to change the world."</p>
+				<p class="small">- Nelson Mandela</p>
+		</div>
+	</div>
+	<div class="column large-6 keylime">
+		<div class="content-area">
+				<h3>- What We Do -</h3>
+				<h2>Give Supplies</h2>
+				<p class="small">The first successful fundraising initiative allowed Heart of a Thousand Hills to purchase school uniforms and supplies for 60 disadvantaged Rwandan school children. These children did not have the basic necessities, such as writing material, book bags and uniforms (which are are a requirement).  In December 2014 Nina travelled back to Rwanda and worked directly with local suppliers and the charity Umuryango Children's Network. The results and feedback were truly inspiring and uplifting.</p>
+				<div class="avatar">
+						<img src="<?= IMAGES ?>/malala-yousafzai.jpg" alt="Malala Yousafzai" />
+				</div>
+					<p class="small quote">"One child, one teacher, one book, and one pen, can change the world."</p>
+					<p class="small">- Malala Yousafzai</p>
+			</div>
+	</div>
 </div>
 
 <!-- END CONTENT AREA 2 -->
