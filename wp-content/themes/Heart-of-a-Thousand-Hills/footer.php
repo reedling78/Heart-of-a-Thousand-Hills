@@ -16,7 +16,7 @@
 	<footer class="site-footer" id="Footer">
 		<div class="row">
 			<?php get_sidebar( 'footer' ); ?>
-			 <div class="column large-12 footer" style="background: url('<?= IMAGES ?>/footer-Image.png') no-repeat center; background-size:cover;">
+			 <div class="column large-12 footer" style="background: url('<?= IMAGES ?>/smilingKids-Full.png') no-repeat center; background-color:#000; background-size:cover;">
                  <ul class="inline-list">
                     <li><a href="https://www.facebook.com/heartofathousandhills" target="_blank"><img src="<?= IMAGES ?>/facebook.svg" width="18" alt="facebook" /></a></li>
                     <li><a href="https://twitter.com/HeartofHills" target="_blank"><img src="<?= IMAGES ?>/twitter.svg" width="36" alt="twitter" /></a></li>
