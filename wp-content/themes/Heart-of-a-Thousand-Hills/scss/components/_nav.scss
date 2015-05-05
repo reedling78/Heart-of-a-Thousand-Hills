@@ -66,21 +66,26 @@
 				font-style: normal;
 				position: relative;
 
+				&:after {
+					content: ".";
+					display: block;
+					position: absolute;
+					text-indent: -9999px;
+					bottom: 2px;
+					width: 0%;
+					height: 2px;
+					background: $primary-color;
+				}
+
 				&:hover {
 
 					&:after {
-						content: ".";
-						display: block;
-						position: absolute;
-						text-indent: -9999px;
-						bottom: 2px;
 						width: 100%;
-						height: 2px;
-						background: $primary-color;
+						@include transition;
 					}
 				}
 
-				&.selected {
+				&.selected:after {
 					content: ".";
 					display: block;
 					position: absolute;

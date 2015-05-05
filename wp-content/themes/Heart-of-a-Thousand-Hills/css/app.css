@@ -3412,7 +3412,7 @@ body {
   overflow: hidden; }
   /* line 12, ../scss/components/_home.scss */
   .start .content {
-    padding: 290px 0; }
+    padding: 280px 0 300px; }
   /* line 16, ../scss/components/_home.scss */
   .start h3,
   .start p {
@@ -3516,18 +3516,26 @@ body {
         text-transform: uppercase;
         font-style: normal;
         position: relative; }
-        /* line 71, ../scss/components/_nav.scss */
-        .site-header .nav ul a:hover:after {
+        /* line 69, ../scss/components/_nav.scss */
+        .site-header .nav ul a:after {
           content: ".";
           display: block;
           position: absolute;
           text-indent: -9999px;
           bottom: 2px;
-          width: 100%;
+          width: 0%;
           height: 2px;
           background: #cecd5a; }
-        /* line 83, ../scss/components/_nav.scss */
-        .site-header .nav ul a.selected {
+        /* line 82, ../scss/components/_nav.scss */
+        .site-header .nav ul a:hover:after {
+          width: 100%;
+          -webkit-transition: all 0.4s ease-in;
+          -moz-transition: all 0.4s ease-in;
+          -o-transition: all 0.4s ease-in;
+          -ms-transition: all 0.4s ease-in;
+          transition: all 0.4s ease-in; }
+        /* line 88, ../scss/components/_nav.scss */
+        .site-header .nav ul a.selected:after {
           content: ".";
           display: block;
           position: absolute;
