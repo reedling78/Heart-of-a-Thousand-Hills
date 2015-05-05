@@ -18,9 +18,8 @@ $touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
 
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	
-
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -35,7 +34,7 @@ $touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
 	<!-- Favicon and Apple Icons -->
     <link rel="shortcut icon" type="image/png" href="<?php echo $favicon32; ?>" sizes="32x32" />
     <link rel="shortcut icon" type="image/png" href="<?php echo $favicon16; ?>" sizes="16x16" />
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo $touch_icon; ?>">
+	<link rel="apple-touch-icon-precomposed" href="<?php echo $touch_icon; ?>" sizes="152x152"/>
 
 	<?php wp_head(); ?>
 </head>
