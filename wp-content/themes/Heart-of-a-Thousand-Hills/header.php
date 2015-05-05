@@ -4,17 +4,14 @@
  *
  * The header for the theme.
  */
+
+// Get the favicon.
+$favicon16 = IMAGES . '/icons/favicon-16x16.png';
+$favicon32 = IMAGES . '/icons/favicon-32x32.png';
+
+// Get the custom touch icon.
+$touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
 ?>
-
-<?php 
-	// Get the favicon.
-	$favicon16 = IMAGES . '/icons/favicon-16x16.png';
-    $favicon32 = IMAGES . '/icons/favicon-32x32.png';
-
-	// Get the custom touch icon.
-	$touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
-?>
-
 <!DOCTYPE html>
 <!--[if IE 8]> <html <?php language_attributes(); ?> class="ie8"> <![endif]-->
 <!--[if !IE]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
@@ -29,7 +26,7 @@
 
 
 	<!-- Fonts.com Web Font Code -->
-	<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/dc5192c9-31e0-4816-96ca-1f1ab513cd27.css"/>
+	<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/b907ee38-2d72-4de9-9a21-f4c200baee9a.css"/>
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
