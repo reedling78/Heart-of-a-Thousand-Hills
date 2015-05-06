@@ -13,11 +13,11 @@
         $events->the_post();
         $eventButtonType = get_post_meta($events->post->ID, 'event_button_selection', true);
         ?>
-           <div class="row event collapse" id="Events">
-    <div class="column large-6 medium-3">
+           <div class="dark row event collapse" id="Events">
+    <div class="column large-6">
         <div class="event-image" style="background-image:url('<?= IMAGES ?>/eventsDefault.png');"></div>
     </div>
-    <div class="column large-6 medium-9">
+    <div class="column large-6">
         <div class="dark event-description">
             <h3>- How We Help -</h3>
             <h2><?php the_title(); ?></h2>

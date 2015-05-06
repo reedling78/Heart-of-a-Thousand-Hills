@@ -3839,7 +3839,7 @@ ul.off-canvas-list {
   /* line 8, ../scss/components/_event.scss */
   .event .event-image {
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: left;
     background-size: cover;
     min-height: 698px; }
   /* line 15, ../scss/components/_event.scss */
