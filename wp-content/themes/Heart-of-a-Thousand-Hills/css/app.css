@@ -3929,10 +3929,15 @@ body {
     width: 60px;
     height: 60px;
     margin-top: 8px; }
-  /* line 48, ../scss/components/_nav.scss */
+    /* line 44, ../scss/components/_nav.scss */
+    .site-header .site-logo a {
+      display: block;
+      width: 60px;
+      height: 60px; }
+  /* line 53, ../scss/components/_nav.scss */
   .site-header .nav {
     float: right; }
-    /* line 51, ../scss/components/_nav.scss */
+    /* line 56, ../scss/components/_nav.scss */
     .site-header .nav ul {
       margin: 0 auto 1.0625rem auto;
       margin-left: -1.375rem;
@@ -3951,10 +3956,10 @@ body {
         /* line 47, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
         .site-header .nav ul > li > * {
           display: block; }
-      /* line 56, ../scss/components/_nav.scss */
+      /* line 61, ../scss/components/_nav.scss */
       .site-header .nav ul li {
         margin: 0 15px; }
-        /* line 60, ../scss/components/_nav.scss */
+        /* line 65, ../scss/components/_nav.scss */
         .site-header .nav ul li:last-child a {
           border-style: solid;
           border-width: 2px;
@@ -3989,33 +3994,33 @@ body {
           /* line 168, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
           .site-header .nav ul li:last-child a:hover, .site-header .nav ul li:last-child a:focus {
             color: #cecd5a; }
-          /* line 67, ../scss/components/_nav.scss */
+          /* line 72, ../scss/components/_nav.scss */
           .site-header .nav ul li:last-child a:hover {
             color: #fff; }
-            /* line 70, ../scss/components/_nav.scss */
+            /* line 75, ../scss/components/_nav.scss */
             .site-header .nav ul li:last-child a:hover:after {
               display: none; }
-        /* line 77, ../scss/components/_nav.scss */
+        /* line 82, ../scss/components/_nav.scss */
         .site-header .nav ul li.menu {
           display: none; }
-      /* line 82, ../scss/components/_nav.scss */
+      /* line 87, ../scss/components/_nav.scss */
       .site-header .nav ul.mobile-menu {
         display: none; }
       @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-        /* line 87, ../scss/components/_nav.scss */
+        /* line 92, ../scss/components/_nav.scss */
         .site-header .nav ul.site-menu {
           display: none; }
-        /* line 90, ../scss/components/_nav.scss */
+        /* line 95, ../scss/components/_nav.scss */
         .site-header .nav ul.mobile-menu {
           display: block; } }
       @media only screen and (max-width: 40em) {
-        /* line 96, ../scss/components/_nav.scss */
+        /* line 101, ../scss/components/_nav.scss */
         .site-header .nav ul.site-menu {
           display: none; }
-        /* line 99, ../scss/components/_nav.scss */
+        /* line 104, ../scss/components/_nav.scss */
         .site-header .nav ul.mobile-menu {
           display: block; } }
-      /* line 104, ../scss/components/_nav.scss */
+      /* line 109, ../scss/components/_nav.scss */
       .site-header .nav ul a {
         color: #c0c0af;
         cursor: pointer;
@@ -4025,7 +4030,7 @@ body {
         text-transform: uppercase;
         font-style: normal;
         position: relative; }
-        /* line 114, ../scss/components/_nav.scss */
+        /* line 119, ../scss/components/_nav.scss */
         .site-header .nav ul a:after {
           content: ".";
           display: block;
@@ -4035,7 +4040,7 @@ body {
           width: 0%;
           height: 2px;
           background: #cecd5a; }
-        /* line 127, ../scss/components/_nav.scss */
+        /* line 132, ../scss/components/_nav.scss */
         .site-header .nav ul a:hover:after {
           width: 100%;
           -webkit-transition: all 0.4s ease-in;
@@ -4043,7 +4048,7 @@ body {
           -o-transition: all 0.4s ease-in;
           -ms-transition: all 0.4s ease-in;
           transition: all 0.4s ease-in; }
-        /* line 133, ../scss/components/_nav.scss */
+        /* line 138, ../scss/components/_nav.scss */
         .site-header .nav ul a.selected:after {
           content: ".";
           display: block;
