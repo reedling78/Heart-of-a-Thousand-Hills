@@ -50,15 +50,38 @@ $touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
 	<!-- End Google Tag Manager -->
 
 
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+<!--     <a class="left-off-canvas-toggle" href="#" >Menu</a> -->
+
+    <!-- Off Canvas Menu -->
+    <aside class="left-off-canvas-menu">
+        <!-- whatever you want goes here -->
+        <?php 
+							wp_nav_menu(
+								array(
+									'theme_location' => 'main-menu',
+									'menu_class' => 'site-menu'
+								)
+							);
+						?>
+    </aside>
+
+
+
+
+
 		<!-- HEADER -->
 		<header class="site-header"> 
 			<div class="row">
-				<div class="column medium-2">
+				<div class="column small-2">
 					<div class="site-logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a>
 					</div>
 				</div>
-				<div class="column medium-10">
+				<div class="column small-10">
 					<nav class="nav" role="navigation">
 						<?php 
 							wp_nav_menu(
@@ -68,6 +91,10 @@ $touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
 								)
 							);
 						?>
+						<ul id="menu-menu-1" class="mobile-menu">
+							<li><a href="" class="left-off-canvas-toggle">Menu</a></li>
+						</ul>
+
 					</nav>
 				</div> <!-- end small-9 -->
 			</div> <!-- end row -->

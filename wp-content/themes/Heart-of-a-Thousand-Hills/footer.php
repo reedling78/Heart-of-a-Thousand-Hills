@@ -54,6 +54,12 @@
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>
 
+
+
+  </div>
+</div>
+
+
 	<?php wp_footer(); ?>
 	<script data-main="<?=SCRIPTS?>/main" src="<?=BOWER?>/requirejs/require.js"></script>
 </body>

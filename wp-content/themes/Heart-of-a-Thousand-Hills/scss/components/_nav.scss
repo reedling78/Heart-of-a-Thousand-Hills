@@ -2,6 +2,23 @@
 // NAV
 //
 
+.left-off-canvas-menu {
+		ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+				list-style: none;
+
+				a {
+					display: block;
+					padding: 10px; 
+				}
+			}
+		}
+	}
+	
+
 .site-header {
 	position: fixed;
 	top: 0;
@@ -25,6 +42,8 @@
 		height: 60px;
 		margin-top: 8px;
 	}
+
+	
 
 	.nav {
 		float: right;
@@ -53,6 +72,32 @@
 							}
 						}
 					}
+				}
+
+				&.menu {
+					display:none;
+				}
+			}
+
+			&.mobile-menu {
+				display:none;
+			}
+
+			@media #{$medium-only} { 
+				&.site-menu {
+					display:none;
+				}
+				&.mobile-menu {
+					display:block;
+				}
+			}
+
+			@media #{$small-only} { 
+				&.site-menu {
+					display:none;
+				}
+				&.mobile-menu {
+					display:block;
 				}
 			}
 
@@ -96,6 +141,9 @@
 					background: $primary-color;
 				}
 			}
+
 		}
+
+		
 	}
 }

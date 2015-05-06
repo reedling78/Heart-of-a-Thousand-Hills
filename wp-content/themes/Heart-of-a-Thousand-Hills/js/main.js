@@ -50,6 +50,7 @@ require(['jquery'], function (skrollr) {
         };
 
         $('.site-menu a').on('click', function(event) {
+            $('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
 
             if(event.target.href === window.location.href)
             {
@@ -69,7 +70,7 @@ require(['jquery'], function (skrollr) {
         $('body').css('height', 'auto');
 
 
-
+        // Off Canvas
         $(window).on('resize', function(){
             $('.yellow-hill').css('width', $('body').width());
             $('.yellow-hill').parent().css('top', '-' + ($('.yellow-hill').height() - 1) + 'px');
@@ -77,5 +78,23 @@ require(['jquery'], function (skrollr) {
         $('.yellow-hill').css('width', $('body').width());
         $('.yellow-hill').parent().css('top', '-' + ($('.yellow-hill').height() - 1) + 'px');
 
+
+
+
+        $('.left-off-canvas-toggle').on('click', function(){
+            $(document.body).animate({ 'scrollTop':   0 }, 1000);
+            setTimeout(function(){
+                $('.off-canvas-wrap.move-right .inner-wrap').on('click', function(e){
+                    if(!$(e.target).hasClass('left-off-canvas-menu') &&
+                        $(e.target).parents('.left-off-canvas-menu').length === 0){
+                        $('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
+                        $(this).unbind('click');
+                    }  
+                });
+            }, 500);            
+        });
+
+
+        
     });
 });
