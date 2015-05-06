@@ -68,5 +68,14 @@ require(['jquery'], function (skrollr) {
 
         $('body').css('height', 'auto');
 
+
+
+        $(window).on('resize', function(){
+            $('.yellow-hill').css('width', $('body').width());
+            $('.yellow-hill').parent().css('top', '-' + ($('.yellow-hill').height() - 1) + 'px');
+        });
+        $('.yellow-hill').css('width', $('body').width());
+        $('.yellow-hill').parent().css('top', '-' + ($('.yellow-hill').height() - 1) + 'px');
+
     });
 });
