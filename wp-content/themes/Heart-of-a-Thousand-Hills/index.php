@@ -88,7 +88,7 @@
 		<h3>- Meet Us -</h3>
 		<h2>The advisors</h2>
 		<p>They're always working hard to get Rwanda's children what they need</p>
-		<p><a href="#" class="button">Join Our Board</a>
+		<p><a href="#" class="button" data-reveal-id="ContentForm">Join Our Board</a>
 	</div>
 </div>
         
