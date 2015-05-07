@@ -3759,6 +3759,98 @@ ul.off-canvas-list {
   .button:hover {
     color: #fff; }
 
+/* line 3, ../scss/components/_contact-form.scss */
+.namespace.contact-form input[type="text"] {
+  color: #333;
+  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  height: 60px;
+  line-height: 60px;
+  -webkit-appearance: none; }
+/* line 15, ../scss/components/_contact-form.scss */
+.namespace.contact-form input[placeholder] {
+  color: #333; }
+/* line 19, ../scss/components/_contact-form.scss */
+.namespace.contact-form input[type="checkbox"] {
+  width: 20px;
+  height: 20px; }
+/* line 24, ../scss/components/_contact-form.scss */
+.namespace.contact-form input {
+  font-size: 1.5em; }
+/* line 28, ../scss/components/_contact-form.scss */
+.namespace.contact-form input::-webkit-input-placeholder {
+  color: #333;
+  font-size: 1.4em;
+  margin: 3%; }
+/* line 34, ../scss/components/_contact-form.scss */
+.namespace.contact-form input:-ms-input-placeholder {
+  color: #333;
+  font-size: 1.4em; }
+/* line 39, ../scss/components/_contact-form.scss */
+.namespace.contact-form label {
+  font-style: normal;
+  color: #333;
+  font-size: 1.4em; }
+/* line 45, ../scss/components/_contact-form.scss */
+.namespace.contact-form h1, .namespace.contact-form h2 {
+  color: #333;
+  text-align: left;
+  margin: 5% 5% 1% 5%;
+  font-family: "Malabar W01", Times New Roman, Times, serif;
+  font-weight: 800;
+  font-size: 2.2em; }
+/* line 54, ../scss/components/_contact-form.scss */
+.namespace.contact-form p {
+  font-size: 1.2em;
+  font-style: normal;
+  color: #333;
+  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif; }
+/* line 61, ../scss/components/_contact-form.scss */
+.namespace.contact-form p label {
+  font-size: 1.2em; }
+/* line 65, ../scss/components/_contact-form.scss */
+.namespace.contact-form .btn {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  color: #333;
+  background: transparent;
+  padding: 10px 20px 10px 20px;
+  border: solid #333 2px;
+  text-decoration: none;
+  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2px;
+  font-weight: 600; }
+/* line 81, ../scss/components/_contact-form.scss */
+.namespace.contact-form .btn:hover {
+  background: #333;
+  color: #FFF;
+  text-decoration: none; }
+/* line 87, ../scss/components/_contact-form.scss */
+.namespace.contact-form .bottomBorder {
+  border-bottom: 1px solid #333; }
+/* line 91, ../scss/components/_contact-form.scss */
+.namespace.contact-form .rightBorder {
+  border-right: 1px solid #333; }
+/* line 95, ../scss/components/_contact-form.scss */
+.namespace.contact-form .contactFields {
+  border: 1px solid #333333;
+  border-radius: 10px;
+  margin: 0% 5% 1% 5%; }
+/* line 100, ../scss/components/_contact-form.scss */
+.namespace.contact-form .contactCheckboxes {
+  padding: 0;
+  margin: 0% 5% 0% 5%; }
+@media only screen and (min-width: 40.063em) {
+  /* line 105, ../scss/components/_contact-form.scss */
+  .namespace.contact-form .rightBorder {
+    border-right: none; } }
+
 /* line 5, ../scss/components/_donate.scss */
 .donate {
   position: relative; }
@@ -3833,6 +3925,100 @@ ul.off-canvas-list {
     /* line 83, ../scss/components/_donate.scss */
     .donate .column.keylime {
       padding-bottom: 160px; } }
+/* line 3, ../scss/components/_donation-form.scss */
+.namespace.donation-form input[type="text"] {
+  color: #333;
+  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
+  width: 40%;
+  display: inline-block; }
+/* line 10, ../scss/components/_donation-form.scss */
+.namespace.donation-form input[placeholder] {
+  color: #333; }
+/* line 14, ../scss/components/_donation-form.scss */
+.namespace.donation-form input[type="checkbox"] {
+  width: 20px;
+  height: 20px; }
+/* line 19, ../scss/components/_donation-form.scss */
+.namespace.donation-form input {
+  font-size: 1.5em; }
+/* line 23, ../scss/components/_donation-form.scss */
+.namespace.donation-form input::-webkit-input-placeholder {
+  color: #333;
+  font-size: 1.4em;
+  margin: 3%; }
+/* line 29, ../scss/components/_donation-form.scss */
+.namespace.donation-form input:-ms-input-placeholder {
+  color: #333;
+  font-size: 1.4em; }
+/* line 34, ../scss/components/_donation-form.scss */
+.namespace.donation-form label {
+  font-style: normal;
+  color: #333;
+  font-size: 1.4em; }
+/* line 40, ../scss/components/_donation-form.scss */
+.namespace.donation-form h1 {
+  color: #333;
+  text-align: left;
+  margin: 5% 5% 1% 5%;
+  font-family: "Malabar W01", Times New Roman, Times, serif;
+  font-weight: 800;
+  font-size: 1.5em; }
+/* line 49, ../scss/components/_donation-form.scss */
+.namespace.donation-form h2 {
+  color: #333;
+  text-align: left;
+  font-family: "Malabar W01", Times New Roman, Times, serif;
+  font-weight: 800;
+  font-size: 1.5em; }
+/* line 57, ../scss/components/_donation-form.scss */
+.namespace.donation-form p {
+  font-size: 1.2em;
+  font-style: normal;
+  color: #333;
+  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif; }
+/* line 64, ../scss/components/_donation-form.scss */
+.namespace.donation-form p label {
+  font-size: 1.2em; }
+/* line 68, ../scss/components/_donation-form.scss */
+.namespace.donation-form .btn {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  color: #333;
+  background: transparent;
+  padding: 10px 20px 10px 20px;
+  border: solid #333 2px;
+  text-decoration: none;
+  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2px;
+  font-weight: 600; }
+/* line 84, ../scss/components/_donation-form.scss */
+.namespace.donation-form .btn:hover {
+  background: #333;
+  color: #FFF;
+  text-decoration: none; }
+/* line 90, ../scss/components/_donation-form.scss */
+.namespace.donation-form .bottomBorder {
+  border-bottom: 1px solid #333; }
+/* line 94, ../scss/components/_donation-form.scss */
+.namespace.donation-form .rightBorder {
+  border-right: 1px solid #333; }
+/* line 98, ../scss/components/_donation-form.scss */
+.namespace.donation-form .contactFields {
+  border: 1px solid #333333;
+  border-radius: 10px;
+  margin: 0% 5% 1% 5%; }
+/* line 103, ../scss/components/_donation-form.scss */
+.namespace.donation-form .contactCheckboxes {
+  padding: 0;
+  margin: 0% 5% 0% 5%; }
+@media only screen and (min-width: 40.063em) {
+  /* line 108, ../scss/components/_donation-form.scss */
+  .namespace.donation-form .rightBorder {
+    border-right: none; } }
+
 /* line 5, ../scss/components/_event.scss */
 .event {
   height: auto; }
@@ -3894,6 +4080,10 @@ body {
   .start h3,
   .start p {
     text-align: center; }
+
+/* line 5, ../scss/components/_modal.scss */
+.modal {
+  position: fixed; }
 
 /* line 6, ../scss/components/_nav.scss */
 .left-off-canvas-menu ul {
@@ -4121,188 +4311,3 @@ p {
   .home video {
     width: auto;
     min-height: 900px; } }
-/* line 3, ../scss/components/_contact-form.scss */
-.namespace.contact-form input[type="text"] {
-  color: #333;
-  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-  background: transparent;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  height: 60px;
-  line-height: 60px;
-  -webkit-appearance: none; }
-/* line 15, ../scss/components/_contact-form.scss */
-.namespace.contact-form input[placeholder] {
-  color: #333; }
-/* line 19, ../scss/components/_contact-form.scss */
-.namespace.contact-form input[type="checkbox"] {
-  width: 20px;
-  height: 20px; }
-/* line 24, ../scss/components/_contact-form.scss */
-.namespace.contact-form input {
-  font-size: 1.5em; }
-/* line 28, ../scss/components/_contact-form.scss */
-.namespace.contact-form input::-webkit-input-placeholder {
-  color: #333;
-  font-size: 1.4em;
-  margin: 3%; }
-/* line 34, ../scss/components/_contact-form.scss */
-.namespace.contact-form input:-ms-input-placeholder {
-  color: #333;
-  font-size: 1.4em; }
-/* line 39, ../scss/components/_contact-form.scss */
-.namespace.contact-form label {
-  font-style: normal;
-  color: #333;
-  font-size: 1.4em; }
-/* line 45, ../scss/components/_contact-form.scss */
-.namespace.contact-form h1, .namespace.contact-form h2 {
-  color: #333;
-  text-align: left;
-  margin: 5% 5% 1% 5%;
-  font-family: "Malabar W01", Times New Roman, Times, serif;
-  font-weight: 800;
-  font-size: 2.2em; }
-/* line 54, ../scss/components/_contact-form.scss */
-.namespace.contact-form p {
-  font-size: 1.2em;
-  font-style: normal;
-  color: #333;
-  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif; }
-/* line 61, ../scss/components/_contact-form.scss */
-.namespace.contact-form p label {
-  font-size: 1.2em; }
-/* line 65, ../scss/components/_contact-form.scss */
-.namespace.contact-form .btn {
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
-  border-radius: 10px;
-  color: #333;
-  background: transparent;
-  padding: 10px 20px 10px 20px;
-  border: solid #333 2px;
-  text-decoration: none;
-  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-size: 1em;
-  letter-spacing: 2px;
-  font-weight: 600; }
-/* line 81, ../scss/components/_contact-form.scss */
-.namespace.contact-form .btn:hover {
-  background: #333;
-  color: #FFF;
-  text-decoration: none; }
-/* line 87, ../scss/components/_contact-form.scss */
-.namespace.contact-form .bottomBorder {
-  border-bottom: 1px solid #333; }
-/* line 91, ../scss/components/_contact-form.scss */
-.namespace.contact-form .rightBorder {
-  border-right: 1px solid #333; }
-/* line 95, ../scss/components/_contact-form.scss */
-.namespace.contact-form .contactFields {
-  border: 1px solid #333333;
-  border-radius: 10px;
-  margin: 0% 5% 1% 5%; }
-/* line 100, ../scss/components/_contact-form.scss */
-.namespace.contact-form .contactCheckboxes {
-  padding: 0;
-  margin: 0% 5% 0% 5%; }
-@media only screen and (min-width: 40.063em) {
-  /* line 105, ../scss/components/_contact-form.scss */
-  .namespace.contact-form .rightBorder {
-    border-right: none; } }
-
-/* line 3, ../scss/components/_donation-form.scss */
-.namespace.donation-form input[type="text"] {
-  color: #333;
-  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-  width: 40%;
-  display: inline-block; }
-/* line 10, ../scss/components/_donation-form.scss */
-.namespace.donation-form input[placeholder] {
-  color: #333; }
-/* line 14, ../scss/components/_donation-form.scss */
-.namespace.donation-form input[type="checkbox"] {
-  width: 20px;
-  height: 20px; }
-/* line 19, ../scss/components/_donation-form.scss */
-.namespace.donation-form input {
-  font-size: 1.5em; }
-/* line 23, ../scss/components/_donation-form.scss */
-.namespace.donation-form input::-webkit-input-placeholder {
-  color: #333;
-  font-size: 1.4em;
-  margin: 3%; }
-/* line 29, ../scss/components/_donation-form.scss */
-.namespace.donation-form input:-ms-input-placeholder {
-  color: #333;
-  font-size: 1.4em; }
-/* line 34, ../scss/components/_donation-form.scss */
-.namespace.donation-form label {
-  font-style: normal;
-  color: #333;
-  font-size: 1.4em; }
-/* line 40, ../scss/components/_donation-form.scss */
-.namespace.donation-form h1 {
-  color: #333;
-  text-align: left;
-  margin: 5% 5% 1% 5%;
-  font-family: "Malabar W01", Times New Roman, Times, serif;
-  font-weight: 800;
-  font-size: 1.5em; }
-/* line 49, ../scss/components/_donation-form.scss */
-.namespace.donation-form h2 {
-  color: #333;
-  text-align: left;
-  font-family: "Malabar W01", Times New Roman, Times, serif;
-  font-weight: 800;
-  font-size: 1.5em; }
-/* line 57, ../scss/components/_donation-form.scss */
-.namespace.donation-form p {
-  font-size: 1.2em;
-  font-style: normal;
-  color: #333;
-  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif; }
-/* line 64, ../scss/components/_donation-form.scss */
-.namespace.donation-form p label {
-  font-size: 1.2em; }
-/* line 68, ../scss/components/_donation-form.scss */
-.namespace.donation-form .btn {
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
-  border-radius: 10px;
-  color: #333;
-  background: transparent;
-  padding: 10px 20px 10px 20px;
-  border: solid #333 2px;
-  text-decoration: none;
-  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-size: 1em;
-  letter-spacing: 2px;
-  font-weight: 600; }
-/* line 84, ../scss/components/_donation-form.scss */
-.namespace.donation-form .btn:hover {
-  background: #333;
-  color: #FFF;
-  text-decoration: none; }
-/* line 90, ../scss/components/_donation-form.scss */
-.namespace.donation-form .bottomBorder {
-  border-bottom: 1px solid #333; }
-/* line 94, ../scss/components/_donation-form.scss */
-.namespace.donation-form .rightBorder {
-  border-right: 1px solid #333; }
-/* line 98, ../scss/components/_donation-form.scss */
-.namespace.donation-form .contactFields {
-  border: 1px solid #333333;
-  border-radius: 10px;
-  margin: 0% 5% 1% 5%; }
-/* line 103, ../scss/components/_donation-form.scss */
-.namespace.donation-form .contactCheckboxes {
-  padding: 0;
-  margin: 0% 5% 0% 5%; }
-@media only screen and (min-width: 40.063em) {
-  /* line 108, ../scss/components/_donation-form.scss */
-  .namespace.donation-form .rightBorder {
-    border-right: none; } }
