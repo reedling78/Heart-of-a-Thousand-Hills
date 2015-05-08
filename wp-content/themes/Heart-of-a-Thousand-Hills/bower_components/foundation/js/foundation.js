@@ -4657,9 +4657,11 @@
           this.locked = false;
         }
         if (animData.pop) {
-          css.top = $(window).scrollTop() - el.data('offset') + 'px';
+          //css.top = $(window).scrollTop() - el.data('offset') + 'px';
+          css.top = 0;
           var end_css = {
-            top: $(window).scrollTop() + el.data('css-top') + 'px',
+            //top: $(window).scrollTop() + el.data('css-top') + 'px',
+            top: 0,
             opacity: 1
           };
 

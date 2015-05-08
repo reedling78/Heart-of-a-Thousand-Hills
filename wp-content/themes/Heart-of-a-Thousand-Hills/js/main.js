@@ -19,7 +19,13 @@ require(['jquery'], function (skrollr) {
 
         $(document).foundation();
 
+        $('[data-reveal-id]').on('click', function () {
+            $('body').addClass('modal');
+        });
 
+        $('.close-reveal-modal').on('click', function(){
+            $('body').removeClass('modal');
+        });
         
 
         $('.event-image').each(function () {
@@ -58,7 +64,7 @@ require(['jquery'], function (skrollr) {
         });
 
         function scrollToAnchor(hash) {
-            if(hash){
+            if (hash){
                 $(document.body).animate({
                 'scrollTop':   $('#' + hash ).offset().top - 87
                 }, 2000);
@@ -71,7 +77,11 @@ require(['jquery'], function (skrollr) {
             $('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
 
             $('.site-menu a, .clicker').removeClass('selected');
-            $(this).addClass('selected');
+
+            if ($(this).attr('href').replace('#', '') !== 'Donate') {
+                $(this).addClass('selected');
+            }
+            
 
             window.history.pushState("object or string", $(this).attr('href').replace('#', ''), $(this).attr('href'));
             
@@ -111,6 +121,9 @@ require(['jquery'], function (skrollr) {
                 });
             }, 500);            
         });
+
+
+    
 
 
         
