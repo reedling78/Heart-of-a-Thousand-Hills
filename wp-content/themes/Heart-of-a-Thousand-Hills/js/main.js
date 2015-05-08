@@ -58,26 +58,30 @@ require(['jquery'], function (skrollr) {
         });
 
         function scrollToAnchor(hash) {
-            $(document.body).animate({
-            'scrollTop':   $('#' + hash ).offset().top - 87
-            }, 2000);
-        };
-
-        $('.site-menu a').on('click', function(event) {
-            $('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
-
-            if(event.target.href === window.location.href)
-            {
-                event.preventDefault();
+            if(hash){
+                $(document.body).animate({
+                'scrollTop':   $('#' + hash ).offset().top - 87
+                }, 2000);
+            } else {
                 $(document.body).animate({ 'scrollTop':   0 }, 2000);
             }
+        };
 
-            if(event.target.href.lastIndexOf(window.location.href + "#", 0) === 0)
-            {
-                event.preventDefault();
-                var anchor = event.target.href.substr(event.target.href.indexOf("#") + 1);
-                scrollToAnchor(anchor);
+        $('.site-menu a, .clicker').on('click', function(e) {
+            $('.off-canvas-wrap').foundation('offcanvas', 'hide', 'move-right');
+
+            $('.site-menu a, .clicker').removeClass('selected');
+            $(this).addClass('selected');
+
+            window.history.pushState("object or string", $(this).attr('href').replace('#', ''), $(this).attr('href'));
+            
+            if(window.location.hash != ''){
+                scrollToAnchor($(this).attr('href').replace('#', ''));
+            } else {
+                scrollToAnchor();
             }
+            
+            e.preventDefault();
 
         });
 
