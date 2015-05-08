@@ -1,15 +1,17 @@
  .namespace.contact-form {
 
 	input[type="text"]{
-		color:#333;
+		color: #333;
 		font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-		background:transparent;
-		border:none;
-		outline:none;
+		background: transparent;
+		border: none;
+		outline: none;
 		box-shadow: none;
 		height: 60px;
 		line-height: 60px;
 		-webkit-appearance: none;
+		margin-bottom: 0;
+		padding-top: 10px;
 	}
 
 	input[placeholder]{
@@ -37,9 +39,11 @@
 	}
 
 	label{
-		font-style: normal;
-		color:#333;
-		font-size: 1.4em;
+	  font-style: normal;
+	  color: #333;
+	  font-size: 1em;
+	  position: absolute;
+	  display:none;
 	}
 
 	h1, h2 { 

@@ -26,6 +26,19 @@ require(['jquery'], function (skrollr) {
         $('.close-reveal-modal').on('click', function(){
             $('body').removeClass('modal');
         });
+
+        $('.wpcf7-form input[type="text"]').each(function(){
+            console.log($(this).attr('placeholder'));
+            $('<label>' + $(this).attr('placeholder') + '</label>').insertBefore(this);
+            $(this).on('keyup', function () {
+                if ($(this).val().length !== 0) {
+                    $(this).prev().fadeIn();
+                } else {
+                    $(this).prev().fadeOut();
+                }
+            });
+
+        });
         
 
         $('.event-image').each(function () {
