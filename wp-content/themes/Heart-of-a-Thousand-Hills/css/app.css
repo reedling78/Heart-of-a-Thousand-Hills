@@ -4088,6 +4088,9 @@ body {
 /* line 5, ../scss/components/_modal.scss */
 .modal {
   position: fixed; }
+  /* line 8, ../scss/components/_modal.scss */
+  .modal .reveal-modal {
+    overflow: scroll; }
 
 /* line 6, ../scss/components/_nav.scss */
 .left-off-canvas-menu ul {

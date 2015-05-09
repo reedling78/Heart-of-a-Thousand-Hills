@@ -4,7 +4,10 @@
 
 .modal {
 	position: fixed;
-	
+
+	.reveal-modal {
+		overflow: scroll;
+	}
 }
 
 @media #{$medium-only} { 
