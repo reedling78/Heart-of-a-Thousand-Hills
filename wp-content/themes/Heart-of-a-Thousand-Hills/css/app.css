@@ -3736,27 +3736,34 @@ ul.off-canvas-list {
 
 /* line 7, ../scss/components/_blog-post.scss */
 #blog-post h2 {
-  margin-left: 30px;
-  color: #333; }
+  color: #333;
+  margin: 5px 0 30px; }
 /* line 12, ../scss/components/_blog-post.scss */
 #blog-post h3 {
-  margin-top: 20px;
-  margin-left: 30px;
-  margin-bottom: 0;
-  color: #333; }
-/* line 19, ../scss/components/_blog-post.scss */
+  color: #333;
+  margin: 40px 0 0; }
+/* line 17, ../scss/components/_blog-post.scss */
 #blog-post p {
-  margin-left: 30px;
   font-style: normal;
-  color: #333; }
+  color: #333;
+  font-size: 21px;
+  margin: 0 0 20px; }
 
+@media only screen and (max-width: 40em) {
+  /* line 27, ../scss/components/_blog-post.scss */
+  h1 {
+    font-size: 2.875rem; }
+
+  /* line 28, ../scss/components/_blog-post.scss */
+  h2 {
+    font-size: 2.125rem; } }
 /* line 5, ../scss/components/_button.scss */
 .button {
   text-transform: uppercase;
   border-radius: 12px;
   font-style: normal; }
   /* line 10, ../scss/components/_button.scss */
-  .button:hover {
+  .button:hover, .button:focus, .button:active, .button.selected {
     color: #fff; }
 
 /* line 3, ../scss/components/_contact-form.scss */
@@ -4192,32 +4199,38 @@ body {
           .site-header .nav ul li:last-child a:hover, .site-header .nav ul li:last-child a:focus {
             color: #cecd5a; }
           /* line 72, ../scss/components/_nav.scss */
+          .site-header .nav ul li:last-child a:after {
+            display: none; }
+          /* line 76, ../scss/components/_nav.scss */
+          .site-header .nav ul li:last-child a:active {
+            color: #fff; }
+          /* line 80, ../scss/components/_nav.scss */
           .site-header .nav ul li:last-child a:hover {
             color: #fff; }
-            /* line 75, ../scss/components/_nav.scss */
+            /* line 83, ../scss/components/_nav.scss */
             .site-header .nav ul li:last-child a:hover:after {
               display: none; }
-        /* line 82, ../scss/components/_nav.scss */
+        /* line 90, ../scss/components/_nav.scss */
         .site-header .nav ul li.menu {
           display: none; }
-      /* line 87, ../scss/components/_nav.scss */
+      /* line 95, ../scss/components/_nav.scss */
       .site-header .nav ul.mobile-menu {
         display: none; }
       @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-        /* line 92, ../scss/components/_nav.scss */
+        /* line 100, ../scss/components/_nav.scss */
         .site-header .nav ul.site-menu {
           display: none; }
-        /* line 95, ../scss/components/_nav.scss */
+        /* line 103, ../scss/components/_nav.scss */
         .site-header .nav ul.mobile-menu {
           display: block; } }
       @media only screen and (max-width: 40em) {
-        /* line 101, ../scss/components/_nav.scss */
+        /* line 109, ../scss/components/_nav.scss */
         .site-header .nav ul.site-menu {
           display: none; }
-        /* line 104, ../scss/components/_nav.scss */
+        /* line 112, ../scss/components/_nav.scss */
         .site-header .nav ul.mobile-menu {
           display: block; } }
-      /* line 109, ../scss/components/_nav.scss */
+      /* line 117, ../scss/components/_nav.scss */
       .site-header .nav ul a {
         color: #c0c0af;
         cursor: pointer;
@@ -4227,7 +4240,7 @@ body {
         text-transform: uppercase;
         font-style: normal;
         position: relative; }
-        /* line 119, ../scss/components/_nav.scss */
+        /* line 127, ../scss/components/_nav.scss */
         .site-header .nav ul a:after {
           content: ".";
           display: block;
@@ -4237,7 +4250,7 @@ body {
           width: 0%;
           height: 2px;
           background: #cecd5a; }
-        /* line 132, ../scss/components/_nav.scss */
+        /* line 140, ../scss/components/_nav.scss */
         .site-header .nav ul a:hover:after {
           width: 100%;
           -webkit-transition: all 0.4s ease-in;
@@ -4245,7 +4258,7 @@ body {
           -o-transition: all 0.4s ease-in;
           -ms-transition: all 0.4s ease-in;
           transition: all 0.4s ease-in; }
-        /* line 138, ../scss/components/_nav.scss */
+        /* line 146, ../scss/components/_nav.scss */
         .site-header .nav ul a.selected:after {
           content: ".";
           display: block;

@@ -5,21 +5,25 @@
 #blog-post {
     
     h2 {
-        margin-left: 30px;
         color: #333;
+        margin: 5px 0 30px;
     }
     
     h3 {
-        margin-top: 20px;
-        margin-left: 30px;
-        margin-bottom: 0;
         color: #333;
+        margin: 40px 0 0;
     }
     
     p {
-        margin-left: 30px;
         font-style: normal;
         color: #333;
+        font-size: 21px;
+        margin: 0 0 20px;
     }
 
+}
+
+@media #{$small-only} { 
+    h1 { font-size: rem-calc(46) }
+    h2 { font-size: rem-calc(34) }
 }

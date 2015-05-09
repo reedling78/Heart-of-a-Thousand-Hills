@@ -47,11 +47,15 @@
 </div>
 
 <div id="blog-post" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-    <img src="<?= IMAGES ?>/footer-Image.png" style="width:100%; height:auto;" />
-    <h3>Date</h3>
-    <h2 id="modalTitle">Blog title lorem ipsum</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet nisi a tempus sagittis. Vestibulum nisl mi, laoreet sit amet aliquam ut, varius nec odio. Suspendisse porta quis dui eu condimentum. Sed est velit, auctor quis ornare eu, viverra eleifend risus. Morbi nec nunc et eros venenatis placerat. Pellentesque dolor est, gravida in mi et, vestibulum vehicula felis. Ut id nunc nulla. Etiam ultrices eros eget enim facilisis congue. Pellentesque luctus imperdiet eros. Donec leo elit, tincidunt non ullamcorper at, posuere ac sem. Donec in augue vitae lorem tincidunt condimentum.</p>
+    <img src="<?= IMAGES ?>/footer-Image.png"/>
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    <div class="row">
+      <div class="columns large-8 medium-10 small-centered">
+        <h3>Date</h3>
+        <h2 id="modalTitle">Blog title lorem ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet nisi a tempus sagittis. Vestibulum nisl mi, laoreet sit amet aliquam ut, varius nec odio. Suspendisse porta quis dui eu condimentum. Sed est velit, auctor quis ornare eu, viverra eleifend risus. Morbi nec nunc et eros venenatis placerat. Pellentesque dolor est, gravida in mi et, vestibulum vehicula felis. Ut id nunc nulla. Etiam ultrices eros eget enim facilisis congue. Pellentesque luctus imperdiet eros. Donec leo elit, tincidunt non ullamcorper at, posuere ac sem. Donec in augue vitae lorem tincidunt condimentum.</p>
+      </div>
+    </div>
 </div>
 
 

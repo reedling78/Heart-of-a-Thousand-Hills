@@ -69,6 +69,14 @@
 						font-size: 20px;
 						@include radius(12px);
 
+						&:after {
+							display: none;
+						}
+
+						&:active {
+							color: #fff;
+						}
+
 						&:hover {
 							color: #fff;
 							
