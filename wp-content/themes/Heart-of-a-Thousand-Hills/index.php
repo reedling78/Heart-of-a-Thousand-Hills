@@ -10,6 +10,8 @@
 
 
 
+<!-- END SUCCESS MESSAGE -->
+
 
 <!-- CONTENT AREA 1 -->
 

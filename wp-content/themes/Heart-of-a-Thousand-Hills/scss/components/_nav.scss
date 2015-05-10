@@ -25,7 +25,17 @@
 	width: 100%;
 	height: 100px;
 	z-index: 999;
-	padding-top: 12px;
+
+	.row {
+		padding: 12px;
+	}
+
+	.success {
+		p {
+			text-align: center;
+			color: $grey;
+		}
+	}
 
 	.main-nav-background {
 		height: 100px;
