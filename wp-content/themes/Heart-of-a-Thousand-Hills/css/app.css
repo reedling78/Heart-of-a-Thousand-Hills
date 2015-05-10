@@ -4120,9 +4120,15 @@ body {
   top: 0;
   width: 100%;
   height: 100px;
-  z-index: 999;
-  padding-top: 12px; }
-  /* line 30, ../scss/components/_nav.scss */
+  z-index: 999; }
+  /* line 29, ../scss/components/_nav.scss */
+  .site-header .row {
+    padding: 12px; }
+  /* line 34, ../scss/components/_nav.scss */
+  .site-header .success p {
+    text-align: center;
+    color: #565656; }
+  /* line 40, ../scss/components/_nav.scss */
   .site-header .main-nav-background {
     height: 100px;
     background-color: rgba(0, 0, 0, 0.4);
@@ -4130,21 +4136,21 @@ body {
     top: -92px;
     z-index: -1;
     opacity: 0; }
-  /* line 39, ../scss/components/_nav.scss */
+  /* line 49, ../scss/components/_nav.scss */
   .site-header .site-logo {
     background: url("../images/hothlogo.svg") no-repeat;
     width: 60px;
     height: 60px;
     margin-top: 8px; }
-    /* line 44, ../scss/components/_nav.scss */
+    /* line 54, ../scss/components/_nav.scss */
     .site-header .site-logo a {
       display: block;
       width: 60px;
       height: 60px; }
-  /* line 53, ../scss/components/_nav.scss */
+  /* line 63, ../scss/components/_nav.scss */
   .site-header .nav {
     float: right; }
-    /* line 56, ../scss/components/_nav.scss */
+    /* line 66, ../scss/components/_nav.scss */
     .site-header .nav ul {
       margin: 0 auto 1.0625rem auto;
       margin-left: -1.375rem;
@@ -4163,10 +4169,10 @@ body {
         /* line 47, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
         .site-header .nav ul > li > * {
           display: block; }
-      /* line 61, ../scss/components/_nav.scss */
+      /* line 71, ../scss/components/_nav.scss */
       .site-header .nav ul li {
         margin: 0 15px; }
-        /* line 65, ../scss/components/_nav.scss */
+        /* line 75, ../scss/components/_nav.scss */
         .site-header .nav ul li:last-child a {
           border-style: solid;
           border-width: 2px;
@@ -4201,39 +4207,39 @@ body {
           /* line 168, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
           .site-header .nav ul li:last-child a:hover, .site-header .nav ul li:last-child a:focus {
             color: #cecd5a; }
-          /* line 72, ../scss/components/_nav.scss */
+          /* line 82, ../scss/components/_nav.scss */
           .site-header .nav ul li:last-child a:after {
             display: none; }
-          /* line 76, ../scss/components/_nav.scss */
+          /* line 86, ../scss/components/_nav.scss */
           .site-header .nav ul li:last-child a:active {
             color: #fff; }
-          /* line 80, ../scss/components/_nav.scss */
+          /* line 90, ../scss/components/_nav.scss */
           .site-header .nav ul li:last-child a:hover {
             color: #fff; }
-            /* line 83, ../scss/components/_nav.scss */
+            /* line 93, ../scss/components/_nav.scss */
             .site-header .nav ul li:last-child a:hover:after {
               display: none; }
-        /* line 90, ../scss/components/_nav.scss */
+        /* line 100, ../scss/components/_nav.scss */
         .site-header .nav ul li.menu {
           display: none; }
-      /* line 95, ../scss/components/_nav.scss */
+      /* line 105, ../scss/components/_nav.scss */
       .site-header .nav ul.mobile-menu {
         display: none; }
       @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-        /* line 100, ../scss/components/_nav.scss */
+        /* line 110, ../scss/components/_nav.scss */
         .site-header .nav ul.site-menu {
           display: none; }
-        /* line 103, ../scss/components/_nav.scss */
+        /* line 113, ../scss/components/_nav.scss */
         .site-header .nav ul.mobile-menu {
           display: block; } }
       @media only screen and (max-width: 40em) {
-        /* line 109, ../scss/components/_nav.scss */
+        /* line 119, ../scss/components/_nav.scss */
         .site-header .nav ul.site-menu {
           display: none; }
-        /* line 112, ../scss/components/_nav.scss */
+        /* line 122, ../scss/components/_nav.scss */
         .site-header .nav ul.mobile-menu {
           display: block; } }
-      /* line 117, ../scss/components/_nav.scss */
+      /* line 127, ../scss/components/_nav.scss */
       .site-header .nav ul a {
         color: #c0c0af;
         cursor: pointer;
@@ -4243,7 +4249,7 @@ body {
         text-transform: uppercase;
         font-style: normal;
         position: relative; }
-        /* line 127, ../scss/components/_nav.scss */
+        /* line 137, ../scss/components/_nav.scss */
         .site-header .nav ul a:after {
           content: ".";
           display: block;
@@ -4253,7 +4259,7 @@ body {
           width: 0%;
           height: 2px;
           background: #cecd5a; }
-        /* line 140, ../scss/components/_nav.scss */
+        /* line 150, ../scss/components/_nav.scss */
         .site-header .nav ul a:hover:after {
           width: 100%;
           -webkit-transition: all 0.4s ease-in;
@@ -4261,7 +4267,7 @@ body {
           -o-transition: all 0.4s ease-in;
           -ms-transition: all 0.4s ease-in;
           transition: all 0.4s ease-in; }
-        /* line 146, ../scss/components/_nav.scss */
+        /* line 156, ../scss/components/_nav.scss */
         .site-header .nav ul a.selected:after {
           content: ".";
           display: block;

@@ -75,6 +75,14 @@ $touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
 
 		<!-- HEADER -->
 		<header class="site-header"> 
+			<!-- FORM SUCCESS MESSAGE
+			<div class="row success keylime">
+				<div class="column large-12">
+					<p>Thank you for contacting us. We look forward to getting back to you.</p>
+					<!--<p>Thank you for your donation. We and the children greatly appreciate your kind gesture.</p>-->
+				<!-- </div>
+			</div>
+			END FORM SUCCESS MESSAGE -->
 			<div class="row">
 				<div class="column small-2">
 					<div class="site-logo">
