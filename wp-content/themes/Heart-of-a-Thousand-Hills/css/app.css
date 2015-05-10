@@ -3693,44 +3693,47 @@ ul.off-canvas-list {
     /* line 12, ../scss/components/_blog-list.scss */
     .blog-list .arrows svg {
       width: 13px; }
-    /* line 17, ../scss/components/_blog-list.scss */
-    .blog-list .arrows .disabled svg path {
-      fill: #515151; }
-    /* line 21, ../scss/components/_blog-list.scss */
-    .blog-list .arrows .disabled:hover svg path {
-      fill: #515151; }
-    /* line 27, ../scss/components/_blog-list.scss */
+    /* line 16, ../scss/components/_blog-list.scss */
+    .blog-list .arrows .disabled {
+      cursor: default; }
+      /* line 19, ../scss/components/_blog-list.scss */
+      .blog-list .arrows .disabled svg path {
+        fill: #515151; }
+      /* line 23, ../scss/components/_blog-list.scss */
+      .blog-list .arrows .disabled:hover svg path {
+        fill: #515151; }
+    /* line 29, ../scss/components/_blog-list.scss */
     .blog-list .arrows a:hover svg path {
       fill: #cecd5a; }
-  /* line 33, ../scss/components/_blog-list.scss */
+  /* line 35, ../scss/components/_blog-list.scss */
   .blog-list .archive {
     text-transform: uppercase;
     font-style: normal;
     font-size: 16px;
     font-weight: 800;
     letter-spacing: 1px; }
-    /* line 40, ../scss/components/_blog-list.scss */
+    /* line 42, ../scss/components/_blog-list.scss */
     .blog-list .archive a {
       color: #c0c0af;
       font-size: 16px;
       font-weight: 800; }
-      /* line 45, ../scss/components/_blog-list.scss */
+      /* line 47, ../scss/components/_blog-list.scss */
       .blog-list .archive a.selected, .blog-list .archive a:hover {
         color: #cecd5a; }
-  /* line 53, ../scss/components/_blog-list.scss */
+  /* line 55, ../scss/components/_blog-list.scss */
   .blog-list .list date {
     display: block;
     margin: 30px 0 20px;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 1px; }
-  /* line 61, ../scss/components/_blog-list.scss */
+  /* line 63, ../scss/components/_blog-list.scss */
   .blog-list .list h2 {
     font-size: 30px; }
-    /* line 63, ../scss/components/_blog-list.scss */
+    /* line 65, ../scss/components/_blog-list.scss */
     .blog-list .list h2 a {
       color: #c0c0af; }
-  /* line 69, ../scss/components/_blog-list.scss */
+  /* line 71, ../scss/components/_blog-list.scss */
   .blog-list .list p a {
     white-space: nowrap; }
 
