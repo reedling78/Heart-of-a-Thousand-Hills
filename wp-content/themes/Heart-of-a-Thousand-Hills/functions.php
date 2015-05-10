@@ -675,8 +675,8 @@ function RequestPosts(){
 
 		$html = $html . '<li>';
 		$html = $html . '<date>' . $dateFormated . '</date>';
-		$html = $html . '<h2><a href="' . $permaLink . '"  data-reveal-id="blog-post" data-post-id="' . ID . '">' . $value -> post_title . '</a></h2>';
-		$html = $html . '<p class="small">' . $postExcerpt . '<span> </span><a data-post-id="' . ID . '" href="' . $permaLink . '" data-reveal-id="blog-post">Read More</a></p>';
+		$html = $html . '<h2><a href="' . $permaLink . '"  data-reveal-id="blog-post" data-post-id="' . $value->ID . '">' . $value -> post_title . '</a></h2>';
+		$html = $html . '<p class="small">' . $postExcerpt . '<span> </span><a data-post-id="' . $value->ID . '" href="' . $permaLink . '" data-reveal-id="blog-post">Read More</a></p>';
 		$html = $html . '</li>';
 	}
 
