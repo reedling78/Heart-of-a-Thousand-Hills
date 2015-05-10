@@ -357,6 +357,8 @@ function add_custom_scripts() {
 }
 
 
+
+
 /**
  * ----------------------------------------------------------------------------------------
  * 11.0 - Registers a new settings field on the 'General Settings' page of the WordPress dashboard.
@@ -572,6 +574,150 @@ function show_event_button_box() {
     	echo '<tr><td><input type="text" name="google_maps_text" id="googleMapsText" value="'.$googleMapsTextValue.'" size="30" />
         <br /><span class="description">Url to the google maps location.</span></td></tr>';
     echo '</table>'; // end table
+}
+
+class PostLight
+{
+	public $title;
+	public $content;
+	public $postDate;
+	public $permaLink;
+}
+
+function RequestPosts(){
+	$currentPage = $_POST['page'];
+ 	$postsKey = $_POST['postsKey'];
+ 	$requestedYear = $_POST['requestedYear'];
+
+ 	if ($postsKey == 'next')
+ 	{
+ 		$currentPage = $currentPage + 1;
+ 	}
+ 	else if ($postsKey == 'previous')
+ 	{
+ 		$currentPage = $currentPage - 1;
+ 	}
+ 	else if ($postsKey == 'year')
+ 	{
+ 		$currentPage = 1;
+ 	}
+
+ 	$argsCurrent = array(
+		'posts_per_page' => 6, 
+		'paged' => $currentPage,
+		'year' => $requestedYear
+		);
+ 	$posts = get_posts($argsCurrent);
+
+	$html = '<div class="row"><div class="columns small-8"><ul class="inline-list archive"><li>Archives</li>';
+	global $wpdb;
+	$years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts ORDER BY post_date DESC");
+
+	foreach($years as $year){
+		$selectedClass = $year == $requestedYear ? 'selected' : '';
+		$html = $html . '<li><a href="#" data-post-key="year" data-current-page="' . $currentPage . '" data-requested-year="' . $year . '" class="blog-page ' . $selectedClass . '" >' . $year . '</a></li>';
+	}
+	
+
+
+	$previousPage = $currentPage - 1;
+ 	$argsPrevious= array(
+		'posts_per_page' => 6, 
+		'paged' => $previousPage,
+		'year' => $requestedYear
+	);
+	$postsPrev = get_posts($argsPrevious);
+	$prevCount = count($postsPrev);
+	$prevEnabled = $prevCount > 0 && $previousPage > 0;
+	$html = $html . '</ul></div><div class="columns small-4"><ul class="inline-list arrows">';
+	$html = $html .'';
+	if($prevEnabled){
+		$html = $html . '<li><a class="blog-page" href="#"';
+	}
+	else{
+		$html = $html . '<li><span class="blog-page disabled" ';
+	}
+	$html = $html . 'data-current-page="' . $currentPage . '" data-post-key="previous" data-requested-year="' . $requestedYear . '">';
+	$html = $html . '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 73.7 74.2" enable-background="new 0 0 73.7 74.2" xml:space="preserve"><g><path fill="#C0C0AF" d="M73.1 40.6H13.6L42 69l-5 5L0 37l37-37l5 5L13.6 33.5h59.5V40.6z"/></g></svg>';
+	if($prevEnabled){
+		$html = $html . '</a></li>';
+	}
+	else{
+		$html = $html . '</span></li>';
+	}
+
+	$nextPage = $currentPage + 1;
+	$argsNext= array(
+		'posts_per_page' => 6, 
+		'paged' => $nextPage,
+		'year' => $requestedYear
+	);
+	$postsNext = get_posts($argsNext);
+	$nextCount = count($postsNext);
+	$nextEnabled = $nextCount > 0;
+	$html = $html . '';
+	if($nextEnabled){
+		$html = $html . '<li><a class="blog-page" href="#"';
+	}
+	else{
+		$html = $html . '<li><span class="blog-page disabled" ';
+	}
+	$html = $html . ' data-current-page="' . $currentPage;
+	$html = $html . '" data-post-key="next" data-requested-year="' . $requestedYear . '">';
+	$html = $html . '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 73.7 74.2" enable-background="new 0 0 73.7 74.2" xml:space="preserve"><g><path fill="#C0C0AF" d="M73.3 37l-37 37l-5-5l28.4-28.4H0.3v-7.1h59.5L31.3 5.1l5-5L73.3 37z"/></g></svg>';
+	if($nextEnabled){
+		$html = $html . '</a></li>';
+	}
+	else{
+		$html = $html . '</span></li>';
+	}
+	$html = $html . '</ul></div></div><div class="row"><div class="columns large-12"><ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 list">';
+
+
+	// $argsCurrent = array(
+	// 	'posts_per_page' => 6, 
+	// 	'paged' => $currentPage,
+	// 	'year' => $requestedYear
+	// );
+	// $posts = get_posts($argsCurrent);
+ 	$postsLight = array();
+
+	foreach ($posts as $value) {
+
+		$postExcerpt = get_words($value -> post_content);
+		$permaLink = get_permalink($value -> ID);
+
+		$date = new DateTime($value -> post_date);
+		$dateFormated = $date->format('n.j.Y');
+
+		$html = $html . '<li>';
+		$html = $html . '<date>' . $dateFormated . '</date>';
+		$html = $html . '<h2><a href="' . $permaLink . '"  data-reveal-id="blog-post">' . $value -> post_title . '</a></h2>';
+		$html = $html . '<p class="small">' . $postExcerpt . '<span> </span><a href="' . $permaLink . '" data-reveal-id="blog-post">Read More</a></p>';
+		$html = $html . '</li>';
+	}
+
+	$html = $html . '</ul></div></div>';
+
+    $response = json_encode( 
+    	array(
+    		'html' => $html
+    		) 
+    	);
+ 
+    header( "Content-Type: application/json" );
+    echo $response;
+ 
+    exit;
+}
+
+add_action( 'wp_ajax_nopriv_RequestPosts', 'RequestPosts' );
+add_action( 'wp_ajax_RequestPosts', 'RequestPosts' );
+
+
+function get_words($sentence, $count = 12) {
+  preg_match("/(?:\w+(?:\W+|$)){0,$count}/", $sentence, $matches);
+  return $matches[0];
 }
 
 ?>

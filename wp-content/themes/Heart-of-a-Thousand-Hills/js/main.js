@@ -20,6 +20,7 @@ require(['jquery'], function (skrollr) {
         $(document).foundation();
 
         $('[data-reveal-id]').on('click', function () {
+            //fire ajax to get post and load to modal
             $('body').addClass('modal');
         });
 
@@ -135,10 +136,25 @@ require(['jquery'], function (skrollr) {
             }, 500);            
         });
 
+        $('.blog-list').on('click', 'a.blog-page' ,function(event){ 
+            event.preventDefault();
 
-    
-
-
-        
+            $.ajax({
+            type: 'post',
+            url: '/wp-admin/admin-ajax.php',
+            data: {
+            action: 'RequestPosts',
+            page: $(this).data("currentPage"),
+            postsKey: $(this).data('postKey'),
+            requestedYear: $(this).data('requestedYear')
+            },
+            success: function(data, textStatus, XMLHttpRequest){
+                console.log(data);
+                $('.blog-list').html(data.html);
+            },
+            error: function(MLHttpRequest, textStatus, errorThrown){
+            }
+        });
+    });
     });
 });
