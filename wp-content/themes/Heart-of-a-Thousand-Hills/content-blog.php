@@ -54,9 +54,9 @@ query_posts($args); ?>
 				<?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
 					<li>
 					<date><?php echo get_the_date('n.j.Y'); ?></date>
-					<h2><a href="<?php the_permalink(); ?>" data-reveal-id="blog-post"><?php the_title(); ?></a></h2>
+					<h2><a href="<?php the_permalink(); ?>" data-reveal-id="blog-post" data-post-id="<?php the_ID(); ?>" ><?php the_title(); ?></a></h2>
 					<?php remove_filter('the_excerpt', 'wpautop'); ?>
-					<p class="small"><?php the_excerpt();  ?><span> </span><a href="<?php the_permalink(); ?>" data-reveal-id="blog-post">Read More</a></p>
+					<p class="small"><?php the_excerpt();  ?><span> </span><a href="<?php the_permalink(); ?>" data-reveal-id="blog-post" data-post-id="<?php the_ID(); ?>">Read More</a></p>
 				</li>
 				<?php endwhile; ?>
 				<?php endif; ?>

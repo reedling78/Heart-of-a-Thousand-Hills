@@ -20,8 +20,28 @@ require(['jquery'], function (skrollr) {
         $(document).foundation();
 
         $('[data-reveal-id]').on('click', function () {
-            //fire ajax to get post and load to modal
-            $('body').addClass('modal');
+            $.ajax({
+                type: 'post',
+                url: '/wp-admin/admin-ajax.php',
+                data: {
+                    action: 'RequestPost',
+                    postId: $(this).data("postId"),
+                },
+                success: function(data, textStatus, XMLHttpRequest){
+                    if(data.success){
+                        var post = data.post;
+                        $('div[data-post-date]').html(post.postDate);
+                        $('h2[data-post-title]').html(post.title);
+                        $('div[data-post-content').html(post.content);
+                        $('body').addClass('modal');
+                    }
+                    else{
+                        $('body').removeClass('modal'); 
+                    }
+                },
+                error: function(MLHttpRequest, textStatus, errorThrown){
+                }
+            });
         });
 
         $('.close-reveal-modal').on('click', function(){
@@ -140,21 +160,21 @@ require(['jquery'], function (skrollr) {
             event.preventDefault();
 
             $.ajax({
-            type: 'post',
-            url: '/wp-admin/admin-ajax.php',
-            data: {
-            action: 'RequestPosts',
-            page: $(this).data("currentPage"),
-            postsKey: $(this).data('postKey'),
-            requestedYear: $(this).data('requestedYear')
-            },
-            success: function(data, textStatus, XMLHttpRequest){
-                console.log(data);
-                $('.blog-list').html(data.html);
-            },
-            error: function(MLHttpRequest, textStatus, errorThrown){
-            }
-        });
+                type: 'post',
+                url: '/wp-admin/admin-ajax.php',
+                data: {
+                    action: 'RequestPosts',
+                    page: $(this).data("currentPage"),
+                    postsKey: $(this).data('postKey'),
+                    requestedYear: $(this).data('requestedYear')
+                },
+                success: function(data, textStatus, XMLHttpRequest){
+                    console.log(data);
+                    $('.blog-list').html(data.html);
+                },
+                error: function(MLHttpRequest, textStatus, errorThrown){
+                }
+            });
     });
     });
 });

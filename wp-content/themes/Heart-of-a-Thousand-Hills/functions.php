@@ -576,14 +576,6 @@ function show_event_button_box() {
     echo '</table>'; // end table
 }
 
-class PostLight
-{
-	public $title;
-	public $content;
-	public $postDate;
-	public $permaLink;
-}
-
 function RequestPosts(){
 	$currentPage = $_POST['page'];
  	$postsKey = $_POST['postsKey'];
@@ -673,15 +665,6 @@ function RequestPosts(){
 	}
 	$html = $html . '</ul></div></div><div class="row"><div class="columns large-12"><ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 list">';
 
-
-	// $argsCurrent = array(
-	// 	'posts_per_page' => 6, 
-	// 	'paged' => $currentPage,
-	// 	'year' => $requestedYear
-	// );
-	// $posts = get_posts($argsCurrent);
- 	$postsLight = array();
-
 	foreach ($posts as $value) {
 
 		$postExcerpt = get_words($value -> post_content);
@@ -692,8 +675,8 @@ function RequestPosts(){
 
 		$html = $html . '<li>';
 		$html = $html . '<date>' . $dateFormated . '</date>';
-		$html = $html . '<h2><a href="' . $permaLink . '"  data-reveal-id="blog-post">' . $value -> post_title . '</a></h2>';
-		$html = $html . '<p class="small">' . $postExcerpt . '<span> </span><a href="' . $permaLink . '" data-reveal-id="blog-post">Read More</a></p>';
+		$html = $html . '<h2><a href="' . $permaLink . '"  data-reveal-id="blog-post" data-post-id="' . ID . '">' . $value -> post_title . '</a></h2>';
+		$html = $html . '<p class="small">' . $postExcerpt . '<span> </span><a data-post-id="' . ID . '" href="' . $permaLink . '" data-reveal-id="blog-post">Read More</a></p>';
 		$html = $html . '</li>';
 	}
 
@@ -714,6 +697,53 @@ function RequestPosts(){
 add_action( 'wp_ajax_nopriv_RequestPosts', 'RequestPosts' );
 add_action( 'wp_ajax_RequestPosts', 'RequestPosts' );
 
+class PostLight
+{
+	public $title;
+	public $content;
+	public $postDate;
+}
+
+function RequestPost(){
+	$postId = $_POST['postId'];
+	$post = get_post($postId);
+
+	if (isset($post)){
+		$postLight = new PostLight;
+		$postLight->title = $post->post_title;
+		$postLight->content = $post->post_content;
+
+		$date = new DateTime($post -> post_date);
+		$dateFormated = $date->format('n.j.Y');
+		$postLight->postDate = $dateFormated;
+
+		$response = json_encode( 
+    	array(
+    		'post' => $postLight,
+    		 'success' => true
+    		) 
+    	);
+ 
+    header( "Content-Type: application/json" );
+    echo $response;
+ 
+    exit;
+	}
+	else{
+		$response = json_encode( 
+    	array(
+    		 'success' => false
+    		) 
+    	);
+ 
+    header( "Content-Type: application/json" );
+    echo $response;
+ 
+		exit();
+	}
+}
+add_action( 'wp_ajax_nopriv_RequestPost', 'RequestPost' );
+add_action( 'wp_ajax_RequestPost', 'RequestPost' );
 
 function get_words($sentence, $count = 12) {
   preg_match("/(?:\w+(?:\W+|$)){0,$count}/", $sentence, $matches);
