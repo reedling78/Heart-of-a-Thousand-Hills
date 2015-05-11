@@ -74,7 +74,7 @@ require(['jquery'], function (skrollr) {
                     $(self).css('width', 'auto').css('height', 'auto');
                 }
             });
-            if($(window).width() > 1023){
+            if($(window).width() > 1024){
                 $(self).css('height', $(window).height() + 'px').css('width', $(self).width() + 'px');
                 $(self).parents('.row').css('height', $(window).height() + 'px');
             } else {
@@ -83,7 +83,7 @@ require(['jquery'], function (skrollr) {
             
 
             $(window).on('scroll', function () {
-                if($(window).width() > 1023){
+                if($(window).width() > 1024){
                     if (offset < $(window).scrollTop()) {
                         $(self).css('position', 'fixed').css('top', '0');
                     } 
