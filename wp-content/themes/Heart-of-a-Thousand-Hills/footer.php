@@ -9,9 +9,6 @@
 		</div> <!-- end row -->
 	</div> <!-- end container -->
 
-
-
-
 	<!-- FOOTER -->
 	<footer class="site-footer" id="Footer">
 		<div class="row">

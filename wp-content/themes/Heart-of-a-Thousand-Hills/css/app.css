@@ -4135,7 +4135,7 @@ body {
     position: relative;
     top: -92px;
     z-index: -1;
-    opacity: 0; }
+    opacity: 1; }
   /* line 49, ../scss/components/_nav.scss */
   .site-header .site-logo {
     background: url("../images/hothlogo.svg") no-repeat;

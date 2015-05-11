@@ -20,9 +20,10 @@ require(['jquery'], function (skrollr) {
         $(document).foundation();
 
         $('[data-reveal-id]').on('click', function () {
+            $('body').addClass('modal');
             $.ajax({
                 type: 'post',
-                url: '/wp-admin/admin-ajax.php',
+                url: '/Heart-of-a-Thousand-Hills/wp-admin/admin-ajax.php',
                 data: {
                     action: 'RequestPost',
                     postId: $(this).data("postId"),
@@ -33,7 +34,7 @@ require(['jquery'], function (skrollr) {
                         $('div[data-post-date]').html(post.postDate);
                         $('h2[data-post-title]').html(post.title);
                         $('div[data-post-content').html(post.content);
-                        $('body').addClass('modal');
+                        
                     }
                     else{
                         $('body').removeClass('modal'); 
@@ -49,7 +50,6 @@ require(['jquery'], function (skrollr) {
         });
 
         $('.wpcf7-form input[type="text"]').each(function(){
-            console.log($(this).attr('placeholder'));
             $('<label>' + $(this).attr('placeholder') + '</label>').insertBefore(this);
             $(this).on('keyup', function () {
                 if ($(this).val().length !== 0) {
@@ -161,7 +161,7 @@ require(['jquery'], function (skrollr) {
 
             $.ajax({
                 type: 'post',
-                url: '/wp-admin/admin-ajax.php',
+                url: '/Heart-of-a-Thousand-Hills/wp-admin/admin-ajax.php',
                 data: {
                     action: 'RequestPosts',
                     page: $(this).data("currentPage"),
@@ -169,7 +169,6 @@ require(['jquery'], function (skrollr) {
                     requestedYear: $(this).data('requestedYear')
                 },
                 success: function(data, textStatus, XMLHttpRequest){
-                    console.log(data);
                     $('.blog-list').html(data.html);
                 },
                 error: function(MLHttpRequest, textStatus, errorThrown){
