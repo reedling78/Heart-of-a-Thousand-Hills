@@ -558,8 +558,8 @@ function show_event_button_box() {
     // Begin the field table and loop
     echo '<table class="form-table">';
     	echo '<tr><th><label for="event_date">Event Date</label></th></tr>';
-    	echo '<tr><td><input type="text" class="datepicker" name="event_date" id="eventDate" value="'.$eventDate.'" size="30" />
-        <br /><span class="description">Url to the event bright page.</span></td></tr>';
+    	echo '<tr><td><input type="text" class="datepicker" name="event_date" id="eventDate" value="'.$eventDate.'" size="15" />
+        <br /><span class="description">Enter the date of this event.</span></td></tr>';
     	echo '<tr><th><label for="event_button_selection">Event Button Selection</label></th></tr>';
     	echo '<tr><td>';
     	echo '<input type="radio" name=event_button_selection id="eventBright" value="eventBright"', $radioButtonValue == "eventBright" ? ' checked="checked"' : "", ' />

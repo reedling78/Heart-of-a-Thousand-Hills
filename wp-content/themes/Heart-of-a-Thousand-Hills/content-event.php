@@ -12,6 +12,11 @@
       while( $events->have_posts() ) {
         $events->the_post();
         $eventButtonType = get_post_meta($events->post->ID, 'event_button_selection', true);
+        $eventDate = get_post_meta($events->post->ID, 'eventDate', true);
+		if($eventDate < time()) {
+			// don't show the event button for events that have already happened
+			$eventButtonType = "";
+		}
         ?>
            <div class="dark row event collapse" id="Events">
     <div class="column large-6">
@@ -29,7 +34,7 @@
                 </a>
                 <?php 
             }
-            else {
+            else if($eventButtonType == "googleMap") {
                 ?>
                 <a href="<?= get_post_meta($post->ID, 'googleMapsText', true) ?>" class="button">
                 <svg xmlns="http://www.w3.org/2000/svg" 
