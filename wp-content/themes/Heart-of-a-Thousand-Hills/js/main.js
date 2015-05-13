@@ -23,7 +23,7 @@ require(['jquery'], function (skrollr) {
             $('body').addClass('modal');
             $.ajax({
                 type: 'post',
-                url: '/wp-admin/admin-ajax.php',
+                url: window.location.href + '/wp-admin/admin-ajax.php',
                 data: {
                     action: 'RequestPost',
                     postId: $(this).data("postId"),
@@ -161,7 +161,7 @@ require(['jquery'], function (skrollr) {
 
             $.ajax({
                 type: 'post',
-                url: '/wp-admin/admin-ajax.php',
+                url: window.location.href + '/wp-admin/admin-ajax.php',
                 data: {
                     action: 'RequestPosts',
                     page: $(this).data("currentPage"),
