@@ -597,7 +597,8 @@ function RequestPosts(){
  	$argsCurrent = array(
 		'posts_per_page' => 6, 
 		'paged' => $currentPage,
-		'year' => $requestedYear
+		'year' => $requestedYear,
+		'post_status' => 'publish'
 		);
  	$posts = get_posts($argsCurrent);
 
@@ -616,7 +617,8 @@ function RequestPosts(){
  	$argsPrevious= array(
 		'posts_per_page' => 6, 
 		'paged' => $previousPage,
-		'year' => $requestedYear
+		'year' => $requestedYear,
+		'post_status' => 'publish'
 	);
 	$postsPrev = get_posts($argsPrevious);
 	$prevCount = count($postsPrev);
@@ -642,7 +644,8 @@ function RequestPosts(){
 	$argsNext= array(
 		'posts_per_page' => 6, 
 		'paged' => $nextPage,
-		'year' => $requestedYear
+		'year' => $requestedYear,
+		'post_status' => 'publish'
 	);
 	$postsNext = get_posts($argsNext);
 	$nextCount = count($postsNext);

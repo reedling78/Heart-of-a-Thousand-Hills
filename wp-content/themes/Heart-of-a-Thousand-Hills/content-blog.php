@@ -1,5 +1,5 @@
 <?php 
-$args = array('posts_per_page' => 6, 'paged' => 1 );
+$args = array('posts_per_page' => 6, 'paged' => 1, 'post_status' => 'publish' );
 query_posts($args); ?>
 <div class="blog-list dark">
 	<div class="row">
@@ -32,7 +32,8 @@ query_posts($args); ?>
 				$argsNext= array(
 				'posts_per_page' => 6, 
 				'paged' => 2,
-				'year' => $currentYear
+				'year' => $currentYear,
+				'post_status' => 'publish'
 				);
 				$postsNext = get_posts($argsNext);
 				$nextCount = count($postsNext);
