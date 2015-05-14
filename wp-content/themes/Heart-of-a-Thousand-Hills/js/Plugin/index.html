@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>imGrid - Just another Image grid jQuery plugin</title>
+    <meta charset="UTF-8">
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="css/imgrid.min.css">
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="css/imgrid.hover.min.css">
+</head>
+<body>
+
+<div style="max-width: 960px; margin-left: auto; margin-right: auto">
+    <h1> imGrid - Media Grid Responsive Gallery </h1>
+
+    <p>This is a very basic example, for a complete list of features please visit <a
+            href="http://demos.rabartu.net/imgrid/docs/01-getting-started.html">online imGrid documentation</a>.</p>
+
+    <br>
+    <div class="imgrid"></div>
+    <br>
+
+    <small>Images from<a href="http://unsplash.com/">Unsplash</a>. Hover effects inspired on
+        <a href="http://tympanus.net/Tutorials/HoverEffectIdeas/">HoverEffectIdeas</a>
+    </small>
+</div>
+
+
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/imagesloaded.pkgd.js"></script>
+<script src="vendor/velocity.min.js"></script>
+<script src="vendor/velocity.ui.min.js"></script>
+<script src="js/imgrid.min.js"></script>
+
+<script>
+    $.get("https://unsplash.it/list", function (image_list) {
+        $image_count = image_list.length;
+        for (var i = 1; i < 19; i++) {
+            var image_id = Math.round(Math.random() * $image_count);
+            $(".imgrid").append(
+                    '<figure>' +
+                    '<img src="https://unsplash.it/800/800?image=' + image_list[image_id].id + '" alt="img01"/>' +
+                    '<figcaption>' +
+                    '<h2>Your title here</h2>' +
+                    '<p class="icon-links">' +
+                    '<a href="#"><span class="fa fa-download"></span></a>' +
+                    '<a href="#"><span class="fa fa-eye"></span></a>' +
+                    '<a href="#"><span class="fa fa-share"></span></a>' +
+                    '</p>' +
+                    '<p class="description">Your description goes here</p>' +
+                    '</figcaption>' +
+                    '</figure>'
+            );
+        }
+        $(".imgrid").imgrid({thumbSize: 300});
+    }, "json");
+</script>
+</body>
+</html>
