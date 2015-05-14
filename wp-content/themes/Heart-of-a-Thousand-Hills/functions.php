@@ -307,6 +307,14 @@ function save_custom_meta($post_id) {
         } elseif (!current_user_can('edit_post', $post_id)) {
             return $post_id;
     }
+
+    $oldEventImage = get_post_meta($post_id, 'event_image', true);
+    $newEventImage = $_POST['event_image'];
+    if ($newEventImage && $newEventImage != $oldEventImage) {
+        update_post_meta($post_id, 'event_image', $newEventImage);
+    } elseif ('' == $newEventImage && $oldEventImage) {
+        delete_post_meta($post_id, 'event_image', $oldEventImage);
+    }
      
     $oldEventRadioButton = get_post_meta($post_id, 'event_button_selection', true);
     $newEventRadioButton = $_POST['event_button_selection'];
@@ -349,6 +357,11 @@ function add_custom_scripts() {
 	if(is_admin()) {
     	wp_enqueue_script('jquery-ui-datepicker');
     	wp_enqueue_style('jquery-ui', get_template_directory_uri().'/css/jquery-ui.min.css');
+
+		wp_enqueue_media();
+ 		wp_register_script('event-image', get_template_directory_uri().'/js/event-images.js', array( 'jquery' ));
+ 		wp_enqueue_script('event-image');
+
 	}
      
     echo '<script type="text/javascript">
@@ -549,6 +562,9 @@ function show_event_button_box() {
 // Use nonce for verification
 	echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
 
+	$eventImage = get_post_meta($post->ID, 'event_image', true);
+	$eventImageSrc = wp_get_attachment_url( $eventImage );
+
 	$radioButtonValue = get_post_meta($post->ID, 'event_button_selection', true);
 	$eventBrightTextValue = get_post_meta($post->ID, 'eventBrightText', true);
 	$googleMapsTextValue = get_post_meta($post->ID, 'googleMapsText', true);
@@ -557,6 +573,8 @@ function show_event_button_box() {
      
     // Begin the field table and loop
     echo '<table class="form-table">';
+    	echo '<tr><th><label for="upload_image">Event Image</label></th></tr>';
+    	echo '<tr><td><input type="text" name="event_image" id="even_image" value="'.$eventImage.'" size="30" /><input type="button" id="event_image_button" class="button" value="Choose Image" /></td></tr>';
     	echo '<tr><th><label for="event_date">Event Date</label></th></tr>';
     	echo '<tr><td><input type="text" class="datepicker" name="event_date" id="eventDate" value="'.$eventDate.'" size="15" />
         <br /><span class="description">Enter the date of this event.</span></td></tr>';
