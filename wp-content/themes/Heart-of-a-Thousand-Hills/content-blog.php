@@ -1,6 +1,7 @@
 <?php 
 $args = array('posts_per_page' => 6, 'paged' => 1, 'post_status' => 'publish' );
-query_posts($args); ?>
+query_posts($args);
+if (have_posts()) : ?>
 <div class="blog-list dark">
 	<div class="row">
 		<div class="columns small-8">
@@ -65,3 +66,4 @@ query_posts($args); ?>
 		</div>
 	</div>
 </div>
+<?php endif; ?>
