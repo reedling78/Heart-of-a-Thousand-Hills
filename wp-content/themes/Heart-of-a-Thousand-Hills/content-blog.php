@@ -44,7 +44,7 @@ if (have_posts()) : ?>
 				<?php if ($nextEnabled) : ?>
 				<li><a href="#" class="blog-page" data-requested-year="<?php echo $currentYear; ?>" data-current-page="1" data-post-key="next"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 73.7 74.2" enable-background="new 0 0 73.7 74.2" xml:space="preserve"><g><path fill="#C0C0AF" d="M73.3 37l-37 37l-5-5l28.4-28.4H0.3v-7.1h59.5L31.3 5.1l5-5L73.3 37z"/></g></svg></a></li>
 				<?php else: ?>
-				<li><span class="blog-page" data-requested-year="<?php echo $currentYear; ?>" data-current-page="1" data-post-key="next"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 73.7 74.2" enable-background="new 0 0 73.7 74.2" xml:space="preserve"><g><path fill="#C0C0AF" d="M73.3 37l-37 37l-5-5l28.4-28.4H0.3v-7.1h59.5L31.3 5.1l5-5L73.3 37z"/></g></svg></span></li>
+				<li><span class="blog-page disabled" data-requested-year="<?php echo $currentYear; ?>" data-current-page="1" data-post-key="next"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 73.7 74.2" enable-background="new 0 0 73.7 74.2" xml:space="preserve"><g><path fill="#C0C0AF" d="M73.3 37l-37 37l-5-5l28.4-28.4H0.3v-7.1h59.5L31.3 5.1l5-5L73.3 37z"/></g></svg></span></li>
 				<?php endif; ?>
 				
 			</ul>
