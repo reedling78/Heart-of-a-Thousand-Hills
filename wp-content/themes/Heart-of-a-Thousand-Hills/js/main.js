@@ -34,7 +34,14 @@ require(['jquery'], function (skrollr) {
                         $('div[data-post-date]').html(post.postDate);
                         $('h2[data-post-title]').html(post.title);
                         $('div[data-post-content').html(post.content);
-                        
+                        if(post.postImageURL != null){
+                            $('img[data-blog-image]').attr('src', post.postImageURL);
+                            $('img[data-blog-image]').attr('alt', 'header image');
+                            $('img[data-blog-image]').show();
+                        }
+                        else{
+                            $('img[data-blog-image]').hide();
+                        }
                     }
                     else{
                         $('body').removeClass('modal'); 

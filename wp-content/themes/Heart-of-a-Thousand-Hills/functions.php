@@ -720,48 +720,57 @@ add_action( 'wp_ajax_RequestPosts', 'RequestPosts' );
 
 class PostLight
 {
-	public $title;
-	public $content;
-	public $postDate;
+  public $title;
+  public $content;
+  public $postDate;
+  public $postImageURL;
 }
 
 function RequestPost(){
-	$postId = $_POST['postId'];
-	$post = get_post($postId);
+  $postId = $_POST['postId'];
+  $post = get_post($postId);
 
-	if (isset($post)){
-		$postLight = new PostLight;
-		$postLight->title = $post->post_title;
-		$postLight->content = $post->post_content;
+  if (isset($post)){
+    $postLight = new PostLight;
+    $postLight->title = $post->post_title;
+    $postLight->content = $post->post_content;
+    $imageObj = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); 
+    if (isset($imageObj)){
+      if (isset($imageObj[0])){
+        $postLight->postImageURL = $imageObj[0];
+      }
+    }
 
-		$date = new DateTime($post -> post_date);
-		$dateFormated = $date->format('n.j.Y');
-		$postLight->postDate = $dateFormated;
+    $date = new DateTime($post -> post_date);
+    $dateFormated = $date->format('n.j.Y');
+    $postLight->postDate = $dateFormated;
 
-		$response = json_encode( 
-    	array(
-    		'post' => $postLight,
-    		 'success' => true
-    		) 
-    	);
+    $postImageURL = 
+
+    $response = json_encode( 
+      array(
+        'post' => $postLight,
+         'success' => true
+        ) 
+      );
  
     header( "Content-Type: application/json" );
     echo $response;
  
     exit;
-	}
-	else{
-		$response = json_encode( 
-    	array(
-    		 'success' => false
-    		) 
-    	);
+  }
+  else{
+    $response = json_encode( 
+      array(
+         'success' => false
+        ) 
+      );
  
     header( "Content-Type: application/json" );
     echo $response;
  
-		exit();
-	}
+    exit();
+  }
 }
 add_action( 'wp_ajax_nopriv_RequestPost', 'RequestPost' );
 add_action( 'wp_ajax_RequestPost', 'RequestPost' );

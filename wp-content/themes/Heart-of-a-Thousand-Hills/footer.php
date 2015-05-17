@@ -44,7 +44,7 @@
 </div>
 
 <div id="blog-post" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-    <img src="<?= IMAGES ?>/footer-Image.png"/>
+    <img data-blog-image />
     <a class="close-reveal-modal" aria-label="Close">&#215;</a>
     <div class="row">
       <div class="columns large-8 medium-10 small-centered">
