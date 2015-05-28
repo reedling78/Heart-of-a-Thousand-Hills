@@ -3769,7 +3769,12 @@ ul.off-canvas-list {
   .button:hover, .button:focus, .button:active, .button.selected {
     color: #fff; }
 
-/* line 3, ../scss/components/_contact-form.scss */
+/* line 2, ../scss/components/_contact-form.scss */
+div.wpcf7-mail-sent-ok {
+  border: 2px solid #398f14;
+  background-color: #398f14; }
+
+/* line 9, ../scss/components/_contact-form.scss */
 .namespace.contact-form input[type="text"] {
   color: #333;
   font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
@@ -3782,33 +3787,33 @@ ul.off-canvas-list {
   -webkit-appearance: none;
   margin-bottom: 0;
   padding-top: 10px; }
-/* line 17, ../scss/components/_contact-form.scss */
+/* line 23, ../scss/components/_contact-form.scss */
 .namespace.contact-form input[placeholder] {
   color: #333; }
-/* line 21, ../scss/components/_contact-form.scss */
+/* line 27, ../scss/components/_contact-form.scss */
 .namespace.contact-form input[type="checkbox"] {
   width: 20px;
   height: 20px; }
-/* line 26, ../scss/components/_contact-form.scss */
+/* line 32, ../scss/components/_contact-form.scss */
 .namespace.contact-form input {
   font-size: 1.5em; }
-/* line 30, ../scss/components/_contact-form.scss */
+/* line 36, ../scss/components/_contact-form.scss */
 .namespace.contact-form input::-webkit-input-placeholder {
   color: #333;
   font-size: 1.4em;
   margin: 3%; }
-/* line 36, ../scss/components/_contact-form.scss */
+/* line 42, ../scss/components/_contact-form.scss */
 .namespace.contact-form input:-ms-input-placeholder {
   color: #333;
   font-size: 1.4em; }
-/* line 41, ../scss/components/_contact-form.scss */
+/* line 47, ../scss/components/_contact-form.scss */
 .namespace.contact-form label {
   font-style: normal;
   color: #333;
   font-size: 1em;
   position: absolute;
   display: none; }
-/* line 49, ../scss/components/_contact-form.scss */
+/* line 55, ../scss/components/_contact-form.scss */
 .namespace.contact-form h1, .namespace.contact-form h2 {
   color: #333;
   text-align: left;
@@ -3816,16 +3821,16 @@ ul.off-canvas-list {
   font-family: "Malabar W01", Times New Roman, Times, serif;
   font-weight: 800;
   font-size: 2.2em; }
-/* line 58, ../scss/components/_contact-form.scss */
+/* line 64, ../scss/components/_contact-form.scss */
 .namespace.contact-form p {
   font-size: 1.2em;
   font-style: normal;
   color: #333;
   font-family: "Quire Sans W01", Arial, Helvetica, sans-serif; }
-/* line 65, ../scss/components/_contact-form.scss */
+/* line 71, ../scss/components/_contact-form.scss */
 .namespace.contact-form p label {
   font-size: 1.2em; }
-/* line 69, ../scss/components/_contact-form.scss */
+/* line 75, ../scss/components/_contact-form.scss */
 .namespace.contact-form .btn {
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
@@ -3840,28 +3845,28 @@ ul.off-canvas-list {
   font-size: 1em;
   letter-spacing: 2px;
   font-weight: 600; }
-/* line 85, ../scss/components/_contact-form.scss */
+/* line 91, ../scss/components/_contact-form.scss */
 .namespace.contact-form .btn:hover {
   background: #333;
   color: #FFF;
   text-decoration: none; }
-/* line 91, ../scss/components/_contact-form.scss */
+/* line 97, ../scss/components/_contact-form.scss */
 .namespace.contact-form .bottomBorder {
   border-bottom: 1px solid #333; }
-/* line 95, ../scss/components/_contact-form.scss */
+/* line 101, ../scss/components/_contact-form.scss */
 .namespace.contact-form .rightBorder {
   border-right: 1px solid #333; }
-/* line 99, ../scss/components/_contact-form.scss */
+/* line 105, ../scss/components/_contact-form.scss */
 .namespace.contact-form .contactFields {
   border: 1px solid #333333;
   border-radius: 10px;
   margin: 0% 5% 1% 5%; }
-/* line 104, ../scss/components/_contact-form.scss */
+/* line 110, ../scss/components/_contact-form.scss */
 .namespace.contact-form .contactCheckboxes {
   padding: 0;
   margin: 0% 5% 0% 5%; }
 @media only screen and (min-width: 40.063em) {
-  /* line 109, ../scss/components/_contact-form.scss */
+  /* line 115, ../scss/components/_contact-form.scss */
   .namespace.contact-form .rightBorder {
     border-right: none; } }
 

@@ -19,8 +19,19 @@ require(['jquery'], function (skrollr) {
 
         $(document).foundation();
 
+        var formtimer;
+
         $('[data-reveal-id]').on('click', function () {
             $('body').addClass('modal');
+            
+            formtimer = setInterval(function(){
+                if($('.wpcf7-response-output').hasClass('wpcf7-mail-sent-ok')){
+                    setTimeout(function(){
+                        $('#ContentForm').foundation('reveal', 'close');
+                    }, 2000);
+                }
+            }, 1000);
+
             $.ajax({
                 type: 'post',
                 url: window.location.href + '/wp-admin/admin-ajax.php',
@@ -54,6 +65,7 @@ require(['jquery'], function (skrollr) {
 
         $('.close-reveal-modal').on('click', function(){
             $('body').removeClass('modal');
+            clearInterval(formtimer);
         });
 
         $('.wpcf7-form input[type="text"]').each(function(){
