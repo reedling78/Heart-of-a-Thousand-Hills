@@ -15,20 +15,29 @@ require(['jquery'], function (skrollr) {
     require(['skrollr', 'foundation'], function (skrollr) {
         'use strict';
 
-        
+        var scrollTop = $(window).scrollTop();
 
         $(document).foundation();
 
 
         $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
           $('body').removeClass('modal');
+            $('body').scrollTop(scrollTop);
             clearInterval(formtimer);
+        });
+
+        $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+            if($(window).scrollTop() !== 0){
+                scrollTop = $(window).scrollTop();
+            }
+          
+          $('body').addClass('modal');
         });
 
         var formtimer;
 
         $('[data-reveal-id]').on('click', function () {
-            $('body').addClass('modal');
+            
 
             formtimer = setInterval(function(){
                 if($('.wpcf7-response-output').hasClass('wpcf7-mail-sent-ok')){
