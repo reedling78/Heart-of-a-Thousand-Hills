@@ -4050,7 +4050,7 @@ div.wpcf7-mail-sent-ok {
   /* line 15, ../scss/components/_event.scss */
   .event .event-description {
     text-align: center;
-    padding: 145px 100px; }
+    padding: 145px 10px; }
   /* line 20, ../scss/components/_event.scss */
   .event svg {
     width: 9px;
