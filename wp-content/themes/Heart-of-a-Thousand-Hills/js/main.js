@@ -19,11 +19,17 @@ require(['jquery'], function (skrollr) {
 
         $(document).foundation();
 
+
+        $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+          $('body').removeClass('modal');
+            clearInterval(formtimer);
+        });
+
         var formtimer;
 
         $('[data-reveal-id]').on('click', function () {
             $('body').addClass('modal');
-            
+
             formtimer = setInterval(function(){
                 if($('.wpcf7-response-output').hasClass('wpcf7-mail-sent-ok')){
                     setTimeout(function(){
@@ -31,6 +37,10 @@ require(['jquery'], function (skrollr) {
                     }, 2000);
                 }
             }, 1000);
+
+            // $(window).on('keydown', function(e){
+            //     console.log(e.keyCode);
+            // });
 
             $.ajax({
                 type: 'post',
@@ -64,8 +74,7 @@ require(['jquery'], function (skrollr) {
         });
 
         $('.close-reveal-modal').on('click', function(){
-            $('body').removeClass('modal');
-            clearInterval(formtimer);
+            
         });
 
         $('.wpcf7-form input[type="text"]').each(function(){
