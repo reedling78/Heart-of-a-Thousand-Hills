@@ -30,15 +30,12 @@ require(['jquery'], function (skrollr) {
             if($(window).scrollTop() !== 0){
                 scrollTop = $(window).scrollTop();
             }
-          
           $('body').addClass('modal');
         });
 
         var formtimer;
 
         $('[data-reveal-id]').on('click', function () {
-            
-
             formtimer = setInterval(function(){
                 if($('.wpcf7-response-output').hasClass('wpcf7-mail-sent-ok')){
                     setTimeout(function(){
@@ -106,14 +103,14 @@ require(['jquery'], function (skrollr) {
             $(window).on('resize', function(){
                 if($(window).width() > 1023){
                     $(self).css('height', $(window).height() + 'px').css('width', $(self).width() + 'px');
-                    $(self).parents('.row').css('height', $(window).height() + 'px');
+                    $(self).parents('.row').css('height', $(window).height() + 'px').css('overflow', 'hidden');
                 } else {
                     $(self).css('width', 'auto').css('height', 'auto');
                 }
             });
             if($(window).width() > 1024){
                 $(self).css('height', $(window).height() + 'px').css('width', $(self).width() + 'px');
-                $(self).parents('.row').css('height', $(window).height() + 'px');
+                $(self).parents('.row').css('height', $(window).height() + 'px').css('overflow', 'hidden');
             } else {
                 $(self).css('width', 'auto').css('height', 'auto');
             }
