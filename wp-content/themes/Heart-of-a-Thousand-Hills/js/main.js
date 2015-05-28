@@ -107,6 +107,11 @@ require(['jquery'], function (skrollr) {
                 } else {
                     $(self).css('width', 'auto').css('height', 'auto');
                 }
+                if($(window).height() < 800) {
+                    $('.event-description').css('padding-top', '80px');
+                } else {
+                    $('.event-description').css('padding-top', '145px');
+                }
             });
             if($(window).width() > 1024){
                 $(self).css('height', $(window).height() + 'px').css('width', $(self).width() + 'px');
@@ -114,6 +119,12 @@ require(['jquery'], function (skrollr) {
             } else {
                 $(self).css('width', 'auto').css('height', 'auto');
             }
+
+            if($(window).height() < 800) {
+                    $('.event-description').css('padding-top', '80px');
+                } else {
+                    $('.event-description').css('padding-top', '145px');
+                }
             
 
             $(window).on('scroll', function () {
