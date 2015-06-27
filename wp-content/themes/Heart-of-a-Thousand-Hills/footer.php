@@ -33,7 +33,7 @@
 
 <div id="DonateForm" class="reveal-modal full" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
     <div class="namespace donation-form ">
-  <?php echo do_shortcode('[dgx-donate]'); ?>
+  <?php echo do_shortcode('[seamless-donations]'); ?>
   </div>
   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 </div>

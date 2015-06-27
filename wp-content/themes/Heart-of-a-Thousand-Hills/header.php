@@ -49,8 +49,6 @@ $touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
 	})(window,document,'script','dataLayer','GTM-5XHGRX');</script>
 	<!-- End Google Tag Manager -->
 
-
-
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
 
@@ -68,10 +66,6 @@ $touch_icon = IMAGES . '/icons/apple-touch-icon-152x152-precomposed.png';
 			);
 		?>
     </aside>
-
-
-
-
 
 		<!-- HEADER -->
 		<header class="site-header"> 

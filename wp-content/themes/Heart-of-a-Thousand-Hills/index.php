@@ -32,7 +32,7 @@
 
 <!-- END CONTENT AREA 1 -->
 
-<!-- CONTENT AREA 2 - IN BETA 
+<!-- CONTENT AREA 2 - IN BETA  -->
 <div class="row about keylime" id="WhoWeAre">
 	<div class="arc" style="top: -117px;">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1500 150" enable-background="new 0 0 1500 150" xml:space="preserve">
@@ -50,7 +50,7 @@
 	?>
 </div>
 
--->
+
 <div class="row about keylime" id="WhoWeAre">
 	<div class="arc" style="top: 0px;">
 		<svg class="yellow-hill" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
