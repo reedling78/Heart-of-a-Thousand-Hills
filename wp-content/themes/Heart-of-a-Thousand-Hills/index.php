@@ -32,7 +32,7 @@
 
 <!-- END CONTENT AREA 1 -->
 
-<!-- CONTENT AREA 2 - IN BETA  -->
+<!-- CONTENT AREA 2 - IN BETA 
 <div class="row about keylime" id="WhoWeAre">
 	<div class="arc" style="top: -117px;">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1500 150" enable-background="new 0 0 1500 150" xml:space="preserve">
@@ -50,7 +50,7 @@
 	?>
 </div>
 
-
+-->
 <div class="row about keylime" id="WhoWeAre">
 	<div class="arc" style="top: 0px;">
 		<svg class="yellow-hill" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -95,14 +95,66 @@
 </div>
 
 
-
-
-
-
-        
+       
 <!-- CONTENT AREA 3 -->
 <?php require_once('content-event.php'); ?>
 <!-- END CONTENT AREA 3 -->
+
+<div class="row" style="z-index: 999999999; position: relative; background-color:#333333;">
+	<div class="column large-12">
+<?php
+	ini_set('display_errors',1);
+	ini_set('display_startup_errors',1);
+	error_reporting(-1);
+
+	$api_key = '165611a9b8940c3f394c3184ff287a4e';
+
+	$tag = 'rwanda';
+	$perPage = 24;
+	$url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search';
+	$url.= '&api_key='.$api_key;
+	$url.= '&tags='.$tag;
+	$url.= '&per_page='.$perPage;
+	$url.= '&format=json';
+	$url.= '&nojsoncallback=1';
+
+	$response = json_decode(file_get_contents($url));
+	$photo_array = $response->photos->photo;
+
+	echo "<ul class=\"gridder\">";
+
+	foreach($photo_array as $single_photo){ 
+		$farm_id = $single_photo->farm;
+		$server_id = $single_photo->server;
+		$photo_id = $single_photo->id;
+		$secret_id = $single_photo->secret;
+		$size = 'q';
+		$title = $single_photo->title;
+		$photo_url = 'http://farm'.$farm_id.'.staticflickr.com/'.$server_id.'/'.$photo_id.'_'.$secret_id.'_'.$size.'.'.'jpg';
+
+		echo "<li class=\"gridder-list\" data-griddercontent=\"#$photo_id\">";
+	    echo "<img src=\"$photo_url\" />";
+	    echo "</li>";
+
+	}
+	echo "</ul>";
+
+	foreach($photo_array as $single_photo){ 
+		$farm_id = $single_photo->farm;
+		$server_id = $single_photo->server;
+		$photo_id = $single_photo->id;
+		$secret_id = $single_photo->secret;
+		$size = 'b';
+		$title = $single_photo->title;
+		$photo_url = 'http://farm'.$farm_id.'.staticflickr.com/'.$server_id.'/'.$photo_id.'_'.$secret_id.'_'.$size.'.'.'jpg';
+
+		echo "<div id=\"$photo_id\" class=\"gridder-content\">";
+		echo "<img src=\"$photo_url\" />";
+		echo "</div>";
+	}
+?>
+	</div>
+</div>
 
 
 

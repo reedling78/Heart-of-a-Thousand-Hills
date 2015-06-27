@@ -3737,27 +3737,30 @@ ul.off-canvas-list {
   .blog-list .list p a {
     white-space: nowrap; }
 
-/* line 7, ../scss/components/_blog-post.scss */
-#blog-post h2 {
-  color: #333;
-  margin: 5px 0 30px; }
-/* line 12, ../scss/components/_blog-post.scss */
-#blog-post h3 {
-  color: #333;
-  margin: 40px 0 0; }
-/* line 17, ../scss/components/_blog-post.scss */
-#blog-post p {
-  font-style: normal;
-  color: #333;
-  font-size: 21px;
-  margin: 0 0 20px; }
+/* line 5, ../scss/components/_blog-post.scss */
+#blog-post {
+  color: #333; }
+  /* line 9, ../scss/components/_blog-post.scss */
+  #blog-post h2 {
+    color: #333;
+    margin: 5px 0 30px; }
+  /* line 14, ../scss/components/_blog-post.scss */
+  #blog-post h3 {
+    color: #333;
+    margin: 40px 0 0; }
+  /* line 19, ../scss/components/_blog-post.scss */
+  #blog-post p {
+    font-style: normal;
+    color: #333;
+    font-size: 21px;
+    margin: 0 0 20px; }
 
 @media only screen and (max-width: 40em) {
-  /* line 27, ../scss/components/_blog-post.scss */
+  /* line 29, ../scss/components/_blog-post.scss */
   h1 {
     font-size: 2.875rem; }
 
-  /* line 28, ../scss/components/_blog-post.scss */
+  /* line 30, ../scss/components/_blog-post.scss */
   h2 {
     font-size: 2.125rem; } }
 /* line 5, ../scss/components/_button.scss */
@@ -4345,3 +4348,42 @@ p {
   .home video {
     width: auto;
     min-height: 900px; } }
+/* line 57, ../scss/app.scss */
+.gridder {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; }
+
+/* line 57, ../scss/app.scss */
+.gridder-list {
+  display: inline-block;
+  vertical-align: top; }
+
+/* line 57, ../scss/app.scss */
+.gridder-show {
+  display: block;
+  float: left;
+  width: 100%;
+  position: relative; }
+
+/* line 57, ../scss/app.scss */
+.gridder-content {
+  display: none; }
+
+/* line 57, ../scss/app.scss */
+.gridder-list {
+  width: 15.83333%; }
+
+/* line 57, ../scss/app.scss */
+.gridder-list:nth-child(n) {
+  margin-bottom: 1%;
+  margin-right: 1%; }
+
+/* line 57, ../scss/app.scss */
+.gridder-list:nth-of-type(6n) {
+  margin-right: 0;
+  margin-bottom: 0; }
+
+/* line 60, ../scss/app.scss */
+.gridder-expanded-content, .gridder-list {
+  text-align: center; }

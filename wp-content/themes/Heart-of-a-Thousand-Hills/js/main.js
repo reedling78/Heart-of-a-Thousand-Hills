@@ -7,12 +7,13 @@ require.config({
         'router': '../bower_components/requirejs-router/router',
         'jquery': '../bower_components/jquery/dist/jquery',
         'skrollr': '../bower_components/skrollr/src/skrollr',
-        'foundation': '../bower_components/foundation/js/foundation'
+        'foundation': '../bower_components/foundation/js/foundation',
+        'gridder': '../gridder/js/jquery.gridder'
 
     }
 });
 require(['jquery'], function (skrollr) {
-    require(['skrollr', 'foundation'], function (skrollr) {
+    require(['skrollr', 'foundation', 'gridder'], function (skrollr) {
         'use strict';
 
         var scrollTop = $(window).scrollTop();
@@ -219,6 +220,34 @@ require(['jquery'], function (skrollr) {
                 error: function(MLHttpRequest, textStatus, errorThrown){
                 }
             });
-    });
+        });
+
+
+        $('.gridder').gridderExpander({
+            scroll: true,
+            scrollOffset: 200,
+            scrollTo: "panel",                  // panel or listitem
+            animationSpeed: 400,
+            animationEasing: "easeInOutExpo",
+            showNav: false,                      // Show Navigation
+            nextText: "Next",                   // Next button text
+            prevText: "Previous",               // Previous button text
+            closeText: "Close",                 // Close button text
+            onStart: function(){
+                //Gridder Inititialized
+            },
+            onContent: function(){
+                //Gridder Content Loaded
+            },
+            onClosed: function(){
+                //Gridder Closed
+            }
+        });
+
+
+
+
+
+
     });
 });
