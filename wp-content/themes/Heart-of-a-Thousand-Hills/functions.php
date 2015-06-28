@@ -255,6 +255,7 @@ if ( ! function_exists( 'alpha_scripts' ) ) {
 
 		// Load the stylesheets
 		wp_enqueue_style( 'alpha-master', THEMEROOT . '/css/app.css' );
+
 	}
 
 	add_action( 'wp_enqueue_scripts', 'alpha_scripts' );
@@ -375,6 +376,20 @@ function add_custom_scripts() {
  * ----------------------------------------------------------------------------------------
  */
 function ovn_initialize_theme_options() {
+
+	// Define the settings field
+	add_settings_field( 
+		'flickr_tag', 					// The ID (or the name) of the field
+		'flickr Tag', 					// The text used to label the field
+		'ovn_flickr_tag_display', 		// The callback function used to render the field
+		'general'							// The section to which we're adding the setting
+	);
+	
+	// Register the 'footer_message' setting with the 'General' section
+	register_setting(
+		'general',
+		'flickr_tag'
+	);
 
 	// Define the settings field
 	add_settings_field( 
@@ -513,6 +528,10 @@ add_action( 'admin_init', 'ovn_initialize_theme_options' );
  * 12.0 - Renders the input field for the 'Footer Message' setting in the 'General Settings' section.
  * ----------------------------------------------------------------------------------------
  */
+
+function ovn_flickr_tag_display() {
+	echo '<input type="text" name="flickr_tag" id="flickr_tag" value="' . get_option( 'flickr_tag' ) . '" />';
+} // end ovn_flickr_tag_display
 
 function ovn_facebook_url_display() {
 	echo '<input type="text" name="facebook_url" id="facebook_url" value="' . get_option( 'facebook_url' ) . '" />';

@@ -109,7 +109,7 @@
 
 	$api_key = '165611a9b8940c3f394c3184ff287a4e';
 
-	$tag = 'rwanda';
+	$tag = get_option('flickr_tag');
 	$perPage = 24;
 	$url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search';
 	$url.= '&api_key='.$api_key;
