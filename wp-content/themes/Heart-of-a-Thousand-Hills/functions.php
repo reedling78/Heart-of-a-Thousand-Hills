@@ -294,60 +294,60 @@ add_filter('excerpt_more', 'new_excerpt_more');
 // Save the Data
 function save_custom_meta($post_id) {
 
-    // //verify nonce
-    // if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__))) 
-    //     return $post_id;
-    // // check autosave
-    // if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-    //     return $post_id;
-    // // check permissions
-    // if ('page' == $_POST['post_type']) {
-    //     if (!current_user_can('edit_page', $post_id))
-    //         return $post_id;
-    //     } elseif (!current_user_can('edit_post', $post_id)) {
-    //         return $post_id;
-    // }
+    //verify nonce
+    if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__))) 
+        return $post_id;
+    // check autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+        return $post_id;
+    // check permissions
+    if ('page' == $_POST['post_type']) {
+        if (!current_user_can('edit_page', $post_id))
+            return $post_id;
+        } elseif (!current_user_can('edit_post', $post_id)) {
+            return $post_id;
+    }
 
-    // $oldEventImage = get_post_meta($post_id, 'event_image', true);
+    $oldEventImage = get_post_meta($post_id, 'event_image', true);
 
-    // $newEventImage = $_POST['event_image'];
-    // if ($newEventImage && $newEventImage != $oldEventImage) {
-    //     update_post_meta($post_id, 'event_image', $newEventImage);
-    // } elseif ('' == $newEventImage && $oldEventImage) {
-    //     delete_post_meta($post_id, 'event_image', $oldEventImage);
-    // }
+    $newEventImage = $_POST['event_image'];
+    if ($newEventImage && $newEventImage != $oldEventImage) {
+        update_post_meta($post_id, 'event_image', $newEventImage);
+    } elseif ('' == $newEventImage && $oldEventImage) {
+        delete_post_meta($post_id, 'event_image', $oldEventImage);
+    }
      
-    // $oldEventRadioButton = get_post_meta($post_id, 'event_button_selection', true);
-    // $newEventRadioButton = $_POST['event_button_selection'];
-    // if ($newEventRadioButton && $newEventRadioButton != $oldEventRadioButton) {
-    //     update_post_meta($post_id, 'event_button_selection', $newEventRadioButton);
-    // } elseif ('' == $newEventRadioButton && $oldEventRadioButton) {
-    //     delete_post_meta($post_id, 'event_button_selection', $oldEventRadioButton);
-    // }
+    $oldEventRadioButton = get_post_meta($post_id, 'event_button_selection', true);
+    $newEventRadioButton = $_POST['event_button_selection'];
+    if ($newEventRadioButton && $newEventRadioButton != $oldEventRadioButton) {
+        update_post_meta($post_id, 'event_button_selection', $newEventRadioButton);
+    } elseif ('' == $newEventRadioButton && $oldEventRadioButton) {
+        delete_post_meta($post_id, 'event_button_selection', $oldEventRadioButton);
+    }
 
-    // $oldEventBrightText = get_post_meta($post_id, 'eventBrightText', true);
-    // $newEventBrightText = $_POST['event_bright_text'];
-    // if ($newEventBrightText && $newEventBrightText != $oldEventBrightText) {
-    //     update_post_meta($post_id, 'eventBrightText', $newEventBrightText);
-    // } elseif ('' == $newEventBrightText && $oldEventBrightText) {
-    //     delete_post_meta($post_id, 'eventBrightText', $oldEventBrightText);
-    // }
+    $oldEventBrightText = get_post_meta($post_id, 'eventBrightText', true);
+    $newEventBrightText = $_POST['event_bright_text'];
+    if ($newEventBrightText && $newEventBrightText != $oldEventBrightText) {
+        update_post_meta($post_id, 'eventBrightText', $newEventBrightText);
+    } elseif ('' == $newEventBrightText && $oldEventBrightText) {
+        delete_post_meta($post_id, 'eventBrightText', $oldEventBrightText);
+    }
 
-    // $oldGoogleMapText = get_post_meta($post_id, 'googleMapsText', true);
-    // $newGoogleMapText = $_POST['google_maps_text'];
-    // if ($newGoogleMapText && $newGoogleMapText != $oldGoogleMapText) {
-    //     update_post_meta($post_id, 'googleMapsText', $newGoogleMapText);
-    // } elseif ('' == $newGoogleMapText && $oldGoogleMapText) {
-    //     delete_post_meta($post_id, 'googleMapsText', $oldGoogleMapText);
-    // }
+    $oldGoogleMapText = get_post_meta($post_id, 'googleMapsText', true);
+    $newGoogleMapText = $_POST['google_maps_text'];
+    if ($newGoogleMapText && $newGoogleMapText != $oldGoogleMapText) {
+        update_post_meta($post_id, 'googleMapsText', $newGoogleMapText);
+    } elseif ('' == $newGoogleMapText && $oldGoogleMapText) {
+        delete_post_meta($post_id, 'googleMapsText', $oldGoogleMapText);
+    }
 
-    // $oldGoogleMapText = get_post_meta($post_id, 'eventDate', true);
-    // $newGoogleMapText = strtotime($_POST['event_date']);
-    // if ($newGoogleMapText && $newGoogleMapText != $oldGoogleMapText) {
-    //     update_post_meta($post_id, 'eventDate', $newGoogleMapText);
-    // } elseif ('' == $newGoogleMapText && $oldGoogleMapText) {
-    //     delete_post_meta($post_id, 'eventDate', $oldGoogleMapText);
-    // }
+    $oldGoogleMapText = get_post_meta($post_id, 'eventDate', true);
+    $newGoogleMapText = strtotime($_POST['event_date']);
+    if ($newGoogleMapText && $newGoogleMapText != $oldGoogleMapText) {
+        update_post_meta($post_id, 'eventDate', $newGoogleMapText);
+    } elseif ('' == $newGoogleMapText && $oldGoogleMapText) {
+        delete_post_meta($post_id, 'eventDate', $oldGoogleMapText);
+    }
 }
 add_action('save_post', 'save_custom_meta');
 
@@ -584,8 +584,12 @@ function show_event_button_box() {
 	$radioButtonValue = get_post_meta($post->ID, 'event_button_selection', true);
 	$eventBrightTextValue = get_post_meta($post->ID, 'eventBrightText', true);
 	$googleMapsTextValue = get_post_meta($post->ID, 'googleMapsText', true);
-
-	$eventDate = date("m/d/Y", get_post_meta($post->ID, 'eventDate', true));
+	$eventDate = "";
+	
+	if (get_post_meta($post->ID, 'eventDate', true) != "") {
+		$eventDate = date("m/d/Y", get_post_meta($post->ID, 'eventDate', true));
+	}
+	
      
     // Begin the field table and loop
     echo '<table class="form-table">';
