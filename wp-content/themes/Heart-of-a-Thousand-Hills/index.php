@@ -113,8 +113,8 @@
 	$perPage = 24;
 	$url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search';
 	$url.= '&api_key='.$api_key;
-	//$url.= '&tags='.$tag;
-	$url.= '&user_id=132915815@N03';
+	$url.= '&tags='.$tag;
+	//$url.= '&user_id=132915815@N03';
 	$url.= '&per_page='.$perPage;
 	$url.= '&format=json';
 	$url.= '&nojsoncallback=1';
