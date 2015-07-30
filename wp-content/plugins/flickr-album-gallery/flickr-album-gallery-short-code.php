@@ -44,6 +44,12 @@ function FlickerAlbumGalleryShortCode( $Id ) {
 								float:left;
 							}
 						}
+						.play-pause {
+							display: none !important;
+						}
+						.gallery<?php echo $ID; ?> {
+							overflow:hidden;
+						}
 						</style>
 						<script type="text/javascript">
 						jQuery(function() {
@@ -55,11 +61,12 @@ function FlickerAlbumGalleryShortCode( $Id ) {
 						});
 						</script>
 
-						<!-- Gallery Thumbnails -->
-						<?php if($FAG_Show_Title == "yes") { ?>
-						<h3 style="border-bottom: 1px solid;"><?php echo ucwords(get_the_title($ID)); ?></h3>
-						<?php } ?>
+						
 						<div class="gallery<?php echo $ID; ?>">
+							<!-- Gallery Thumbnails -->
+							<?php if($FAG_Show_Title == "yes") { ?>
+							<h3 style="border-bottom: 1px solid;"><?php echo ucwords(get_the_title($ID)); ?></h3>
+							<?php } ?>
 							<div class="row">
 								<div class="col-xs-12 spinner-wrapper">
 									<div class="LoadingImg"><img src="<?php echo FAG_PLUGIN_URL."img/loading.gif"; ?>" /></div>

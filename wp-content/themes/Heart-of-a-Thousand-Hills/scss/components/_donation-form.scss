@@ -1,113 +1,140 @@
- .namespace.donation-form {
+#dgx-donate-container {
+	background: transparent;
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 0;
 
-	input[type="text"]{
-		color:#333;
-		font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-		width: 40%;
-  		display: inline-block;
-	}
+	#dgx-donate-form-donation-section {
+		margin: 50px auto 95px;
+		width: 620px;
 
-	input[placeholder]{
-		color: #333;
-	}
-	
-	input[type="checkbox"]{
-		width: 20px;
-  		height: 20px;
-	}
-
-	input{
-		font-size: 1.5em;
-	}
-
-	input::-webkit-input-placeholder{
-		color: #333;
-		font-size: 1.4em;
-		margin: 3%;
-	}
-
-	input:-ms-input-placeholder { 
-		color: #333;
-		font-size: 1.4em;
-	}
-
-	label{
-		font-style: normal;
-		color:#333;
-		font-size: 1.4em;
-	}
-
-	h1 { 
-		color: #333;
-		text-align: left;
-		margin:5% 5% 1% 5%; 
-		font-family: "Malabar W01", Times New Roman, Times, serif;
-		font-weight: 800;
-		font-size: 1.5em;
-	}
-
-	h2 { 
-		color: #333;
-		text-align: left;
-		font-family: "Malabar W01", Times New Roman, Times, serif;
-		font-weight: 800;
-		font-size: 1.5em;
-	}
-
-	p {	
-		font-size: 1.2em; 
-		font-style: normal;
-		color:#333;
-		font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-	}
-
-	p label{
-		font-size: 1.2em;
-	}
-	
-	.btn {
-	  -webkit-border-radius: 10;
-	  -moz-border-radius: 10;
-	  border-radius: 10px;
-	  color: #333;
-	  background: transparent;
-	  padding: 10px 20px 10px 20px;
-	  border: solid #333 2px;
-	  text-decoration: none;
-	  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-	  text-transform: uppercase;
-	  font-size: 1em;
-	  letter-spacing: 2px;
-	  font-weight: 600;
-	}
-
-	.btn:hover {
-	  background: #333;
-	  color: #FFF;
-	  text-decoration: none;
-	}
-
-	.bottomBorder{
-		border-bottom: 1px solid #333;
-	}
-
-	.rightBorder{
-		border-right:1px solid #333;
-	}
-
-	.contactFields{
-		border:1px solid #333333;
-		border-radius: 10px;
-		margin:0% 5% 1% 5%;
-	}
-	.contactCheckboxes{
-		padding:0;
-		margin:0% 5% 0% 5%;
-	}
-	@media only screen and (min-width: 40.063em){
-		.rightBorder{
-				border-right:none;
+		#donation_header {
+			&:after {
+				content: "I'm donating";
+				color: $grey;
+				display: block;
+				font: 68px $header-font-family;
+				font-weight: $header-font-weight;
+				margin: 0 0 35px;
+				text-align: center;
+				width: 100%;
 			}
+		}
+	}
+
+	#dgx-donate-form-donor-section {
+		color: $grey;
+		font: 15px $body-font-family;
+		@include clearfix;
+	}
+
+	#_dgx_donate_donor_first_name,
+	#_dgx_donate_donor_last_name,
+	#_dgx_donate_donor_email {
+		float: left;
+		width: 33.33%;
+
+		input {
+			background: transparent;
+			border: 2px solid $grey;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			color: $grey;
+			font: 25px $body-font-family;
+			font-style: italic;
+			height: 50px;
+			margin: 8px 0 0;
+			padding-left: 15px;
+		}
+	}
+
+	#_dgx_donate_donor_first_name {
+		input {
+			border-right: none;
+			@include radius(12px 0 0 12px);
+		}
+	}
+
+	#_dgx_donate_donor_email {
+		input {
+			border-left: none;
+			@include radius(0 12px 12px 0);
+		}
+	}
+
+	.dgx-donate-form-section {
+		background: transparent;
+		border: none !important;
+		margin: 0 0 80px;
+		padding: 0;
+
+		p {
+			display: none;
+		}
+
+		span {
+			color: $grey;
+			font: 25px $body-font-family;
+			font-style: italic;
+
+			&.horiz {
+				margin-left: 70px;
+			}
+		}
+
+		input[type="radio"] {
+			margin: 0 10px 0 0;
+		}
+	}
+
+	h2 {
+		color: $grey;
+		font: 15px $body-font-family;
+		font-weight: 700;
+		letter-spacing: 1px;
+		margin: 0 0 35px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.dgx-donate-pay-enabled {
+		border: 2px solid rgba(0,0,0,.1);
+		height: 105px;
+		position: relative;
+		@include radius(12px);
+
+		&:hover {
+			background: rgba(0,0,0,.1);
+		}
+
+		&:after {
+			color: $grey;
+			content: "Donate";
+			display: block;
+			font: 24px/105px $body-font-family;
+			font-weight: 700;
+			letter-spacing: 1;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		input {
+			display: block;
+			height: 105px;
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			z-index: 4;
+		}
 	}
 }
 
+.reveal-modal .close-reveal-modal {
+	color: $grey !important;
+}

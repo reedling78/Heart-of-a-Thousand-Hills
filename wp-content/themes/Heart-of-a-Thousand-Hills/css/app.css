@@ -3947,99 +3947,131 @@ div.wpcf7-mail-sent-ok {
     /* line 83, ../scss/components/_donate.scss */
     .donate .column.keylime {
       padding-bottom: 160px; } }
-/* line 3, ../scss/components/_donation-form.scss */
-.namespace.donation-form input[type="text"] {
-  color: #333;
-  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-  width: 40%;
-  display: inline-block; }
-/* line 10, ../scss/components/_donation-form.scss */
-.namespace.donation-form input[placeholder] {
-  color: #333; }
-/* line 14, ../scss/components/_donation-form.scss */
-.namespace.donation-form input[type="checkbox"] {
-  width: 20px;
-  height: 20px; }
-/* line 19, ../scss/components/_donation-form.scss */
-.namespace.donation-form input {
-  font-size: 1.5em; }
-/* line 23, ../scss/components/_donation-form.scss */
-.namespace.donation-form input::-webkit-input-placeholder {
-  color: #333;
-  font-size: 1.4em;
-  margin: 3%; }
-/* line 29, ../scss/components/_donation-form.scss */
-.namespace.donation-form input:-ms-input-placeholder {
-  color: #333;
-  font-size: 1.4em; }
-/* line 34, ../scss/components/_donation-form.scss */
-.namespace.donation-form label {
-  font-style: normal;
-  color: #333;
-  font-size: 1.4em; }
-/* line 40, ../scss/components/_donation-form.scss */
-.namespace.donation-form h1 {
-  color: #333;
-  text-align: left;
-  margin: 5% 5% 1% 5%;
-  font-family: "Malabar W01", Times New Roman, Times, serif;
-  font-weight: 800;
-  font-size: 1.5em; }
-/* line 49, ../scss/components/_donation-form.scss */
-.namespace.donation-form h2 {
-  color: #333;
-  text-align: left;
-  font-family: "Malabar W01", Times New Roman, Times, serif;
-  font-weight: 800;
-  font-size: 1.5em; }
-/* line 57, ../scss/components/_donation-form.scss */
-.namespace.donation-form p {
-  font-size: 1.2em;
-  font-style: normal;
-  color: #333;
-  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif; }
-/* line 64, ../scss/components/_donation-form.scss */
-.namespace.donation-form p label {
-  font-size: 1.2em; }
-/* line 68, ../scss/components/_donation-form.scss */
-.namespace.donation-form .btn {
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
-  border-radius: 10px;
-  color: #333;
+/* line 1, ../scss/components/_donation-form.scss */
+#dgx-donate-container {
   background: transparent;
-  padding: 10px 20px 10px 20px;
-  border: solid #333 2px;
-  text-decoration: none;
-  font-family: "Quire Sans W01", Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-size: 1em;
-  letter-spacing: 2px;
-  font-weight: 600; }
-/* line 84, ../scss/components/_donation-form.scss */
-.namespace.donation-form .btn:hover {
-  background: #333;
-  color: #FFF;
-  text-decoration: none; }
-/* line 90, ../scss/components/_donation-form.scss */
-.namespace.donation-form .bottomBorder {
-  border-bottom: 1px solid #333; }
-/* line 94, ../scss/components/_donation-form.scss */
-.namespace.donation-form .rightBorder {
-  border-right: 1px solid #333; }
-/* line 98, ../scss/components/_donation-form.scss */
-.namespace.donation-form .contactFields {
-  border: 1px solid #333333;
-  border-radius: 10px;
-  margin: 0% 5% 1% 5%; }
-/* line 103, ../scss/components/_donation-form.scss */
-.namespace.donation-form .contactCheckboxes {
-  padding: 0;
-  margin: 0% 5% 0% 5%; }
-@media only screen and (min-width: 40.063em) {
-  /* line 108, ../scss/components/_donation-form.scss */
-  .namespace.donation-form .rightBorder {
-    border-right: none; } }
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0; }
+  /* line 7, ../scss/components/_donation-form.scss */
+  #dgx-donate-container #dgx-donate-form-donation-section {
+    margin: 50px auto 95px;
+    width: 620px; }
+    /* line 12, ../scss/components/_donation-form.scss */
+    #dgx-donate-container #dgx-donate-form-donation-section #donation_header:after {
+      content: "I'm donating";
+      color: #565656;
+      display: block;
+      font: 68px "Malabar W01", Times New Roman, Times, serif;
+      font-weight: 800;
+      margin: 0 0 35px;
+      text-align: center;
+      width: 100%; }
+  /* line 25, ../scss/components/_donation-form.scss */
+  #dgx-donate-container #dgx-donate-form-donor-section {
+    color: #565656;
+    font: 15px "Quire Sans W01", Arial, Helvetica, sans-serif; }
+    /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
+    #dgx-donate-container #dgx-donate-form-donor-section:before, #dgx-donate-container #dgx-donate-form-donor-section:after {
+      content: " ";
+      display: table; }
+    /* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
+    #dgx-donate-container #dgx-donate-form-donor-section:after {
+      clear: both; }
+  /* line 31, ../scss/components/_donation-form.scss */
+  #dgx-donate-container #_dgx_donate_donor_first_name,
+  #dgx-donate-container #_dgx_donate_donor_last_name,
+  #dgx-donate-container #_dgx_donate_donor_email {
+    float: left;
+    width: 33.33%; }
+    /* line 37, ../scss/components/_donation-form.scss */
+    #dgx-donate-container #_dgx_donate_donor_first_name input,
+    #dgx-donate-container #_dgx_donate_donor_last_name input,
+    #dgx-donate-container #_dgx_donate_donor_email input {
+      background: transparent;
+      border: 2px solid #565656;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #565656;
+      font: 25px "Quire Sans W01", Arial, Helvetica, sans-serif;
+      font-style: italic;
+      height: 50px;
+      margin: 8px 0 0;
+      padding-left: 15px; }
+  /* line 53, ../scss/components/_donation-form.scss */
+  #dgx-donate-container #_dgx_donate_donor_first_name input {
+    border-right: none;
+    border-radius: 12px 0 0 12px; }
+  /* line 60, ../scss/components/_donation-form.scss */
+  #dgx-donate-container #_dgx_donate_donor_email input {
+    border-left: none;
+    border-radius: 0 12px 12px 0; }
+  /* line 66, ../scss/components/_donation-form.scss */
+  #dgx-donate-container .dgx-donate-form-section {
+    background: transparent;
+    border: none !important;
+    margin: 0 0 80px;
+    padding: 0; }
+    /* line 72, ../scss/components/_donation-form.scss */
+    #dgx-donate-container .dgx-donate-form-section p {
+      display: none; }
+    /* line 76, ../scss/components/_donation-form.scss */
+    #dgx-donate-container .dgx-donate-form-section span {
+      color: #565656;
+      font: 25px "Quire Sans W01", Arial, Helvetica, sans-serif;
+      font-style: italic; }
+      /* line 81, ../scss/components/_donation-form.scss */
+      #dgx-donate-container .dgx-donate-form-section span.horiz {
+        margin-left: 70px; }
+    /* line 86, ../scss/components/_donation-form.scss */
+    #dgx-donate-container .dgx-donate-form-section input[type="radio"] {
+      margin: 0 10px 0 0; }
+  /* line 91, ../scss/components/_donation-form.scss */
+  #dgx-donate-container h2 {
+    color: #565656;
+    font: 15px "Quire Sans W01", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 35px;
+    text-align: center;
+    text-transform: uppercase; }
+  /* line 101, ../scss/components/_donation-form.scss */
+  #dgx-donate-container .dgx-donate-pay-enabled {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    height: 105px;
+    position: relative;
+    border-radius: 12px; }
+    /* line 107, ../scss/components/_donation-form.scss */
+    #dgx-donate-container .dgx-donate-pay-enabled:hover {
+      background: rgba(0, 0, 0, 0.1); }
+    /* line 111, ../scss/components/_donation-form.scss */
+    #dgx-donate-container .dgx-donate-pay-enabled:after {
+      color: #565656;
+      content: "Donate";
+      display: block;
+      font: 24px/105px "Quire Sans W01", Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      letter-spacing: 1;
+      position: absolute;
+      text-align: center;
+      text-transform: uppercase;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1; }
+    /* line 127, ../scss/components/_donation-form.scss */
+    #dgx-donate-container .dgx-donate-pay-enabled input {
+      display: block;
+      height: 105px;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 4; }
+
+/* line 138, ../scss/components/_donation-form.scss */
+.reveal-modal .close-reveal-modal {
+  color: #565656 !important; }
 
 /* line 5, ../scss/components/_event.scss */
 .event {
@@ -4135,8 +4167,8 @@ body {
 
 /* line 35, ../scss/components/_images.scss */
 .gridder-list:nth-child(n) {
-  margin-bottom: 1%;
-  margin-right: 1%; }
+  margin-bottom: 0;
+  margin-right: 0; }
 
 /* line 40, ../scss/components/_images.scss */
 .gridder-list:nth-of-type(6n) {
