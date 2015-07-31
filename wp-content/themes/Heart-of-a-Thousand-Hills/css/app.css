@@ -3984,21 +3984,19 @@ div.wpcf7-mail-sent-ok {
   #dgx-donate-container #_dgx_donate_donor_email {
     float: left;
     width: 33.33%; }
-    /* line 37, ../scss/components/_donation-form.scss */
-    #dgx-donate-container #_dgx_donate_donor_first_name input,
-    #dgx-donate-container #_dgx_donate_donor_last_name input,
-    #dgx-donate-container #_dgx_donate_donor_email input {
-      background: transparent;
-      border: 2px solid #565656;
-      -moz-box-shadow: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      color: #565656;
-      font: 25px "Quire Sans W01", Arial, Helvetica, sans-serif;
-      font-style: italic;
-      height: 50px;
-      margin: 8px 0 0;
-      padding-left: 15px; }
+  /* line 38, ../scss/components/_donation-form.scss */
+  #dgx-donate-container input[type="text"] {
+    background: transparent;
+    border: 2px solid #565656;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #565656;
+    font: 25px "Quire Sans W01", Arial, Helvetica, sans-serif;
+    font-style: italic;
+    height: 50px;
+    margin: 8px 0 0;
+    padding-left: 15px; }
   /* line 53, ../scss/components/_donation-form.scss */
   #dgx-donate-container #_dgx_donate_donor_first_name input {
     border-right: none;
@@ -4008,26 +4006,34 @@ div.wpcf7-mail-sent-ok {
     border-left: none;
     border-radius: 0 12px 12px 0; }
   /* line 66, ../scss/components/_donation-form.scss */
+  #dgx-donate-container #_dgx_donate_user_amount.other-donation-level {
+    color: #565656;
+    font: 15px "Quire Sans W01", Arial, Helvetica, sans-serif;
+    margin: 20px 100px; }
+    /* line 71, ../scss/components/_donation-form.scss */
+    #dgx-donate-container #_dgx_donate_user_amount.other-donation-level input {
+      border-radius: 12px; }
+  /* line 76, ../scss/components/_donation-form.scss */
   #dgx-donate-container .dgx-donate-form-section {
     background: transparent;
     border: none !important;
     margin: 0 0 80px;
     padding: 0; }
-    /* line 72, ../scss/components/_donation-form.scss */
+    /* line 82, ../scss/components/_donation-form.scss */
     #dgx-donate-container .dgx-donate-form-section p {
       display: none; }
-    /* line 76, ../scss/components/_donation-form.scss */
+    /* line 86, ../scss/components/_donation-form.scss */
     #dgx-donate-container .dgx-donate-form-section span {
       color: #565656;
       font: 25px "Quire Sans W01", Arial, Helvetica, sans-serif;
       font-style: italic; }
-      /* line 81, ../scss/components/_donation-form.scss */
+      /* line 91, ../scss/components/_donation-form.scss */
       #dgx-donate-container .dgx-donate-form-section span.horiz {
         margin-left: 70px; }
-    /* line 86, ../scss/components/_donation-form.scss */
+    /* line 96, ../scss/components/_donation-form.scss */
     #dgx-donate-container .dgx-donate-form-section input[type="radio"] {
       margin: 0 10px 0 0; }
-  /* line 91, ../scss/components/_donation-form.scss */
+  /* line 101, ../scss/components/_donation-form.scss */
   #dgx-donate-container h2 {
     color: #565656;
     font: 15px "Quire Sans W01", Arial, Helvetica, sans-serif;
@@ -4036,16 +4042,16 @@ div.wpcf7-mail-sent-ok {
     margin: 0 0 35px;
     text-align: center;
     text-transform: uppercase; }
-  /* line 101, ../scss/components/_donation-form.scss */
+  /* line 111, ../scss/components/_donation-form.scss */
   #dgx-donate-container .dgx-donate-pay-enabled {
     border: 2px solid rgba(0, 0, 0, 0.1);
     height: 105px;
     position: relative;
     border-radius: 12px; }
-    /* line 107, ../scss/components/_donation-form.scss */
+    /* line 117, ../scss/components/_donation-form.scss */
     #dgx-donate-container .dgx-donate-pay-enabled:hover {
       background: rgba(0, 0, 0, 0.1); }
-    /* line 111, ../scss/components/_donation-form.scss */
+    /* line 121, ../scss/components/_donation-form.scss */
     #dgx-donate-container .dgx-donate-pay-enabled:after {
       color: #565656;
       content: "Donate";
@@ -4060,7 +4066,7 @@ div.wpcf7-mail-sent-ok {
       left: 0;
       width: 100%;
       z-index: 1; }
-    /* line 127, ../scss/components/_donation-form.scss */
+    /* line 137, ../scss/components/_donation-form.scss */
     #dgx-donate-container .dgx-donate-pay-enabled input {
       display: block;
       height: 105px;
@@ -4069,9 +4075,22 @@ div.wpcf7-mail-sent-ok {
       width: 100%;
       z-index: 4; }
 
-/* line 138, ../scss/components/_donation-form.scss */
+/* line 148, ../scss/components/_donation-form.scss */
 .reveal-modal .close-reveal-modal {
   color: #565656 !important; }
+
+/* line 152, ../scss/components/_donation-form.scss */
+.seamless-donations-forms-error-message {
+  background: #565656;
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 80%; }
+
+/* line 159, ../scss/components/_donation-form.scss */
+.seamless-donations-error-message-field {
+  color: yellow;
+  background: #565656;
+  padding: 10px 20px; }
 
 /* line 5, ../scss/components/_event.scss */
 .event {
