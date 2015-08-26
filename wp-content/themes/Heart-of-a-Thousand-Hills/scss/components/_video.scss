@@ -2,6 +2,20 @@
 // VIDEO
 //
 
+
+.no-videoautoplay {
+    video {
+        display:none;
+    }
+
+    .start {
+        background: url('/Heart-of-a-Thousand-Hills/wp-content/themes/Heart-of-a-Thousand-Hills/images/smilingKids-Full.png') no-repeat center;
+        background-color: #000;
+        background-size: cover;
+    }
+}
+
+
 .start {
 	video {
 		opacity: .5;

@@ -4418,7 +4418,16 @@ p {
   /* line 43, ../scss/components/_type.scss */
   h2 {
     font-size: 2.125rem; } }
-/* line 6, ../scss/components/_video.scss */
+/* line 7, ../scss/components/_video.scss */
+.no-videoautoplay video {
+  display: none; }
+/* line 11, ../scss/components/_video.scss */
+.no-videoautoplay .start {
+  background: url("/Heart-of-a-Thousand-Hills/wp-content/themes/Heart-of-a-Thousand-Hills/images/smilingKids-Full.png") no-repeat center;
+  background-color: #000;
+  background-size: cover; }
+
+/* line 20, ../scss/components/_video.scss */
 .start video {
   opacity: .5;
   width: 100%;
@@ -4431,7 +4440,7 @@ p {
   z-index: -1; }
 
 @media (max-width: 1920px) {
-  /* line 20, ../scss/components/_video.scss */
+  /* line 34, ../scss/components/_video.scss */
   .home video {
     width: auto;
     min-height: 900px; } }
